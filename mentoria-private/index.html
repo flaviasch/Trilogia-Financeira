@@ -1,0 +1,685 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mentoria Trilogia Financeira Private | Flávia Schuscimann</title>
+  <meta name="description" content="Arquitetura patrimonial para quem já construiu e quer proteger, estruturar e otimizar. Mentoria individual com Flávia Schuscimann, CFP®." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --navy: #0D2B45;
+      --navy-light: #1a3d5c;
+      --gold: #CFAE65;
+      --gold-light: #e8d49b;
+      --white: #FFFFFF;
+      --off-white: #F9F7F4;
+      --gray: #6B7280;
+      --text: #1F2937;
+    }
+
+    html { scroll-behavior: smooth; }
+    body { font-family: 'Inter', sans-serif; color: var(--text); background: var(--white); line-height: 1.6; }
+    h1, h2, h3, h4 { font-family: 'Playfair Display', serif; line-height: 1.2; }
+    a { text-decoration: none; color: inherit; }
+    .container { max-width: 1100px; margin: 0 auto; padding: 0 24px; }
+
+    /* NAV */
+    nav {
+      background: var(--navy);
+      padding: 16px 24px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .nav-inner {
+      max-width: 1100px;
+      margin: 0 auto;
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .nav-logo {
+      font-family: 'Playfair Display', serif;
+      color: var(--white);
+      font-size: 16px;
+      font-weight: 600;
+    }
+
+    .nav-logo span { color: var(--gold); }
+
+    .nav-back {
+      font-size: 13px;
+      color: rgba(255,255,255,0.6);
+      border: 1px solid rgba(255,255,255,0.2);
+      padding: 6px 16px;
+      border-radius: 100px;
+      transition: all 0.2s;
+    }
+
+    .nav-back:hover { color: var(--white); border-color: rgba(255,255,255,0.5); }
+
+    /* HERO */
+    .hero {
+      background: var(--navy);
+      color: var(--white);
+      padding: 80px 24px 100px;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero::before {
+      content: '';
+      position: absolute;
+      top: -80px; right: -80px;
+      width: 500px; height: 500px;
+      border-radius: 50%;
+      background: rgba(207,174,101,0.05);
+      pointer-events: none;
+    }
+
+    .hero::after {
+      content: '';
+      position: absolute;
+      bottom: -60px; left: -60px;
+      width: 300px; height: 300px;
+      border-radius: 50%;
+      background: rgba(207,174,101,0.04);
+      pointer-events: none;
+    }
+
+    .hero-tag {
+      display: inline-block;
+      border: 1px solid var(--gold);
+      color: var(--gold);
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 2.5px;
+      text-transform: uppercase;
+      padding: 6px 20px;
+      border-radius: 100px;
+      margin-bottom: 36px;
+    }
+
+    .hero h1 {
+      font-size: clamp(34px, 5vw, 60px);
+      font-weight: 700;
+      max-width: 760px;
+      margin: 0 auto 12px;
+      line-height: 1.1;
+    }
+
+    .hero h1 span { color: var(--gold); }
+
+    .hero-sub-title {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(16px, 2vw, 22px);
+      color: rgba(255,255,255,0.6);
+      margin-bottom: 40px;
+      font-style: italic;
+    }
+
+    .hero-phrase {
+      font-size: clamp(18px, 2.5vw, 26px);
+      color: var(--white);
+      max-width: 700px;
+      margin: 0 auto 48px;
+      line-height: 1.6;
+      font-family: 'Playfair Display', serif;
+    }
+
+    .hero-phrase em { color: var(--gold); font-style: normal; }
+
+    .btn {
+      display: inline-block;
+      background: var(--gold);
+      color: var(--navy);
+      font-weight: 700;
+      font-size: 16px;
+      padding: 18px 52px;
+      border-radius: 4px;
+      transition: background 0.2s, transform 0.2s;
+      letter-spacing: 0.3px;
+    }
+
+    .btn:hover { background: var(--gold-light); transform: translateY(-2px); }
+
+    .hero-sub { margin-top: 18px; font-size: 13px; color: rgba(255,255,255,0.4); }
+
+    /* GOLD LINE */
+    .gold-line { height: 3px; background: linear-gradient(90deg, transparent, var(--gold), transparent); }
+
+    /* SECTION BASE */
+    section { padding: 80px 24px; }
+
+    .section-tag {
+      display: block;
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 16px;
+    }
+
+    .section-title {
+      font-size: clamp(26px, 3.5vw, 42px);
+      color: var(--navy);
+      margin-bottom: 20px;
+    }
+
+    .section-subtitle {
+      font-size: 17px;
+      color: var(--gray);
+      max-width: 600px;
+      line-height: 1.7;
+    }
+
+    /* DIFERENÇA */
+    .diff { background: var(--off-white); }
+
+    .diff-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 32px;
+      margin-top: 48px;
+    }
+
+    .diff-card {
+      background: var(--white);
+      border-radius: 6px;
+      overflow: hidden;
+    }
+
+    .diff-card-header {
+      padding: 20px 28px;
+      font-family: 'Playfair Display', serif;
+      font-size: 20px;
+      font-weight: 600;
+    }
+
+    .diff-card-header.regular { background: #F3F4F6; color: var(--navy); }
+    .diff-card-header.private { background: var(--navy); color: var(--white); }
+    .diff-card-header.private span { color: var(--gold); }
+
+    .diff-card-body { padding: 28px; }
+
+    .diff-list { list-style: none; }
+
+    .diff-list li {
+      display: flex;
+      gap: 12px;
+      margin-bottom: 14px;
+      font-size: 15px;
+      color: var(--text);
+      line-height: 1.6;
+    }
+
+    .diff-list li::before {
+      content: '•';
+      color: var(--gold);
+      flex-shrink: 0;
+      font-weight: 700;
+    }
+
+    /* PILARES */
+    .pillars { background: var(--white); }
+
+    .pillars-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 28px;
+      margin-top: 48px;
+    }
+
+    .pillar-card {
+      border: 1px solid #E5E7EB;
+      border-radius: 6px;
+      padding: 36px 32px;
+      position: relative;
+    }
+
+    .pillar-number {
+      font-family: 'Playfair Display', serif;
+      font-size: 48px;
+      color: rgba(207,174,101,0.2);
+      font-weight: 700;
+      position: absolute;
+      top: 20px;
+      right: 24px;
+      line-height: 1;
+    }
+
+    .pillar-card h3 {
+      font-size: 20px;
+      color: var(--navy);
+      margin-bottom: 16px;
+    }
+
+    .pillar-items { list-style: none; }
+
+    .pillar-items li {
+      font-size: 14px;
+      color: var(--gray);
+      padding: 6px 0;
+      border-bottom: 1px solid #F3F4F6;
+      display: flex;
+      gap: 10px;
+    }
+
+    .pillar-items li:last-child { border-bottom: none; }
+
+    .pillar-items li::before {
+      content: '•';
+      color: var(--gold);
+      flex-shrink: 0;
+    }
+
+    .pillar-note {
+      margin-top: 14px;
+      font-size: 12px;
+      color: rgba(207,174,101,0.8);
+      font-style: italic;
+    }
+
+    /* FORMATO */
+    .format { background: var(--navy); color: var(--white); }
+
+    .format .section-title { color: var(--white); }
+    .format .section-subtitle { color: rgba(255,255,255,0.6); }
+
+    .format-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 24px;
+      margin-top: 48px;
+    }
+
+    .format-item {
+      text-align: center;
+      padding: 32px 20px;
+      border: 1px solid rgba(207,174,101,0.2);
+      border-radius: 6px;
+    }
+
+    .format-icon {
+      font-size: 32px;
+      margin-bottom: 16px;
+      display: block;
+    }
+
+    .format-item h4 {
+      font-size: 16px;
+      color: var(--gold);
+      margin-bottom: 10px;
+    }
+
+    .format-item p {
+      font-size: 14px;
+      color: rgba(255,255,255,0.6);
+      line-height: 1.6;
+    }
+
+    /* FRASES */
+    .phrases { background: var(--off-white); }
+
+    .phrases-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+      margin-top: 48px;
+    }
+
+    .phrase-card {
+      background: var(--white);
+      border-left: 3px solid var(--gold);
+      padding: 28px 24px;
+      border-radius: 0 4px 4px 0;
+    }
+
+    .phrase-card p {
+      font-family: 'Playfair Display', serif;
+      font-size: 17px;
+      color: var(--navy);
+      line-height: 1.6;
+    }
+
+    /* INVESTIMENTO */
+    .investment { background: var(--white); text-align: center; }
+
+    .investment-box {
+      max-width: 560px;
+      margin: 48px auto 0;
+      border: 1px solid #E5E7EB;
+      border-radius: 6px;
+      overflow: hidden;
+    }
+
+    .investment-top {
+      background: var(--navy);
+      padding: 36px;
+    }
+
+    .investment-label {
+      font-size: 12px;
+      font-weight: 600;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.5);
+      margin-bottom: 12px;
+    }
+
+    .investment-price {
+      font-family: 'Playfair Display', serif;
+      font-size: 52px;
+      color: var(--gold);
+      font-weight: 700;
+      line-height: 1;
+    }
+
+    .investment-price-note {
+      font-size: 14px;
+      color: rgba(255,255,255,0.5);
+      margin-top: 8px;
+    }
+
+    .investment-body {
+      padding: 36px;
+    }
+
+    .investment-includes { list-style: none; margin-bottom: 32px; }
+
+    .investment-includes li {
+      display: flex;
+      gap: 12px;
+      padding: 10px 0;
+      border-bottom: 1px solid #F3F4F6;
+      font-size: 15px;
+      color: var(--text);
+    }
+
+    .investment-includes li:last-child { border-bottom: none; }
+
+    .investment-includes li::before { content: '✓'; color: var(--gold); font-weight: 700; flex-shrink: 0; }
+
+    .investment-note {
+      font-size: 13px;
+      color: var(--gray);
+      line-height: 1.7;
+      margin-top: 20px;
+    }
+
+    /* CTA FINAL */
+    .cta-final {
+      background: var(--navy);
+      text-align: center;
+      padding: 80px 24px;
+      color: var(--white);
+    }
+
+    .cta-final .section-title { color: var(--white); max-width: 640px; margin: 0 auto 20px; }
+
+    .cta-final p {
+      font-size: 17px;
+      color: rgba(255,255,255,0.7);
+      max-width: 520px;
+      margin: 0 auto 40px;
+      line-height: 1.7;
+    }
+
+    /* FOOTER */
+    footer {
+      background: #081e30;
+      color: rgba(255,255,255,0.5);
+      text-align: center;
+      padding: 32px 24px;
+      font-size: 13px;
+    }
+
+    footer a { color: var(--gold); }
+
+    /* RESPONSIVE */
+    @media (max-width: 900px) {
+      .format-grid { grid-template-columns: repeat(2, 1fr); }
+      .phrases-grid { grid-template-columns: 1fr; }
+    }
+
+    @media (max-width: 768px) {
+      .diff-grid { grid-template-columns: 1fr; }
+      .pillars-grid { grid-template-columns: 1fr; }
+      .format-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+
+    @media (max-width: 480px) {
+      .format-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav>
+    <div class="nav-inner">
+      <span class="nav-logo">Flávia <span>Schuscimann</span></span>
+      <a href="../" class="nav-back">Voltar ao início</a>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="container">
+      <span class="hero-tag">Mentoria Individual · Vagas Limitadas</span>
+      <h1>Trilogia Financeira<br><span>Private</span></h1>
+      <p class="hero-sub-title">Investimentos, Patrimônio, Sucessão e Estratégia Tributária</p>
+      <p class="hero-phrase">
+        "Aqui não é sobre escolher investimento.<br>
+        É sobre <em>estruturar patrimônio.</em>"
+      </p>
+      <a href="https://wa.me/5511995658658?text=Ol%C3%A1%2C%20Fl%C3%A1via%21%20Quero%20saber%20mais%20sobre%20a%20Mentoria%20Trilogia%20Private." class="btn" target="_blank">Quero conhecer a Private</a>
+      <p class="hero-sub">Conversa inicial sem compromisso · Individual · Com Flávia Schuscimann, CFP®</p>
+    </div>
+  </section>
+
+  <div class="gold-line"></div>
+
+  <!-- DIFERENÇA -->
+  <section class="diff">
+    <div class="container">
+      <span class="section-tag">Entenda a diferença</span>
+      <h2 class="section-title">Cada mentoria atende um momento diferente.</h2>
+      <p class="section-subtitle">A Private não é uma versão melhorada da Trilogia. É um produto diferente, para um perfil diferente.</p>
+
+      <div class="diff-grid">
+        <div class="diff-card">
+          <div class="diff-card-header regular">Mentoria Trilogia Financeira</div>
+          <div class="diff-card-body">
+            <ul class="diff-list">
+              <li>Organiza o dinheiro e elimina a desconexão</li>
+              <li>Cria a base financeira com método</li>
+              <li>Dá direção inicial para investimentos</li>
+              <li>Estrutura controle, reserva e orçamento</li>
+              <li>Para quem quer sair do ciclo de desorganização</li>
+            </ul>
+          </div>
+        </div>
+        <div class="diff-card">
+          <div class="diff-card-header private">Mentoria Trilogia <span>Private</span></div>
+          <div class="diff-card-body">
+            <ul class="diff-list">
+              <li>Otimiza patrimônio já construído</li>
+              <li>Protege o que foi conquistado</li>
+              <li>Reduz ineficiências tributárias</li>
+              <li>Organiza a transmissão patrimonial</li>
+              <li>Para quem quer pensar no longo prazo com inteligência</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PILARES -->
+  <section class="pillars">
+    <div class="container">
+      <span class="section-tag">Os 4 Pilares</span>
+      <h2 class="section-title">O que é trabalhado na Private.</h2>
+      <p class="section-subtitle">Uma visão integrada do patrimônio, não só da carteira de investimentos.</p>
+
+      <div class="pillars-grid">
+
+        <div class="pillar-card">
+          <span class="pillar-number">01</span>
+          <h3>Estratégia de Investimentos</h3>
+          <ul class="pillar-items">
+            <li>Análise de carteira atual</li>
+            <li>Alocação estratégica por objetivo</li>
+            <li>Gestão de risco</li>
+            <li>Suporte em decisões relevantes</li>
+          </ul>
+        </div>
+
+        <div class="pillar-card">
+          <span class="pillar-number">02</span>
+          <h3>Estrutura Patrimonial</h3>
+          <ul class="pillar-items">
+            <li>Mapeamento de onde está o patrimônio</li>
+            <li>Avaliação de como está organizado</li>
+            <li>Análise de eficiência da estrutura</li>
+            <li>Identificação de pontos de melhoria</li>
+          </ul>
+        </div>
+
+        <div class="pillar-card">
+          <span class="pillar-number">03</span>
+          <h3>Gestão Tributária</h3>
+          <ul class="pillar-items">
+            <li>Identificação de ineficiências tributárias</li>
+            <li>Orientação sobre os melhores caminhos</li>
+            <li>Visão estratégica e conceitual</li>
+            <li>Direcionamento para especialistas quando necessário</li>
+          </ul>
+          <p class="pillar-note">Orientação estratégica. Não execução contábil ou jurídica.</p>
+        </div>
+
+        <div class="pillar-card">
+          <span class="pillar-number">04</span>
+          <h3>Planejamento Sucessório</h3>
+          <ul class="pillar-items">
+            <li>Estrutura de transmissão patrimonial</li>
+            <li>Identificação de riscos</li>
+            <li>Organização preventiva</li>
+            <li>Visão de longo prazo para o que você construiu</li>
+          </ul>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- FORMATO -->
+  <section class="format">
+    <div class="container">
+      <span class="section-tag">Como funciona</span>
+      <h2 class="section-title">Atendimento individual. Profundidade real.</h2>
+      <p class="section-subtitle">Cada etapa foi pensada para quem tem patrimônio e precisa de atenção estratégica, não de soluções genéricas.</p>
+
+      <div class="format-grid">
+        <div class="format-item">
+          <span class="format-icon">◇</span>
+          <h4>Encontros mensais</h4>
+          <p>Reuniões estratégicas individuais, profundas e focadas em decisões reais.</p>
+        </div>
+        <div class="format-item">
+          <span class="format-icon">◇</span>
+          <h4>Suporte contínuo</h4>
+          <p>Acesso direto via WhatsApp para dúvidas e alinhamentos entre os encontros.</p>
+        </div>
+        <div class="format-item">
+          <span class="format-icon">◇</span>
+          <h4>Intervenções pontuais</h4>
+          <p>Suporte em decisões importantes que aparecem ao longo do processo.</p>
+        </div>
+        <div class="format-item">
+          <span class="format-icon">◇</span>
+          <h4>4 a 6 meses</h4>
+          <p>Duração flexível, com possibilidade de continuidade para quem quer acompanhamento de longo prazo.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FRASES -->
+  <section class="phrases">
+    <div class="container">
+      <span class="section-tag">Perspectiva</span>
+      <h2 class="section-title">O que a maioria ignora.</h2>
+
+      <div class="phrases-grid">
+        <div class="phrase-card">
+          <p>"A maioria das pessoas investe sem pensar em sucessão e paga mais imposto do que deveria."</p>
+        </div>
+        <div class="phrase-card">
+          <p>"Rentabilidade é uma parte pequena do problema. Estrutura é o que realmente importa."</p>
+        </div>
+        <div class="phrase-card">
+          <p>"Aqui, a gente não olha só para a carteira. A gente olha para o patrimônio como um todo."</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- INVESTIMENTO -->
+  <section class="investment">
+    <div class="container">
+      <span class="section-tag">Investimento</span>
+      <h2 class="section-title">Uma conversa antes de qualquer compromisso.</h2>
+      <p class="section-subtitle" style="margin: 0 auto;">A Private é para um perfil específico. Por isso começa com uma conversa individual para entender o seu cenário.</p>
+
+      <div class="investment-box">
+        <div class="investment-top">
+          <p class="investment-label">Investimento</p>
+          <p class="investment-price">R$10k – 15k</p>
+          <p class="investment-price-note">Valor definido após análise do cenário</p>
+        </div>
+        <div class="investment-body">
+          <ul class="investment-includes">
+            <li>Encontros mensais estratégicos individuais</li>
+            <li>Suporte via WhatsApp durante todo o processo</li>
+            <li>Análise de carteira e estrutura patrimonial</li>
+            <li>Orientação tributária estratégica</li>
+            <li>Planejamento sucessório preventivo</li>
+            <li>Duração de 4 a 6 meses</li>
+          </ul>
+          <a href="https://wa.me/5511995658658?text=Ol%C3%A1%2C%20Fl%C3%A1via%21%20Quero%20saber%20mais%20sobre%20a%20Mentoria%20Trilogia%20Private." class="btn" target="_blank" style="display:block;text-align:center;width:100%">Quero conversar sobre a Private</a>
+          <p class="investment-note">Não há vendas por impulso aqui. A Private começa com uma conversa para entender se faz sentido para o seu momento.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA FINAL -->
+  <section class="cta-final">
+    <div class="container">
+      <span class="section-tag" style="color:var(--gold)">Próximo passo</span>
+      <h2 class="section-title">Quem não pensa em sucessão e tributação está deixando dinheiro na mesa.</h2>
+      <p>Se você já construiu patrimônio e quer estruturá-lo com inteligência, começa com uma conversa. Sem compromisso.</p>
+      <a href="https://wa.me/5511995658658?text=Ol%C3%A1%2C%20Fl%C3%A1via%21%20Quero%20saber%20mais%20sobre%20a%20Mentoria%20Trilogia%20Private." class="btn" target="_blank">Falar com Flávia</a>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>Flávia Schuscimann, CFP® &nbsp;|&nbsp; Assessora credenciada à <a href="https://xpi.com.br" target="_blank">XP Investimentos</a> &nbsp;|&nbsp; <a href="https://www.instagram.com/flavia.schuscimann" target="_blank">@flavia.schuscimann</a></p>
+    <p style="margin-top:8px">2026 &copy; Todos os direitos reservados</p>
+  </footer>
+
+</body>
+</html>
