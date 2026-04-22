@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Assessoria de Investimentos | Flávia Schuscimann</title>
+  <meta name="description" content="Assessoria de investimentos personalizada, credenciada à XP. Carteira estruturada para o seu perfil, objetivos e momento de vida." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root { --navy: #0D2B45; --navy-light: #1a3d5c; --gold: #CFAE65; --gold-light: #e8d49b; --white: #FFFFFF; --off-white: #F9F7F4; --gray: #6B7280; --text: #1F2937; }
+    html { scroll-behavior: smooth; }
+    body { font-family: 'Inter', sans-serif; color: var(--text); background: var(--white); line-height: 1.6; }
+    h1, h2, h3 { font-family: 'Playfair Display', serif; line-height: 1.2; }
+    a { text-decoration: none; color: inherit; }
+    .container { max-width: 1100px; margin: 0 auto; padding: 0 24px; }
+
+    nav { background: var(--navy); padding: 16px 24px; }
+    .nav-inner { max-width: 1100px; margin: 0 auto; width: 100%; display: flex; align-items: center; justify-content: space-between; }
+    .nav-logo { font-family: 'Playfair Display', serif; color: var(--white); font-size: 16px; font-weight: 600; }
+    .nav-logo span { color: var(--gold); }
+    .nav-back { font-size: 13px; color: rgba(255,255,255,0.6); border: 1px solid rgba(255,255,255,0.2); padding: 6px 16px; border-radius: 100px; transition: all 0.2s; }
+    .nav-back:hover { color: var(--white); border-color: rgba(255,255,255,0.5); }
+
+    .hero { background: var(--navy); color: var(--white); padding: 80px 24px 100px; text-align: center; }
+    .hero-tag { display: inline-block; border: 1px solid var(--gold); color: var(--gold); font-size: 11px; font-weight: 600; letter-spacing: 2.5px; text-transform: uppercase; padding: 6px 20px; border-radius: 100px; margin-bottom: 36px; }
+    .hero h1 { font-size: clamp(34px, 5vw, 58px); font-weight: 700; max-width: 720px; margin: 0 auto 20px; }
+    .hero h1 span { color: var(--gold); }
+    .hero p { font-size: clamp(17px, 2vw, 20px); color: rgba(255,255,255,0.75); max-width: 620px; margin: 0 auto 48px; line-height: 1.7; }
+    .btn { display: inline-block; background: var(--gold); color: var(--navy); font-weight: 700; font-size: 16px; padding: 18px 52px; border-radius: 4px; transition: background 0.2s, transform 0.2s; }
+    .btn:hover { background: var(--gold-light); transform: translateY(-2px); }
+    .hero-sub { margin-top: 18px; font-size: 13px; color: rgba(255,255,255,0.4); }
+
+    .gold-line { height: 3px; background: linear-gradient(90deg, transparent, var(--gold), transparent); }
+    section { padding: 80px 24px; }
+    .section-tag { display: block; font-size: 11px; font-weight: 700; letter-spacing: 3px; text-transform: uppercase; color: var(--gold); margin-bottom: 16px; }
+    .section-title { font-size: clamp(26px, 3.5vw, 42px); color: var(--navy); margin-bottom: 20px; }
+    .section-subtitle { font-size: 17px; color: var(--gray); max-width: 600px; line-height: 1.7; }
+
+    /* DIFERENCIAL */
+    .diff { background: var(--off-white); }
+    .diff-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; margin-top: 48px; }
+    .diff-card { background: var(--white); padding: 32px 28px; border-radius: 6px; border-top: 3px solid var(--gold); }
+    .diff-card h3 { font-size: 18px; color: var(--navy); margin-bottom: 12px; }
+    .diff-card p { font-size: 15px; color: var(--gray); line-height: 1.7; }
+
+    /* COMO FUNCIONA */
+    .how { background: var(--white); }
+    .steps { display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px; margin-top: 48px; }
+    .step { text-align: center; padding: 32px 20px; }
+    .step-num { width: 52px; height: 52px; border-radius: 50%; background: var(--navy); color: var(--gold); font-family: 'Playfair Display', serif; font-size: 22px; font-weight: 700; display: flex; align-items: center; justify-content: center; margin: 0 auto 20px; }
+    .step h4 { font-size: 16px; color: var(--navy); margin-bottom: 10px; }
+    .step p { font-size: 14px; color: var(--gray); line-height: 1.6; }
+
+    /* SOBRE */
+    .about { background: var(--navy); color: var(--white); }
+    .about-grid { display: grid; grid-template-columns: 1fr 1.5fr; gap: 64px; align-items: center; }
+    .about-photo img { width: 100%; max-width: 360px; aspect-ratio: 3/4; object-fit: cover; object-position: top; border-radius: 4px; border: 3px solid rgba(207,174,101,0.3); display: block; margin-left: auto; }
+    .about .section-title { color: var(--white); }
+    .about p { font-size: 16px; color: rgba(255,255,255,0.8); line-height: 1.8; margin-bottom: 18px; }
+    .creds { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 28px; }
+    .cred { background: rgba(207,174,101,0.12); border: 1px solid rgba(207,174,101,0.3); color: var(--gold); font-size: 12px; font-weight: 600; padding: 5px 13px; border-radius: 100px; }
+
+    /* CTA */
+    .cta-final { background: var(--off-white); text-align: center; padding: 80px 24px; }
+    .cta-final .section-title { max-width: 600px; margin: 0 auto 20px; }
+    .cta-final p { font-size: 17px; color: var(--gray); max-width: 500px; margin: 0 auto 40px; line-height: 1.7; }
+
+    footer { background: #081e30; color: rgba(255,255,255,0.5); text-align: center; padding: 32px 24px; font-size: 13px; }
+    footer a { color: var(--gold); }
+
+    @media (max-width: 900px) { .diff-grid { grid-template-columns: 1fr 1fr; } .steps { grid-template-columns: repeat(2, 1fr); } .about-grid { grid-template-columns: 1fr; } .about-photo { display: flex; justify-content: center; } }
+    @media (max-width: 600px) { .diff-grid { grid-template-columns: 1fr; } .steps { grid-template-columns: 1fr 1fr; } }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <div class="nav-inner">
+      <span class="nav-logo">Flávia <span>Schuscimann</span></span>
+      <a href="../" class="nav-back">Voltar ao início</a>
+    </div>
+  </nav>
+
+  <section class="hero">
+    <div class="container">
+      <span class="hero-tag">Assessoria · XP Investimentos</span>
+      <h1>Sua carteira.<br><span>Sua estratégia.</span><br>Sem conflito de interesse.</h1>
+      <p>Assessoria de investimentos personalizada, credenciada à XP. Uma carteira estruturada de acordo com seus objetivos, perfil e momento de vida.</p>
+      <a href="https://wa.me/5511995658658?text=Ol%C3%A1%2C%20Fl%C3%A1via%21%20Quero%20saber%20mais%20sobre%20a%20assessoria%20de%20investimentos." class="btn" target="_blank">Falar com Flávia</a>
+      <p class="hero-sub">Conversa inicial sem compromisso</p>
+    </div>
+  </section>
+
+  <div class="gold-line"></div>
+
+  <!-- DIFERENCIAL -->
+  <section class="diff">
+    <div class="container">
+      <span class="section-tag">Por que é diferente</span>
+      <h2 class="section-title">Assessoria com visão financeira completa.</h2>
+      <p class="section-subtitle">A diferença entre um assessor e uma CFP® está na visão. Aqui não se olha só para a carteira.</p>
+
+      <div class="diff-grid">
+        <div class="diff-card">
+          <h3>Visão comportamental</h3>
+          <p>20 anos de mercado e especialização em finanças comportamentais. Flávia entende que o maior inimigo dos investimentos é o próprio investidor.</p>
+        </div>
+        <div class="diff-card">
+          <h3>Carteira com propósito</h3>
+          <p>Cada ativo tem um objetivo. A alocação é construída com base em metas reais, prazo e perfil, não em tendências de mercado.</p>
+        </div>
+        <div class="diff-card">
+          <h3>Sem conflito de interesse</h3>
+          <p>Credenciada à XP, com acesso a uma ampla gama de produtos. A recomendação é baseada no que faz sentido para você, não para a instituição.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- COMO FUNCIONA -->
+  <section class="how">
+    <div class="container">
+      <span class="section-tag">Como funciona</span>
+      <h2 class="section-title">Começa com uma conversa.</h2>
+      <p class="section-subtitle">Nenhuma recomendação antes de entender o seu cenário.</p>
+
+      <div class="steps">
+        <div class="step">
+          <div class="step-num">1</div>
+          <h4>Conversa inicial</h4>
+          <p>Entendemos seus objetivos, perfil e momento financeiro atual.</p>
+        </div>
+        <div class="step">
+          <div class="step-num">2</div>
+          <h4>Diagnóstico</h4>
+          <p>Análise da carteira atual, se houver, e identificação de pontos de melhoria.</p>
+        </div>
+        <div class="step">
+          <div class="step-num">3</div>
+          <h4>Estratégia personalizada</h4>
+          <p>Proposta de alocação alinhada com seus objetivos e tolerância ao risco.</p>
+        </div>
+        <div class="step">
+          <div class="step-num">4</div>
+          <h4>Acompanhamento contínuo</h4>
+          <p>Suporte nas decisões e revisões periódicas conforme sua vida evolui.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SOBRE FLÁVIA -->
+  <section class="about">
+    <div class="container">
+      <div class="about-grid">
+        <div class="about-photo">
+          <img src="../flavia.jpg" alt="Flávia Schuscimann" />
+        </div>
+        <div>
+          <span class="section-tag">Quem vai cuidar da sua carteira</span>
+          <h2 class="section-title">20 anos de mercado financeiro.</h2>
+          <p>Trabalhei 14 anos como gerente de relacionamento nos maiores bancos do país, antes de me tornar assessora independente credenciada à XP. Hoje sou sócia de escritório e lidero um time de 10 assessores.</p>
+          <p>Sou CFP® há 7 anos, especializada em finanças comportamentais, e já ajudei mais de 200 famílias a construírem carteiras alinhadas com seus objetivos de vida.</p>
+          <p>Coautora do livro "Enriqueça enquanto dorme" e criadora do Método Trilogia Financeira.</p>
+          <div class="creds">
+            <span class="cred">CFP® há 7 anos</span>
+            <span class="cred">Assessora XP</span>
+            <span class="cred">Sócia de escritório</span>
+            <span class="cred">+200 famílias atendidas</span>
+            <span class="cred">Finanças comportamentais</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta-final">
+    <div class="container">
+      <span class="section-tag">Próximo passo</span>
+      <h2 class="section-title">Uma conversa muda a direção da sua carteira.</h2>
+      <p>Sem compromisso. Sem jargão. Apenas uma conversa para entender se faz sentido trabalharmos juntas.</p>
+      <a href="https://wa.me/5511995658658?text=Ol%C3%A1%2C%20Fl%C3%A1via%21%20Quero%20saber%20mais%20sobre%20a%20assessoria%20de%20investimentos." class="btn" target="_blank">Falar com Flávia no WhatsApp</a>
+    </div>
+  </section>
+
+  <footer>
+    <p>Flávia Schuscimann, CFP® &nbsp;|&nbsp; Assessora credenciada à <a href="https://xpi.com.br" target="_blank">XP Investimentos</a> &nbsp;|&nbsp; <a href="../">flaviaschusciman.com</a></p>
+    <p style="margin-top:8px">2026 &copy; Todos os direitos reservados</p>
+  </footer>
+
+</body>
+</html>
