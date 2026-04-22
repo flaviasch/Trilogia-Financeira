@@ -68,6 +68,31 @@
     .cta-final .section-title { max-width: 600px; margin: 0 auto 20px; }
     .cta-final p { font-size: 17px; color: var(--gray); max-width: 500px; margin: 0 auto 40px; line-height: 1.7; }
 
+    /* MODELOS */
+    .models { background: var(--off-white); }
+    .models-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 28px; margin-top: 48px; }
+    .model-card { border-radius: 6px; overflow: hidden; border: 1px solid #E5E7EB; }
+    .model-card.recommended { border-color: var(--gold); box-shadow: 0 4px 24px rgba(207,174,101,0.15); }
+    .model-header { padding: 24px 28px; }
+    .model-header.standard { background: #F3F4F6; }
+    .model-header.recommended-header { background: var(--navy); }
+    .model-badge { font-size: 10px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; margin-bottom: 10px; display: block; }
+    .model-badge.std { color: var(--gray); }
+    .model-badge.rec { color: var(--gold); }
+    .model-header h3 { font-size: 22px; }
+    .model-header.standard h3 { color: var(--navy); }
+    .model-header.recommended-header h3 { color: var(--white); }
+    .model-body { padding: 28px; background: var(--white); }
+    .model-body p { font-size: 15px; color: var(--text); line-height: 1.7; margin-bottom: 20px; }
+    .model-list { list-style: none; margin-bottom: 20px; }
+    .model-list li { display: flex; gap: 10px; padding: 8px 0; border-bottom: 1px solid #F3F4F6; font-size: 14px; color: var(--text); }
+    .model-list li:last-child { border-bottom: none; }
+    .model-list li.pro::before { content: '✓'; color: #16a34a; font-weight: 700; flex-shrink: 0; }
+    .model-list li.con::before { content: '×'; color: #dc2626; font-weight: 700; flex-shrink: 0; }
+    .model-note { font-size: 13px; color: var(--gray); font-style: italic; line-height: 1.6; padding-top: 8px; border-top: 1px solid #F3F4F6; }
+    .model-cta { display: block; text-align: center; padding: 14px 20px; border-radius: 4px; font-size: 14px; font-weight: 600; margin-top: 20px; background: var(--gold); color: var(--navy); transition: background 0.2s; }
+    .model-cta:hover { background: var(--gold-light); }
+
     footer { background: #081e30; color: rgba(255,255,255,0.5); text-align: center; padding: 32px 24px; font-size: 13px; }
     footer a { color: var(--gold); }
 
@@ -148,6 +173,56 @@
           <h4>Acompanhamento contínuo</h4>
           <p>Suporte nas decisões e revisões periódicas conforme sua vida evolui.</p>
         </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- MODELOS DE REMUNERAÇÃO -->
+  <section class="models">
+    <div class="container">
+      <span class="section-tag">Modelos de remuneração</span>
+      <h2 class="section-title">Duas formas de trabalhar. Uma recomendação clara.</h2>
+      <p class="section-subtitle">Entender como o assessor é remunerado é fundamental para saber se os interesses estão alinhados com os seus.</p>
+
+      <div class="models-grid">
+
+        <div class="model-card">
+          <div class="model-header standard">
+            <span class="model-badge std">Modelo tradicional</span>
+            <h3>Comissionado</h3>
+          </div>
+          <div class="model-body">
+            <p>O assessor é remunerado pela instituição financeira através de comissões sobre os produtos que recomenda. Sem custo direto para o cliente.</p>
+            <ul class="model-list">
+              <li class="pro">Sem cobrança direta ao cliente</li>
+              <li class="pro">Acesso a todos os produtos da plataforma XP</li>
+              <li class="con">Remuneração varia conforme o produto indicado</li>
+              <li class="con">Potencial conflito de interesse nas recomendações</li>
+              <li class="con">Produtos com maior comissão podem ser priorizados</li>
+            </ul>
+            <p class="model-note">Modelo mais comum no mercado. Funciona bem quando há transparência sobre as comissões envolvidas em cada produto.</p>
+          </div>
+        </div>
+
+        <div class="model-card recommended">
+          <div class="model-header recommended-header">
+            <span class="model-badge rec">Recomendado</span>
+            <h3>Fee Based</h3>
+          </div>
+          <div class="model-body">
+            <p>O cliente paga diretamente pela assessoria, independente dos produtos escolhidos. A remuneração do assessor não depende do que é comprado.</p>
+            <ul class="model-list">
+              <li class="pro">Interesses 100% alinhados com o cliente</li>
+              <li class="pro">Recomendação baseada no que é melhor para você</li>
+              <li class="pro">Transparência total sobre o custo da assessoria</li>
+              <li class="pro">Sem viés na escolha de produtos</li>
+              <li class="pro">Relação mais próxima e comprometida</li>
+            </ul>
+            <p class="model-note">O modelo que Flávia recomenda para quem quer uma assessoria com total alinhamento de interesses e sem ruído nas decisões.</p>
+            <a href="https://wa.me/5511995658658?text=Ol%C3%A1%2C%20Fl%C3%A1via%21%20Quero%20saber%20mais%20sobre%20a%20assessoria%20fee%20based." class="model-cta" target="_blank">Quero saber mais sobre o fee based</a>
+          </div>
+        </div>
+
       </div>
     </div>
   </section>
