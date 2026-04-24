@@ -5,6 +5,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Assessoria de Investimentos | Flávia Schuscimann</title>
   <meta name="description" content="Assessoria de investimentos personalizada, credenciada à XP. Carteira estruturada para o seu perfil, objetivos e momento de vida." />
+  <meta name="keywords" content="assessoria de investimentos, assessor XP Investimentos, fee based, carteira de investimentos, planejamento de investimentos, assessoria financeira, CFP, Flávia Schuscimann" />
+  <link rel="canonical" href="https://flaviaschusciman.com/assessoria/" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://flaviaschusciman.com/assessoria/" />
+  <meta property="og:title" content="Assessoria de Investimentos | Flávia Schuscimann" />
+  <meta property="og:description" content="Assessoria de investimentos personalizada, credenciada à XP. Carteira estruturada para o seu perfil, objetivos e momento de vida." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
@@ -35,7 +41,7 @@
 
     .gold-line { height: 3px; background: linear-gradient(90deg, transparent, var(--gold), transparent); }
     section { padding: 80px 24px; }
-    .section-tag { display: block; font-size: 11px; font-weight: 700; letter-spacing: 3px; text-transform: uppercase; color: var(--gold); margin-bottom: 16px; }
+    .section-tag { display: block; font-size: 11px; font-weight: 700; letter-spacing: 3px; text-transform: uppercase; color: var(--navy); margin-bottom: 16px; }
     .section-title { font-size: clamp(26px, 3.5vw, 42px); color: var(--navy); margin-bottom: 20px; }
     .section-subtitle { font-size: 17px; color: var(--gray); max-width: 600px; line-height: 1.7; }
 
@@ -97,7 +103,15 @@
     footer a { color: var(--gold); }
 
     @media (max-width: 900px) { .diff-grid { grid-template-columns: 1fr 1fr; } .steps { grid-template-columns: repeat(2, 1fr); } .about-grid { grid-template-columns: 1fr; } .about-photo { display: flex; justify-content: center; } }
+    .depoimentos-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; margin-top: 48px; }
+    .dep-card { background: rgba(255,255,255,0.05); border: 1px solid rgba(207,174,101,0.2); border-top: 3px solid var(--gold); border-radius: 4px; padding: 28px 24px; }
+    .dep-text { font-size: 14px; color: rgba(255,255,255,0.85); line-height: 1.75; margin-bottom: 20px; font-style: italic; }
+    .dep-author { font-size: 13px; font-weight: 600; color: var(--gold); letter-spacing: 0.5px; }
+    .dep-result { font-size: 12px; color: rgba(255,255,255,0.4); margin-top: 4px; }
+    @media (max-width: 900px) { .depoimentos-grid { grid-template-columns: 1fr; } }
+
     @media (max-width: 600px) { .diff-grid { grid-template-columns: 1fr; } .steps { grid-template-columns: 1fr 1fr; } }
+    @media (max-width: 480px) { .models-grid { grid-template-columns: 1fr; } .steps { grid-template-columns: 1fr; } section { padding: 60px 20px; } .cta-final { padding: 60px 20px; } }
   </style>
 </head>
 <body>
@@ -195,6 +209,8 @@
             <ul class="model-list">
               <li class="pro">Sem cobrança direta ao cliente</li>
               <li class="pro">Acesso a todos os produtos da plataforma XP</li>
+              <li class="pro">Carteira alinhada ao perfil de investidor</li>
+              <li class="con">Produtos e serviços conforme demanda, sem planejamento integrado</li>
               <li class="con">Remuneração varia conforme o produto indicado</li>
               <li class="con">Potencial conflito de interesse nas recomendações</li>
               <li class="con">Produtos com maior comissão podem ser priorizados</li>
@@ -212,7 +228,9 @@
             <p>O cliente paga diretamente pela assessoria, independente dos produtos escolhidos. A remuneração do assessor não depende do que é comprado.</p>
             <ul class="model-list">
               <li class="pro">Interesses 100% alinhados com o cliente</li>
-              <li class="pro">Recomendação baseada no que é melhor para você</li>
+              <li class="pro">Produtos, soluções e decisões financeiras alinhadas ao planejamento</li>
+              <li class="pro">Visão 360 do cliente</li>
+              <li class="pro">Carteira recomendada por objetivo</li>
               <li class="pro">Transparência total sobre o custo da assessoria</li>
               <li class="pro">Sem viés na escolha de produtos</li>
               <li class="pro">Relação mais próxima e comprometida</li>
@@ -246,6 +264,31 @@
             <span class="cred">+200 famílias atendidas</span>
             <span class="cred">Finanças comportamentais</span>
           </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- DEPOIMENTOS -->
+  <section style="background:var(--navy);padding:80px 24px;">
+    <div class="container">
+      <span class="section-tag" style="display:block;font-size:11px;font-weight:700;letter-spacing:3px;text-transform:uppercase;color:var(--gold);margin-bottom:16px;">Clientes que confiam</span>
+      <h2 style="font-family:'Playfair Display',serif;font-size:clamp(26px,3.5vw,38px);color:#fff;margin-bottom:0;">Nas palavras de quem viveu.</h2>
+      <div class="depoimentos-grid">
+        <div class="dep-card">
+          <p class="dep-text">"Uma profissional diferenciada, inteligente, dedicada, prestativa e que se coloca no lugar do cliente. A Flávia percebendo a dificuldade, não mediu esforços e tomou todas as providências para que o assunto fosse solucionado. Os produtos e serviços dos bancos são os mesmos — mas quem faz a diferença são as pessoas."</p>
+          <p class="dep-author">Roseni</p>
+          <p class="dep-result">Problema complexo com banco resolvido</p>
+        </div>
+        <div class="dep-card">
+          <p class="dep-text">"Gostaria de agradecer à minha assessora Flávia por toda atenção, paciência e estratégia para investir minhas economias de acordo com meu objetivo a longo prazo e perfil. Desde o início do atendimento, me direcionaram de forma clara e didática para visualizar onde chegaria com o plano que traçamos em conjunto."</p>
+          <p class="dep-author">Joice</p>
+          <p class="dep-result">Estratégia de investimento alinhada a objetivos</p>
+        </div>
+        <div class="dep-card">
+          <p class="dep-text">"Todo bom trabalho precisa de profissionais competentes, experientes, especializados, comprometidos e disponíveis. A Flávia alinha os objetivos financeiros, implementa as melhores estratégias e aconselha investimentos para que o cliente alcance suas metas — com respeito pela história de cada um."</p>
+          <p class="dep-author">Gustavo</p>
+          <p class="dep-result">Atendimento diferenciado e estratégico</p>
         </div>
       </div>
     </div>

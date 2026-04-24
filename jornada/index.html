@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Jornada Domine Seu Dinheiro | Flávia Schuscimann</title>
+  <meta name="description" content="Organize sua vida financeira com clareza e método. Programa online com Flávia Schuscimann, CFP®." />
+  <meta name="keywords" content="organizar finanças pessoais, curso finanças online, jornada financeira, domine seu dinheiro, planejamento financeiro, educação financeira, Flávia Schuscimann, CFP" />
+  <link rel="canonical" href="https://flaviaschusciman.com/jornada/" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://flaviaschusciman.com/jornada/" />
+  <meta property="og:title" content="Jornada Domine Seu Dinheiro | Flávia Schuscimann" />
+  <meta property="og:description" content="Organize sua vida financeira com clareza e método. Programa online com Flávia Schuscimann, CFP®." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --navy: #0D2B45; --navy-light: #1a3d5c; --navy-dark: #081e30;
+      --gold: #CFAE65; --gold-light: #e8d49b; --gold-dark: #a88a3f;
+      --white: #FFFFFF; --off-white: #F9F7F4; --cream: #F4F0E8;
+      --gray: #6B7280; --gray-light: #F3F4F6; --text: #1F2937; --border: #E5E7EB;
+    }
+    html { scroll-behavior: smooth; }
+    body { font-family: 'Inter', sans-serif; color: var(--text); background: var(--white); line-height: 1.6; }
+    h1, h2, h3, h4 { font-family: 'Playfair Display', serif; line-height: 1.2; }
+    a { text-decoration: none; color: inherit; }
+    .container { max-width: 1000px; margin: 0 auto; padding: 0 24px; }
+
+    nav { background: var(--navy); padding: 16px 24px; }
+    .nav-inner { max-width: 1000px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; }
+    .nav-logo { font-family: 'Playfair Display', serif; color: var(--white); font-size: 16px; font-weight: 600; }
+    .nav-logo span { color: var(--gold); }
+    .nav-back { font-size: 13px; color: rgba(255,255,255,0.6); border: 1px solid rgba(255,255,255,0.2); padding: 6px 16px; border-radius: 100px; transition: all 0.2s; }
+    .nav-back:hover { color: var(--white); border-color: rgba(255,255,255,0.5); }
+
+    /* HERO */
+    .hero { background: var(--navy); color: var(--white); padding: 80px 24px 100px; }
+    .hero-inner { max-width: 1000px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: center; }
+    .hero-badge { display: inline-block; background: rgba(207,174,101,0.15); border: 1px solid rgba(207,174,101,0.4); color: var(--gold); font-size: 11px; font-weight: 700; letter-spacing: 2.5px; text-transform: uppercase; padding: 6px 18px; border-radius: 100px; margin-bottom: 28px; }
+    .hero h1 { font-size: clamp(28px, 4vw, 48px); font-weight: 700; margin-bottom: 20px; line-height: 1.1; }
+    .hero h1 span { color: var(--gold); }
+    .hero-desc { font-size: 17px; color: rgba(255,255,255,0.7); max-width: 440px; margin-bottom: 36px; line-height: 1.75; }
+    .btn-hero { display: inline-block; background: var(--gold); color: var(--navy); font-weight: 700; font-size: 17px; padding: 18px 52px; border-radius: 8px; transition: background 0.2s, transform 0.2s; }
+    .btn-hero:hover { background: var(--gold-light); transform: translateY(-2px); }
+    .hero-price { margin-top: 16px; font-size: 14px; color: rgba(255,255,255,0.4); }
+    .hero-price strong { color: rgba(255,255,255,0.7); }
+    .hero-visual { position: relative; }
+    .hero-photo { width: 100%; border-radius: 12px; display: block; object-fit: cover; aspect-ratio: 4/5; object-position: top; border: 2px solid rgba(207,174,101,0.25); }
+    .floating-card { position: absolute; background: var(--white); border-radius: 10px; padding: 14px 18px; box-shadow: 0 8px 32px rgba(0,0,0,0.25); bottom: 32px; left: -20px; }
+    .fc-label { font-size: 10px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: var(--gray); margin-bottom: 4px; }
+    .fc-value { font-family: 'Playfair Display', serif; font-size: 17px; font-weight: 700; color: var(--navy); }
+    .fc-sub { font-size: 11px; color: var(--gray); margin-top: 2px; }
+    .fc-badge { background: rgba(207,174,101,0.15); color: var(--gold-dark); font-size: 10px; font-weight: 700; padding: 3px 8px; border-radius: 100px; display: inline-block; margin-top: 4px; }
+    @media (max-width: 768px) { .hero-inner { grid-template-columns: 1fr; } .hero-visual { display: none; } }
+
+    .gold-line { height: 3px; background: linear-gradient(90deg, transparent, var(--gold), transparent); }
+
+    section { padding: 80px 24px; }
+    .section-tag { display: block; font-size: 11px; font-weight: 700; letter-spacing: 3px; text-transform: uppercase; color: var(--navy); margin-bottom: 16px; }
+    .pill { display: inline-block; background: rgba(207,174,101,0.12); border: 1px solid rgba(207,174,101,0.35); color: var(--gold-dark); font-size: 11px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; padding: 5px 16px; border-radius: 100px; margin-bottom: 20px; }
+    .section-title { font-size: clamp(26px, 3.5vw, 40px); color: var(--navy); margin-bottom: 16px; }
+    .section-title span { color: var(--gold-dark); }
+    .section-subtitle { font-size: 17px; color: var(--gray); line-height: 1.75; }
+
+    /* DIAGNOSE */
+    .diagnose { background: var(--cream); text-align: center; }
+    .diagnose .section-title { max-width: 640px; margin: 0 auto 16px; }
+    .diagnose .section-subtitle { max-width: 560px; margin: 0 auto 48px; }
+    .diag-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; max-width: 760px; margin: 0 auto; }
+    .diag-card { background: var(--white); border-radius: 12px; padding: 22px 20px; border: 1px solid var(--border); display: flex; gap: 14px; align-items: flex-start; text-align: left; }
+    .diag-icon { font-size: 22px; flex-shrink: 0; padding-top: 2px; }
+    .diag-card p { font-size: 15px; color: var(--text); line-height: 1.6; }
+
+    /* O QUE É */
+    .what { background: var(--white); }
+    .what-inner { max-width: 820px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr; gap: 48px; align-items: start; }
+    .what-left h2 { font-size: clamp(24px, 3vw, 36px); color: var(--navy); margin-bottom: 16px; }
+    .what-left h2 em { color: var(--gold-dark); font-style: normal; }
+    .what-left p { font-size: 16px; color: var(--gray); line-height: 1.8; margin-bottom: 16px; }
+    .what-right { background: var(--navy); border-radius: 14px; padding: 32px; }
+    .what-right-label { font-size: 10px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: var(--gold); margin-bottom: 16px; display: block; }
+    .module-list { list-style: none; }
+    .module-list li { display: flex; gap: 12px; padding: 12px 0; border-bottom: 1px solid rgba(255,255,255,0.08); font-size: 14px; color: rgba(255,255,255,0.8); }
+    .module-list li:last-child { border-bottom: none; }
+    .module-num { font-family: 'Playfair Display', serif; font-size: 16px; font-weight: 700; color: var(--gold); min-width: 24px; }
+
+    /* TRANSFORMAÇÃO */
+    .transform { background: var(--off-white); }
+    .transform .section-title { text-align: center; margin-bottom: 48px; }
+    .before-after { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; max-width: 820px; margin: 0 auto; }
+    .ba-card { border-radius: 14px; padding: 32px; }
+    .ba-card.before { background: var(--white); border: 1px solid var(--border); }
+    .ba-card.after { background: var(--navy); }
+    .ba-label { font-size: 11px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; margin-bottom: 20px; display: block; }
+    .ba-card.before .ba-label { color: var(--gray); }
+    .ba-card.after .ba-label { color: var(--gold); }
+    .ba-list { list-style: none; }
+    .ba-list li { display: flex; gap: 10px; padding: 10px 0; border-bottom: 1px solid; font-size: 14px; }
+    .ba-card.before .ba-list li { border-color: var(--gray-light); color: var(--gray); }
+    .ba-card.after .ba-list li { border-color: rgba(255,255,255,0.08); color: rgba(255,255,255,0.85); }
+    .ba-list li:last-child { border-bottom: none; }
+    .ba-icon { flex-shrink: 0; font-size: 14px; }
+
+    /* PARA QUEM */
+    .for-who { background: var(--cream); text-align: center; }
+    .for-who .section-title { max-width: 560px; margin: 0 auto 48px; }
+    .fw-list { max-width: 600px; margin: 0 auto; display: flex; flex-direction: column; gap: 10px; text-align: left; }
+    .fw-item { background: var(--white); border-radius: 10px; padding: 16px 20px; display: flex; gap: 14px; align-items: center; border: 1px solid var(--border); font-size: 15px; color: var(--text); }
+    .fw-bullet { width: 8px; height: 8px; border-radius: 50%; background: var(--gold); flex-shrink: 0; }
+
+    /* POSICIONAMENTO */
+    .position { background: var(--navy); color: var(--white); text-align: center; }
+    .position-card { max-width: 720px; margin: 0 auto; }
+    .position h2 { font-size: clamp(22px, 3vw, 34px); color: var(--white); margin-bottom: 16px; }
+    .position h2 em { color: var(--gold); font-style: normal; }
+    .position p { font-size: 16px; color: rgba(255,255,255,0.65); line-height: 1.8; }
+
+    /* PREÇO */
+    .pricing { background: var(--white); text-align: center; }
+    .price-wrap { max-width: 480px; margin: 48px auto 0; background: var(--white); border-radius: 16px; border: 2px solid rgba(207,174,101,0.35); box-shadow: 0 8px 40px rgba(0,0,0,0.08); overflow: hidden; }
+    .price-top { background: var(--navy); padding: 40px 40px 32px; }
+    .price-label { font-size: 11px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: rgba(255,255,255,0.45); margin-bottom: 14px; }
+    .price-main { font-family: 'Playfair Display', serif; font-size: 68px; color: var(--gold); font-weight: 700; line-height: 1; }
+    .price-note { font-size: 13px; color: rgba(255,255,255,0.4); margin-top: 8px; }
+    .price-body { padding: 32px 40px; }
+    .includes-list { list-style: none; margin-bottom: 28px; text-align: left; }
+    .includes-list li { display: flex; gap: 12px; padding: 11px 0; border-bottom: 1px solid var(--gray-light); font-size: 15px; color: var(--text); }
+    .includes-list li:last-child { border-bottom: none; }
+    .includes-list li::before { content: '✓'; color: var(--gold-dark); font-weight: 700; flex-shrink: 0; }
+    .btn-buy { display: block; background: var(--gold); color: var(--navy); font-weight: 700; font-size: 17px; padding: 18px 32px; border-radius: 8px; text-align: center; transition: background 0.2s, transform 0.2s; }
+    .btn-buy:hover { background: var(--gold-light); transform: translateY(-2px); }
+    .guarantee-note { margin-top: 16px; font-size: 13px; color: var(--gray); }
+
+    /* ESTEIRA */
+    .esteira { background: var(--cream); }
+    .esteira-inner { max-width: 820px; margin: 0 auto; }
+    .esteira-flow { display: flex; align-items: center; gap: 8px; margin-top: 40px; flex-wrap: wrap; justify-content: center; }
+    .esteira-step { background: var(--white); border: 1px solid var(--border); border-radius: 10px; padding: 16px 20px; text-align: center; flex: 1; min-width: 140px; }
+    .esteira-step.active { background: var(--navy); border-color: var(--navy); }
+    .esteira-step.active p { color: var(--white); }
+    .esteira-step.active span { color: var(--gold); }
+    .esteira-step span { font-size: 10px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: var(--gold-dark); display: block; margin-bottom: 4px; }
+    .esteira-step p { font-size: 13px; font-weight: 600; color: var(--navy); line-height: 1.3; }
+    .esteira-arrow { color: var(--gold); font-size: 20px; flex-shrink: 0; }
+
+    /* UPSELL */
+    .upsell-card { background: var(--navy); border-radius: 16px; padding: 40px; margin-top: 40px; display: flex; gap: 32px; align-items: center; }
+    .upsell-icon { font-size: 40px; flex-shrink: 0; }
+    .upsell-tag { font-size: 10px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: var(--gold); margin-bottom: 8px; display: block; }
+    .upsell-card h3 { font-size: 20px; color: var(--white); margin-bottom: 10px; }
+    .upsell-card p { font-size: 14px; color: rgba(255,255,255,0.6); line-height: 1.7; margin-bottom: 20px; }
+    .btn-upsell { display: inline-block; background: transparent; border: 2px solid var(--gold); color: var(--gold); font-weight: 700; font-size: 14px; padding: 11px 24px; border-radius: 8px; transition: all 0.2s; }
+    .btn-upsell:hover { background: var(--gold); color: var(--navy); }
+
+    .testimonials-jdd { background: var(--off-white); }
+    .testimonials-jdd-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; margin-top: 48px; }
+    .t-card { background: var(--white); border-top: 3px solid var(--gold); border-radius: 4px; padding: 32px 28px; }
+    .t-text { font-size: 15px; color: var(--text); line-height: 1.75; margin-bottom: 24px; font-style: italic; }
+    .t-author { font-size: 13px; font-weight: 600; color: var(--navy); letter-spacing: 0.5px; }
+    .t-result { font-size: 12px; color: var(--gray); margin-top: 4px; }
+    @media (max-width: 768px) { .testimonials-jdd-grid { grid-template-columns: 1fr; } }
+
+    footer { background: #081e30; color: rgba(255,255,255,0.5); text-align: center; padding: 32px 24px; font-size: 13px; }
+    footer a { color: var(--gold); }
+
+    @media (max-width: 768px) {
+      .diag-grid { grid-template-columns: 1fr; }
+      .what-inner { grid-template-columns: 1fr; }
+      .before-after { grid-template-columns: 1fr; }
+      .upsell-card { flex-direction: column; padding: 32px; }
+    }
+    @media (max-width: 480px) {
+      section { padding: 60px 20px; }
+      .price-top { padding: 32px 24px 24px; }
+      .price-body { padding: 24px; }
+      .esteira-arrow { display: none; }
+      .esteira-step { min-width: 100%; }
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <div class="nav-inner">
+      <span class="nav-logo">Flávia <span>Schuscimann</span></span>
+      <a href="../" class="nav-back">Voltar ao início</a>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-inner">
+      <div>
+        <span class="hero-badge">✦ Jornada Domine Seu Dinheiro</span>
+        <h1>Sair da confusão e organizar o dinheiro de verdade. Com <span>clareza e método.</span></h1>
+        <p class="hero-desc">Organize sua vida financeira entendendo suas prioridades reais, estruturando o fluxo do dinheiro e criando uma base sólida para tomar decisões com segurança.</p>
+        <a href="#comprar" class="btn-hero">Quero a JDD</a>
+      </div>
+      <div class="hero-visual">
+        <img src="../mapa/Flavia.png" alt="Flávia Schuscimann" class="hero-photo" />
+        <div class="floating-card">
+          <p class="fc-label">Programa</p>
+          <p class="fc-value">Programa Completo</p>
+          <p class="fc-sub">Acesso imediato</p>
+          <span class="fc-badge">✦ Disponível agora</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="gold-line"></div>
+
+  <!-- DIAGNÓSTICO -->
+  <section class="diagnose">
+    <div class="container">
+      <span class="pill">Identificação</span>
+      <h2 class="section-title">Você está fazendo tudo e <span>nada funciona?</span></h2>
+      <p class="section-subtitle">Isso não é falta de esforço. É falta de estrutura e direção clara. Veja se você reconhece algum desses cenários.</p>
+      <div class="diag-grid">
+        <div class="diag-card">
+          <span class="diag-icon">🌀</span>
+          <p>Confusão sobre o que fazer primeiro com o dinheiro todo mês.</p>
+        </div>
+        <div class="diag-card">
+          <span class="diag-icon">📚</span>
+          <p>Excesso de informação financeira por aí, mas pouca direção sobre o que é certo para você.</p>
+        </div>
+        <div class="diag-card">
+          <span class="diag-icon">🔁</span>
+          <p>Dificuldade de manter consistência. O que funciona por um tempo logo para de funcionar.</p>
+        </div>
+        <div class="diag-card">
+          <span class="diag-icon">😟</span>
+          <p>Insegurança nas decisões financeiras. Medo de errar e acabar pior do que antes.</p>
+        </div>
+        <div class="diag-card">
+          <span class="diag-icon">🎯</span>
+          <p>Falta de clareza sobre prioridades. Tudo parece urgente e nada avança de verdade.</p>
+        </div>
+        <div class="diag-card">
+          <span class="diag-icon">🚧</span>
+          <p>Sensação de estar no improviso financeiro, mesmo quando a renda não é o problema.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- O QUE É -->
+  <section class="what">
+    <div class="container">
+      <div class="what-inner">
+        <div class="what-left">
+          <span class="pill">O programa</span>
+          <h2>Organizar a <em>mente</em> e o dinheiro ao mesmo tempo.</h2>
+          <p>A Jornada Domine Seu Dinheiro não é sobre controle financeiro. É sobre entender sua fase atual, definir prioridades reais e criar uma estrutura prática que você consegue manter.</p>
+          <p>Você sai com clareza sobre onde está, o que fazer agora e como avançar sem precisar recomeçar toda vez.</p>
+        </div>
+        <div class="what-right">
+          <span class="what-right-label">Estrutura do programa</span>
+          <ul class="module-list">
+            <li><span class="module-num">01</span> Boas-vindas + orientações de uso</li>
+            <li><span class="module-num">02</span> Recomeço Financeiro — Guia completo</li>
+            <li><span class="module-num">03</span> Sua Relação com o Dinheiro</li>
+            <li><span class="module-num">04</span> Gestão de Caixa Descomplicada</li>
+            <li><span class="module-num">05</span> Estrutura Financeira para o Dia a Dia</li>
+            <li><span class="module-num">06</span> Organização Financeira no Dia a Dia (Bônus)</li>
+            <li><span class="module-num">✦</span> +Bônus: Roda da Vida, Quiz de Perfil, Mapa dos Gatilhos e Diagnóstico Financeiro</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ANTES E DEPOIS -->
+  <section class="transform">
+    <div class="container">
+      <span class="pill">Transformação</span>
+      <h2 class="section-title">O que muda depois da Jornada.</h2>
+      <div class="before-after">
+        <div class="ba-card before">
+          <span class="ba-label">Antes</span>
+          <ul class="ba-list">
+            <li><span class="ba-icon">✕</span> Confusão sobre onde o dinheiro vai</li>
+            <li><span class="ba-icon">✕</span> Sensação de sempre recomeçar</li>
+            <li><span class="ba-icon">✕</span> Decisões por impulso ou medo</li>
+            <li><span class="ba-icon">✕</span> Falta de prioridade clara</li>
+            <li><span class="ba-icon">✕</span> Improviso financeiro constante</li>
+          </ul>
+        </div>
+        <div class="ba-card after">
+          <span class="ba-label">Depois</span>
+          <ul class="ba-list">
+            <li><span class="ba-icon">✓</span> Clareza sobre sua fase financeira atual</li>
+            <li><span class="ba-icon">✓</span> Estrutura prática que você consegue manter</li>
+            <li><span class="ba-icon">✓</span> Segurança para tomar decisões</li>
+            <li><span class="ba-icon">✓</span> Prioridades definidas e caminho claro</li>
+            <li><span class="ba-icon">✓</span> Direção real para avançar</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PARA QUEM -->
+  <section class="for-who">
+    <div class="container">
+      <span class="pill">Para quem é</span>
+      <h2 class="section-title">Essa jornada é para você que...</h2>
+      <div class="fw-list">
+        <div class="fw-item"><span class="fw-bullet"></span> Quer organizar as finanças mas não sabe por onde começar de forma consistente</div>
+        <div class="fw-item"><span class="fw-bullet"></span> Tem renda, mas sente que o dinheiro nunca rende o suficiente</div>
+        <div class="fw-item"><span class="fw-bullet"></span> Está cansada de recomeçar e quer uma estrutura que dura</div>
+        <div class="fw-item"><span class="fw-bullet"></span> Precisa de mais clareza antes de avançar para investimentos</div>
+        <div class="fw-item"><span class="fw-bullet"></span> Quer sair do improviso e ter controle real sobre as decisões financeiras</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- POSICIONAMENTO -->
+  <section class="position">
+    <div class="container">
+      <div class="position-card">
+        <span class="pill" style="background:rgba(207,174,101,0.12);border-color:rgba(207,174,101,0.35);color:var(--gold);">Diferencial</span>
+        <h2>Não é controle financeiro. É organizar a <em>mente</em> e o dinheiro ao mesmo tempo.</h2>
+        <p style="margin-top:16px;">A Jornada transforma pessoas que estavam confusas em pessoas com direção, prontas para estruturar uma vida financeira completa. É o passo intermediário entre o primeiro diagnóstico e o acompanhamento aprofundado da Mentoria Trilogia.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- PREÇO -->
+  <section class="pricing" id="comprar">
+    <div class="container">
+      <span class="pill">Investimento</span>
+      <h2 class="section-title">Acesso imediato.</h2>
+      <div class="price-wrap">
+        <div class="price-top">
+          <p class="price-label">Jornada Domine Seu Dinheiro</p>
+          <p style="font-family:'Playfair Display',serif;font-size:22px;color:rgba(255,255,255,0.35);text-decoration:line-through;line-height:1;margin-bottom:4px;">R$297</p>
+          <p class="price-main">R$197</p>
+          <p class="price-note">Pagamento único · Acesso imediato</p>
+        </div>
+        <div class="price-body">
+          <ul class="includes-list">
+            <li>Guia do Recomeço Financeiro</li>
+            <li>Sua Relação com o Dinheiro</li>
+            <li>Gestão de Caixa Descomplicada</li>
+            <li>Estrutura Financeira para o Dia a Dia</li>
+            <li>Guia Completo da Jornada</li>
+            <li>Bônus: Checklist Semanal + Planner Mensal</li>
+            <li>Bônus: Roda da Vida Financeira</li>
+            <li>Bônus: Quiz de Perfil Financeiro</li>
+            <li>Bônus: Mapa dos Gatilhos Mentais</li>
+            <li>Bônus: Diagnóstico da Saúde Financeira</li>
+            <li>Acesso imediato após a compra</li>
+          </ul>
+          <a href="https://pay.kiwify.com.br/a1ulIuQ" class="btn-buy" target="_blank">Quero a JDD →</a>
+          <p class="guarantee-note">Garantia de 7 dias. Se não fizer sentido, devolvemos tudo.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- DEPOIMENTOS -->
+  <section class="testimonials-jdd">
+    <div class="container">
+      <span class="section-tag">Resultados reais</span>
+      <h2 class="section-title">Quem aplicou o método.</h2>
+      <div class="testimonials-jdd-grid">
+        <div class="t-card">
+          <p class="t-text">"Passando para agradecer a imensa ajuda que me deu em minha vida financeira. Através da Jornada Domine Seu Dinheiro, consegui me organizar, guardar dinheiro e hoje não tenho mais dívidas no cartão. Posso dizer que estou com minha vida financeira bem melhor agora."</p>
+          <p class="t-author">Tiago</p>
+          <p class="t-result">Zerou dívidas no cartão após a JDD</p>
+        </div>
+        <div class="t-card">
+          <p class="t-text">"Eu não tinha noção do quanto eu gastava entre canais pagos, apps e linha telefônica. Quando fiz esse exercício, identifiquei onde o gasto estava sendo exagerado. Consegui renegociar meu plano e a economia foi gigantesca. Obrigada, Flávia, por abrir meus olhos."</p>
+          <p class="t-author">Lu Diniz</p>
+          <p class="t-result">Economia gigantesca identificando gastos invisíveis</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ESTEIRA + UPSELL -->
+  <section class="esteira">
+    <div class="esteira-inner">
+      <span class="pill">Sua jornada na esteira</span>
+      <h2 class="section-title">Onde a JDD se encaixa.</h2>
+      <div class="esteira-flow">
+        <div class="esteira-step">
+          <span>Entrada</span>
+          <p>Mapa da Reserva</p>
+        </div>
+        <span class="esteira-arrow">→</span>
+        <div class="esteira-step active">
+          <span>Você está aqui</span>
+          <p>JDD</p>
+        </div>
+        <span class="esteira-arrow">→</span>
+        <div class="esteira-step">
+          <span>Curso</span>
+          <p>Reserva que Rende</p>
+        </div>
+        <span class="esteira-arrow">→</span>
+        <div class="esteira-step">
+          <span>Mentoria</span>
+          <p>Mentoria Trilogia</p>
+        </div>
+      </div>
+      <div class="upsell-card">
+        <div class="upsell-icon">🏆</div>
+        <div>
+          <span class="upsell-tag">Próximo passo</span>
+          <h3>Pronta para ir mais fundo?</h3>
+          <p>Quem conclui a Jornada com estrutura organizada está pronta para o acompanhamento completo da Mentoria Trilogia Financeira, onde a transformação se torna permanente.</p>
+          <a href="../mentoria/" class="btn-upsell">Conhecer a Mentoria Trilogia</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <p>Flávia Schuscimann, CFP® &nbsp;|&nbsp; <a href="https://www.instagram.com/flavia.schuscimann" target="_blank">@flavia.schuscimann</a> &nbsp;|&nbsp; <a href="../">flaviaschusciman.com</a></p>
+    <p style="margin-top:8px">2026 &copy; Todos os direitos reservados</p>
+  </footer>
+
+</body>
+</html>

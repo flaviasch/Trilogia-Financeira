@@ -5,6 +5,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Mentoria Trilogia Financeira | Flávia Schuscimann</title>
   <meta name="description" content="Transforme sua renda em patrimônio real. Mentoria individual com Flávia Schuscimann, CFP®, para mulheres que ganham bem mas ainda não construíram a estrutura financeira que merecem." />
+  <meta name="keywords" content="mentoria financeira individual, mentoria planejamento financeiro, mentoria CFP, alta renda finanças, mulheres e dinheiro, construir patrimônio, planejadora financeira, Flávia Schuscimann" />
+  <link rel="canonical" href="https://flaviaschusciman.com/mentoria/" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://flaviaschusciman.com/mentoria/" />
+  <meta property="og:title" content="Mentoria Trilogia Financeira | Flávia Schuscimann" />
+  <meta property="og:description" content="Transforme sua renda em patrimônio real. Mentoria individual com Flávia Schuscimann, CFP®, para mulheres que ganham bem mas ainda não construíram a estrutura financeira que merecem." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
@@ -42,7 +48,6 @@
       background: var(--navy);
       color: var(--white);
       padding: 80px 24px 100px;
-      text-align: center;
       position: relative;
       overflow: hidden;
     }
@@ -56,6 +61,8 @@
       background: rgba(207,174,101,0.06);
       pointer-events: none;
     }
+
+    .hero-inner { max-width: 1000px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: center; }
 
     .hero-tag {
       display: inline-block;
@@ -71,21 +78,27 @@
     }
 
     .hero h1 {
-      font-size: clamp(32px, 5vw, 56px);
+      font-size: clamp(32px, 5vw, 52px);
       font-weight: 700;
-      max-width: 800px;
-      margin: 0 auto 24px;
+      margin: 0 0 24px;
       line-height: 1.15;
     }
 
     .hero h1 span { color: var(--gold); }
 
     .hero p {
-      font-size: clamp(16px, 2vw, 20px);
+      font-size: clamp(16px, 2vw, 18px);
       color: rgba(255,255,255,0.75);
-      max-width: 640px;
-      margin: 0 auto 48px;
+      margin: 0 0 40px;
     }
+
+    .hero-visual { position: relative; }
+    .hero-photo { width: 100%; border-radius: 12px; display: block; object-fit: cover; aspect-ratio: 4/5; object-position: top; border: 2px solid rgba(207,174,101,0.25); }
+    .floating-card { position: absolute; background: var(--white); border-radius: 10px; padding: 14px 18px; box-shadow: 0 8px 32px rgba(0,0,0,0.25); bottom: 32px; left: -20px; }
+    .floating-card .floating-card-label { font-size: 10px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: var(--gold); margin-bottom: 4px; }
+    .floating-card .floating-card-value { font-size: 13px; font-weight: 600; color: var(--navy); line-height: 1.4; margin: 0; }
+
+    @media (max-width: 768px) { .hero-inner { grid-template-columns: 1fr; } .hero-visual { display: none; } }
 
     .btn {
       display: inline-block;
@@ -130,7 +143,7 @@
       font-weight: 700;
       letter-spacing: 3px;
       text-transform: uppercase;
-      color: var(--gold);
+      color: var(--navy);
       margin-bottom: 16px;
     }
 
@@ -472,6 +485,43 @@
       line-height: 1.6;
     }
 
+    /* ── DEPOIMENTOS ── */
+    .testimonials { background: var(--navy); }
+    .testimonials .section-tag { color: var(--gold); }
+    .testimonials .section-title { color: var(--white); }
+    .testimonials-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 24px;
+      margin-top: 48px;
+    }
+    .testimonial-card {
+      background: rgba(255,255,255,0.05);
+      border: 1px solid rgba(207,174,101,0.2);
+      border-top: 3px solid var(--gold);
+      border-radius: 4px;
+      padding: 32px 28px;
+    }
+    .testimonial-text {
+      font-size: 15px;
+      color: rgba(255,255,255,0.85);
+      line-height: 1.75;
+      margin-bottom: 24px;
+      font-style: italic;
+    }
+    .testimonial-author {
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--gold);
+      letter-spacing: 0.5px;
+    }
+    .testimonial-result {
+      font-size: 12px;
+      color: rgba(255,255,255,0.45);
+      margin-top: 4px;
+    }
+    @media (max-width: 900px) { .testimonials-grid { grid-template-columns: 1fr; } }
+
     /* ── FAQ ── */
     .faq { background: var(--off-white); }
 
@@ -534,11 +584,23 @@
     }
 
     /* ── RESPONSIVE ── */
+    @media (max-width: 768px) {
+      .transformation .container { grid-template-columns: 1fr; gap: 40px; }
+      .about-grid { grid-template-columns: 1fr; }
+      .about-img { max-width: 320px; margin: 0 auto; }
+    }
     @media (max-width: 640px) {
       section { padding: 60px 20px; }
       .hero { padding: 60px 20px 80px; }
+      .pillars { grid-template-columns: 1fr; }
       .pillar-card { padding: 28px 20px; }
+      .price-box { padding: 28px 20px; }
       .price-main { font-size: 40px; }
+      .journey-grid { grid-template-columns: 1fr; }
+    }
+    @media (max-width: 480px) {
+      .price-box { padding: 20px 16px; }
+      .faq-item { padding: 18px; }
     }
   </style>
 </head>
@@ -546,11 +608,20 @@
 
   <!-- HERO -->
   <section class="hero">
-    <div class="container">
-      <span class="hero-tag">Mentoria Individual · Vagas Limitadas</span>
-      <h1>Você ganha bem.<br><span>Agora é hora de construir</span><br>patrimônio de verdade.</h1>
-      <p>O primeiro passo é uma conversa gratuita de 60 minutos. Você me conta sua situação, eu entendo seu cenário e você sai com clareza e direção real. Sem compromisso.</p>
-      <a href="#sessao" class="btn">Quero agendar minha Sessão da Clareza</a>
+    <div class="hero-inner">
+      <div>
+        <span class="hero-tag">✦ Mentoria Trilogia Financeira</span>
+        <h1>Você ganha bem.<br><span>Agora é hora de construir</span><br>patrimônio de verdade.</h1>
+        <p>O primeiro passo é uma conversa gratuita de 60 minutos. Você me conta sua situação, eu entendo seu cenário e você sai com clareza e direção real. Sem compromisso.</p>
+        <a href="https://forms.gle/Qnvhmc8CBwgue9DH7" class="btn" target="_blank">Agendar minha Sessão da Clareza</a>
+      </div>
+      <div class="hero-visual">
+        <img src="Flavia%201.jpg" alt="Flávia Schuscimann" class="hero-photo" />
+        <div class="floating-card">
+          <p class="floating-card-label">Vagas Limitadas</p>
+          <p class="floating-card-value">Mentoria Individual<br>✦ Vagas Limitadas</p>
+        </div>
+      </div>
     </div>
   </section>
 
@@ -732,44 +803,68 @@
     </div>
   </section>
 
-  <!-- INVESTIMENTO -->
+  <!-- DEPOIMENTOS -->
+  <section class="testimonials">
+    <div class="container">
+      <span class="section-tag">Resultados reais</span>
+      <h2 class="section-title">Nas palavras de quem viveu.</h2>
+      <div class="testimonials-grid">
+
+        <div class="testimonial-card">
+          <p class="testimonial-text">"Desde que iniciei a mentoria, a mudança mais tangível foi a forma como passei a lidar com o cartão de crédito. No primeiro mês já reduzi minha fatura em 34%. No seguinte, mais 65%. Quando olho o comparativo do início até agora, a queda acumulada é de quase 77%. Mais do que o número, isso representa mudança de mentalidade e decisões financeiras alinhadas com meus objetivos de longo prazo."</p>
+          <p class="testimonial-author">Tathiely B.</p>
+          <p class="testimonial-result">Redução de 77% nos gastos com cartão</p>
+        </div>
+
+        <div class="testimonial-card">
+          <p class="testimonial-text">"Antes eu não guardava dinheiro pra nada. Ganhava, gastava e no final do mês nem sabia pra onde tinha ido. Reserva de emergência? Zero. A Flávia conseguiu transformar um assunto que pra mim era super complicado em algo mais leve. Hoje tenho clareza de onde vai o meu dinheiro, consigo me organizar e ter a minha reserva. Sou muito grata por ter uma assessora que realmente se importa e não me deixa desistir da minha liberdade financeira."</p>
+          <p class="testimonial-author">Ana Paula</p>
+          <p class="testimonial-result">Saiu do zero e construiu sua primeira reserva</p>
+        </div>
+
+        <div class="testimonial-card">
+          <p class="testimonial-text">"Antes, a gente vivia num looping: só pagava contas e, no fim do mês, o dinheiro sumia. Com a planilha que a Flávia sugeriu, percebi que boa parte ia pra besteiras. Consegui zerar dois cartões com dívidas atrasadas e agora consigo ver claramente para onde vai cada gasto. Só de começar já sentimos uma diferença enorme na nossa vida financeira."</p>
+          <p class="testimonial-author">Rodrigo V.</p>
+          <p class="testimonial-result">Zerou dois cartões com dívidas atrasadas</p>
+        </div>
+
+        <div class="testimonial-card">
+          <p class="testimonial-text">"Antes do nosso planejamento, eu achava que tinha noção das minhas finanças — mas a verdade é que eu vivia sem clareza do que estava me sabotando. Você conseguiu organizar tudo de um jeito tão leve, prático e sem julgamentos, que me fez sentir segura pra olhar de frente pra minha relação com o dinheiro. Hoje tenho uma visão muito mais estratégica, sei onde estou e pra onde quero ir. Foi um divisor de águas pra mim."</p>
+          <p class="testimonial-author">Paula</p>
+          <p class="testimonial-result">Visão estratégica e paz com o dinheiro</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- PROCESSO SELETIVO -->
   <section class="investment">
     <div class="container">
-      <span class="section-tag">Investimento</span>
-      <h2 class="section-title">Se você fosse construir isso sozinha</h2>
-      <p class="section-subtitle">Veja o que está incluído e o valor real de cada parte.</p>
-
-      <div class="anchor-table">
-        <div class="anchor-row">
-          <span>6 encontros individuais com acompanhamento</span>
-          <span>R$ 8.000</span>
-        </div>
-        <div class="anchor-row">
-          <span>Trilha exclusiva no Notion</span>
-          <span>R$ 1.200</span>
-        </div>
-        <div class="anchor-row">
-          <span>Pacote completo de ferramentas e materiais</span>
-          <span>R$ 1.300</span>
-        </div>
-        <div class="anchor-row">
-          <span>Suporte entre os encontros</span>
-          <span>R$ 1.000</span>
-        </div>
-        <div class="anchor-row total">
-          <span>Valor real total</span>
-          <span>R$ 11.500</span>
-        </div>
-      </div>
+      <span class="section-tag">Processo Seletivo</span>
+      <h2 class="section-title">Vagas limitadas por turma.</h2>
+      <p class="section-subtitle">A mentoria tem número reduzido de vagas para garantir acompanhamento real. O processo começa com uma conversa gratuita — você me conta sua situação e eu avalio se faz sentido avançarmos juntas.</p>
 
       <div class="price-box">
-        <p class="price-label">Seu investimento</p>
-        <p class="price-main">R$ 4.000</p>
-        <p class="price-installment">à vista ou em até 6x de R$ 750,60 no cartão</p>
-        <a href="#sessao" class="btn" style="width:100%; text-align:center; display:block;">Quero agendar minha Sessão da Clareza</a>
+        <p class="price-label">Como funciona o processo</p>
+        <div style="text-align:left;margin-bottom:32px;">
+          <div style="display:flex;gap:14px;padding:14px 0;border-bottom:1px solid rgba(207,174,101,0.2);">
+            <span style="font-family:'Playfair Display',serif;font-size:20px;color:var(--gold);font-weight:700;flex-shrink:0;min-width:28px;">01</span>
+            <span style="font-size:15px;color:rgba(255,255,255,0.85);padding-top:2px;">Você agenda a Sessão da Clareza Financeira — gratuita e sem compromisso</span>
+          </div>
+          <div style="display:flex;gap:14px;padding:14px 0;border-bottom:1px solid rgba(207,174,101,0.2);">
+            <span style="font-family:'Playfair Display',serif;font-size:20px;color:var(--gold);font-weight:700;flex-shrink:0;min-width:28px;">02</span>
+            <span style="font-size:15px;color:rgba(255,255,255,0.85);padding-top:2px;">Conversamos por 60 a 90 minutos sobre o seu cenário financeiro real</span>
+          </div>
+          <div style="display:flex;gap:14px;padding:14px 0;">
+            <span style="font-family:'Playfair Display',serif;font-size:20px;color:var(--gold);font-weight:700;flex-shrink:0;min-width:28px;">03</span>
+            <span style="font-size:15px;color:rgba(255,255,255,0.85);padding-top:2px;">Se fizer sentido para as duas partes, apresento as condições e avançamos</span>
+          </div>
+        </div>
+        <a href="https://forms.gle/Qnvhmc8CBwgue9DH7" class="btn" target="_blank" style="width:100%; text-align:center; display:block;">Agendar minha Sessão da Clareza</a>
       </div>
 
-      <p class="investment-note">Esse investimento não compra ferramentas. Compra os anos que você para de perder tentando sozinha. O objetivo não é apenas organizar seu dinheiro é mudar a direção da sua vida financeira.</p>
+      <p class="investment-note">Novas turmas abrem periodicamente. O número de vagas é limitado para garantir presença real e resultado concreto.</p>
     </div>
   </section>
 
@@ -808,13 +903,13 @@
     <div class="container">
       <h2>O próximo passo<br>é <span>seu</span>.</h2>
       <p>A Sessão da Clareza Financeira é gratuita, individual e com a Flávia. Você sai com diagnóstico real e próximos passos concretos.</p>
-      <a href="https://wa.me/5511995658658?text=Ol%C3%A1%2C%20Fl%C3%A1via%21%20Quero%20agendar%20minha%20Sess%C3%A3o%20da%20Clareza%20Financeira." class="btn" target="_blank">Agendar minha Sessão da Clareza</a>
+      <a href="https://forms.gle/Qnvhmc8CBwgue9DH7" class="btn" target="_blank">Agendar minha Sessão da Clareza</a>
       <p class="investment-note" style="margin-top:20px">Após o contato, Flávia retorna em até 48h para agendar.</p>
     </div>
   </section>
 
   <footer>
-    <p>© 2025 Flávia Schuscimann · CFP® · Todos os direitos reservados</p>
+    <p>© 2026 Flávia Schuscimann · CFP® · Todos os direitos reservados</p>
   </footer>
 
 </body>
