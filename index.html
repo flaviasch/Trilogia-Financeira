@@ -71,8 +71,10 @@
       max-width: 440px;
     }
     .hero-credentials { display: flex; flex-wrap: wrap; gap: 8px; }
-    .hero-diagnostico { display: inline-block; margin-top: 20px; font-size: 13px; color: rgba(255,255,255,0.5); border-bottom: 1px solid rgba(255,255,255,0.2); padding-bottom: 2px; transition: color 0.2s, border-color 0.2s; }
-    .hero-diagnostico:hover { color: var(--gold); border-color: var(--gold); }
+    .diagnostico-cta { display: flex; align-items: center; gap: 16px; background: var(--off-white); border: 1px solid var(--border); border-left: 3px solid var(--gold); border-radius: 6px; padding: 16px 24px; margin-bottom: 40px; }
+    .diagnostico-cta p { font-size: 14px; color: var(--gray); white-space: nowrap; }
+    .diagnostico-cta a { font-size: 14px; font-weight: 600; color: var(--navy); border-bottom: 1px solid rgba(13,43,69,0.25); padding-bottom: 1px; transition: color 0.2s, border-color 0.2s; }
+    .diagnostico-cta a:hover { color: var(--gold-dark); border-color: var(--gold); }
     .cred-tag {
       background: rgba(207,174,101,0.1);
       border: 1px solid rgba(207,174,101,0.28);
@@ -261,7 +263,6 @@
           <span class="cred-tag">Coautora — Enriqueça enquanto dorme</span>
           <span class="cred-tag">Finanças comportamentais</span>
         </div>
-        <a href="https://seu-dinheiro-conecta.lovable.app/" class="hero-diagnostico" target="_blank">Não sabe por onde começar? Faça o diagnóstico gratuito →</a>
       </div>
       <div class="hero-photo">
         <img src="flavia.jpg" alt="Flávia Schuscimann" />
@@ -441,6 +442,12 @@
         </div>
 
       </div>
+
+      <div class="diagnostico-cta">
+        <p>Não sabe qual escolher?</p>
+        <a href="https://seu-dinheiro-conecta.lovable.app/" target="_blank">Faça o diagnóstico gratuito e descubra seu próximo passo →</a>
+      </div>
+
     </div>
   </section>
 
