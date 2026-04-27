@@ -71,10 +71,6 @@
       max-width: 440px;
     }
     .hero-credentials { display: flex; flex-wrap: wrap; gap: 8px; }
-    .diagnostico-cta { display: flex; align-items: center; gap: 16px; background: var(--off-white); border: 1px solid var(--border); border-left: 3px solid var(--gold); border-radius: 6px; padding: 16px 24px; margin-bottom: 40px; }
-    .diagnostico-cta p { font-size: 14px; color: var(--gray); white-space: nowrap; }
-    .diagnostico-cta a { font-size: 14px; font-weight: 600; color: var(--navy); border-bottom: 1px solid rgba(13,43,69,0.25); padding-bottom: 1px; transition: color 0.2s, border-color 0.2s; }
-    .diagnostico-cta a:hover { color: var(--gold-dark); border-color: var(--gold); }
     .cred-tag {
       background: rgba(207,174,101,0.1);
       border: 1px solid rgba(207,174,101,0.28);
@@ -135,59 +131,53 @@
     .esteira .section-title { color: var(--white); }
     .esteira .section-subtitle { color: rgba(255,255,255,0.55); }
     .esteira-steps {
-      display: flex;
-      align-items: stretch;
-      gap: 0;
-      margin-top: 48px;
-      overflow-x: auto;
+      display: flex; align-items: stretch; gap: 0;
+      margin-top: 48px; overflow-x: auto;
     }
     .esteira-step {
-      flex: 1;
-      min-width: 140px;
+      flex: 1; min-width: 130px;
       background: rgba(255,255,255,0.05);
       border: 1px solid rgba(255,255,255,0.1);
-      border-right: none;
-      padding: 24px 20px;
-      position: relative;
-      text-align: center;
+      border-right: none; padding: 24px 16px;
+      position: relative; text-align: center;
     }
     .esteira-step:last-child { border-right: 1px solid rgba(255,255,255,0.1); }
     .esteira-step:not(:last-child)::after {
-      content: '›';
-      position: absolute;
-      right: -12px;
-      top: 50%;
-      transform: translateY(-50%);
-      color: var(--gold);
-      font-size: 20px;
-      z-index: 2;
-      background: var(--navy);
-      padding: 0 2px;
+      content: '›'; position: absolute; right: -12px; top: 50%;
+      transform: translateY(-50%); color: var(--gold); font-size: 20px;
+      z-index: 2; background: var(--navy); padding: 0 2px;
     }
-    .esteira-step.highlight {
-      background: rgba(207,174,101,0.1);
-      border-color: rgba(207,174,101,0.3);
-    }
+    .esteira-step.highlight { background: rgba(207,174,101,0.1); border-color: rgba(207,174,101,0.3); }
     .step-tag { font-size: 9px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: var(--gold); margin-bottom: 8px; display: block; }
     .step-name { font-size: 13px; font-weight: 600; color: var(--white); line-height: 1.3; margin-bottom: 6px; }
-    .step-price { font-family: 'Playfair Display', serif; font-size: 16px; color: var(--gold); font-weight: 700; }
-
-    /* ===== SOLUÇÕES ===== */
-    .solutions { background: var(--white); }
-    .solutions-grid {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 20px;
+    .step-price { font-size: 13px; color: rgba(255,255,255,0.45); }
+    .step-badge-novo { display: inline-block; font-size: 9px; font-weight: 700; background: rgba(207,174,101,0.2); color: var(--gold); padding: 2px 8px; border-radius: 100px; margin-bottom: 6px; letter-spacing: 1px; }
+    .diagnostico-entrada {
+      margin-top: 28px; display: flex; align-items: center; gap: 12px;
+      padding: 14px 20px; background: rgba(255,255,255,0.04);
+      border: 1px solid rgba(255,255,255,0.08); border-left: 3px solid rgba(207,174,101,0.5);
+      border-radius: 6px; max-width: 520px;
     }
+    .diagnostico-entrada p { font-size: 13px; color: rgba(255,255,255,0.45); white-space: nowrap; }
+    .diagnostico-entrada a { font-size: 13px; font-weight: 600; color: var(--gold); opacity: 0.85; transition: opacity 0.2s; }
+    .diagnostico-entrada a:hover { opacity: 1; }
+
+    /* ===== ECOSSISTEMA ===== */
+    .solutions { background: var(--white); }
+    .eco-group { margin-bottom: 44px; }
+    .eco-group:last-child { margin-bottom: 0; }
+    .eco-group-header { display: flex; align-items: center; gap: 14px; margin-bottom: 20px; }
+    .eco-group-header span { font-size: 10px; font-weight: 700; letter-spacing: 2.5px; text-transform: uppercase; color: var(--navy); opacity: 0.45; white-space: nowrap; }
+    .eco-group-header::after { content: ''; flex: 1; height: 1px; background: var(--border); }
+    .eco-grid-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+    .eco-grid-2 { display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; }
     .solution-card {
-      border: 1px solid var(--border);
-      border-radius: 8px;
-      overflow: hidden;
-      display: flex;
-      flex-direction: column;
+      border: 1px solid var(--border); border-radius: 8px; overflow: hidden;
+      display: flex; flex-direction: column;
       transition: box-shadow 0.2s, transform 0.2s;
     }
     .solution-card:hover { box-shadow: 0 8px 32px rgba(13,43,69,0.12); transform: translateY(-3px); }
+    .solution-card.destaque { border-color: rgba(207,174,101,0.4); box-shadow: 0 0 0 1px rgba(207,174,101,0.2); }
     .solution-card-top { background: var(--navy); padding: 24px 20px 20px; }
     .solution-type { font-size: 9px; font-weight: 700; letter-spacing: 2.5px; text-transform: uppercase; color: var(--gold); margin-bottom: 10px; display: block; }
     .solution-card-top h3 { font-size: 17px; color: var(--white); line-height: 1.3; }
@@ -197,18 +187,12 @@
     .solution-price small { font-family: 'Inter', sans-serif; font-size: 12px; color: var(--gray); font-weight: 400; }
     .solution-badge { display: inline-block; font-size: 10px; font-weight: 600; padding: 3px 10px; border-radius: 100px; margin-bottom: 12px; }
     .badge-available { background: #DCFCE7; color: #166534; }
-    .badge-coming { background: #FEF9C3; color: #854D0E; }
+    .badge-limited { background: #FEF3C7; color: #92400E; }
     .badge-free { background: rgba(207,174,101,0.15); color: #92700A; }
-    .badge-entry { background: rgba(207,174,101,0.12); color: var(--gold-dark); }
+    .badge-novo { background: #DBEAFE; color: #1e40af; }
     .solution-link {
-      display: block;
-      text-align: center;
-      padding: 11px 16px;
-      border-radius: 6px;
-      font-size: 13px;
-      font-weight: 600;
-      background: var(--navy);
-      color: var(--white);
+      display: block; text-align: center; padding: 11px 16px; border-radius: 6px;
+      font-size: 13px; font-weight: 600; background: var(--navy); color: var(--white);
       transition: background 0.2s;
     }
     .solution-link:hover { background: var(--navy-light); }
@@ -221,25 +205,42 @@
     .purpose { background: var(--navy); color: var(--white); text-align: center; padding: 80px 24px; }
     .purpose .section-title { color: var(--white); }
     .purpose p { font-size: 18px; color: rgba(255,255,255,0.72); max-width: 620px; margin: 0 auto 40px; line-height: 1.8; }
-    .btn { display: inline-block; background: var(--gold); color: var(--navy); font-weight: 700; font-size: 16px; padding: 18px 48px; border-radius: 6px; transition: background 0.2s, transform 0.2s; }
+    .btn { display: inline-block; background: var(--gold); color: var(--navy); font-weight: 700; font-size: 16px; padding: 18px 40px; border-radius: 6px; transition: background 0.2s, transform 0.2s; }
     .btn:hover { background: var(--gold-light); transform: translateY(-2px); }
+    .btn-outline-gold { display: inline-block; background: transparent; border: 2px solid var(--gold); color: var(--gold); font-weight: 700; font-size: 16px; padding: 16px 40px; border-radius: 6px; transition: background 0.2s, transform 0.2s; }
+    .btn-outline-gold:hover { background: rgba(207,174,101,0.1); transform: translateY(-2px); }
+    .btn-row { display: flex; align-items: center; justify-content: center; gap: 16px; flex-wrap: wrap; }
+
+    /* ===== CREDENCIAIS ===== */
+    .credenciais { background: var(--off-white); padding: 40px 24px; border-top: 1px solid var(--border); }
+    .cred-row { display: flex; align-items: center; justify-content: center; gap: 40px; flex-wrap: wrap; }
+    .cred-item { display: flex; align-items: center; gap: 12px; }
+    .cred-item-dot { width: 6px; height: 6px; border-radius: 50%; background: var(--gold); flex-shrink: 0; }
+    .cred-item-text { font-size: 13px; color: var(--gray); line-height: 1.4; }
+    .cred-item-text strong { color: var(--navy); font-weight: 600; }
+    .cred-divider { width: 1px; height: 32px; background: var(--border); }
 
     footer { background: #081e30; color: rgba(255,255,255,0.5); text-align: center; padding: 32px 24px; font-size: 13px; }
     footer a { color: var(--gold); }
 
     /* ===== RESPONSIVE ===== */
-    @media (max-width: 1000px) { .solutions-grid { grid-template-columns: repeat(2, 1fr); } }
     @media (max-width: 900px) {
       .about-grid { grid-template-columns: 1fr; }
       .esteira-steps { flex-wrap: wrap; }
       .esteira-step { min-width: 45%; }
+      .eco-grid-3 { grid-template-columns: repeat(2, 1fr); }
     }
     @media (max-width: 768px) {
       .hero-inner { grid-template-columns: 1fr; min-height: auto; }
       .hero-photo { height: 420px; order: -1; }
       .hero-content { padding: 48px 24px 64px; }
-      .solutions-grid { grid-template-columns: 1fr; }
+      .eco-grid-3, .eco-grid-2 { grid-template-columns: 1fr; }
+      .btn-row { flex-direction: column; align-items: stretch; max-width: 320px; margin: 0 auto; }
+      .btn-row .btn, .btn-row .btn-outline-gold { text-align: center; }
+      .cred-divider { display: none; }
       .about-stats { grid-template-columns: repeat(3, 1fr); }
+      .diagnostico-entrada { flex-direction: column; align-items: flex-start; gap: 6px; }
+      .diagnostico-entrada p { white-space: normal; }
     }
     @media (max-width: 480px) {
       .about-stats { grid-template-columns: 1fr; }
@@ -313,11 +314,15 @@
       <p class="section-subtitle">Não existe ponto de entrada errado. Existe o seu momento agora.</p>
       <div class="esteira-steps">
         <div class="esteira-step">
-          <span class="step-tag">Entrada</span>
+          <span class="step-tag">Passo 1</span>
+          <p class="step-name">Raio-X Financeiro</p>
+        </div>
+        <div class="esteira-step">
+          <span class="step-tag">Passo 2</span>
           <p class="step-name">Mapa da Reserva Financeira</p>
         </div>
         <div class="esteira-step">
-          <span class="step-tag">Intermediário</span>
+          <span class="step-tag">Programa online</span>
           <p class="step-name">Jornada Domine Seu Dinheiro</p>
         </div>
         <div class="esteira-step">
@@ -337,115 +342,157 @@
           <p class="step-name">Trilogia Private</p>
         </div>
       </div>
+      <div class="diagnostico-entrada">
+        <p>Não sabe por onde começar?</p>
+        <a href="https://seu-dinheiro-conecta.lovable.app/" target="_blank">Faça o diagnóstico gratuito e descubra seu ponto de entrada →</a>
+      </div>
     </div>
   </section>
 
-  <!-- SOLUÇÕES -->
+  <!-- ECOSSISTEMA -->
   <section class="solutions">
     <div class="container">
       <span class="section-tag">Ecossistema</span>
       <h2 class="section-title">Todas as formas de trabalhar comigo</h2>
       <p class="section-subtitle">Encontre a solução certa para o seu momento agora.</p>
 
-      <div class="solutions-grid">
+      <!-- Grupo 1 -->
+      <div class="eco-group">
+        <div class="eco-group-header"><span>Por onde começar</span></div>
+        <div class="eco-grid-3">
 
-        <div class="solution-card">
-          <div class="solution-card-top">
-            <span class="solution-type">Produto de Entrada</span>
-            <h3>Mapa da Reserva Financeira</h3>
+          <div class="solution-card">
+            <div class="solution-card-top">
+              <span class="solution-type">Ferramenta gratuita</span>
+              <h3>Diagnóstico Financeiro</h3>
+            </div>
+            <div class="solution-card-body">
+              <span class="solution-badge badge-free">Gratuito</span>
+              <p>Descubra seu perfil financeiro em 5 perguntas e receba um direcionamento personalizado para o seu próximo passo.</p>
+              <a href="https://seu-dinheiro-conecta.lovable.app/" class="solution-link outline" target="_blank">Fazer o diagnóstico</a>
+            </div>
           </div>
-          <div class="solution-card-body">
-            <p>Entenda por que o dinheiro some e construa sua primeira reserva com clareza, leveza e segurança.</p>
-            <a href="mapa/" class="solution-link outline">Conhecer o produto</a>
+
+          <div class="solution-card">
+            <div class="solution-card-top">
+              <span class="solution-type">Passo 1</span>
+              <h3>Raio-X Financeiro</h3>
+            </div>
+            <div class="solution-card-body">
+              <p>Diagnóstico completo da sua situação financeira atual. Entenda onde está, onde está vazando e o que precisa mudar primeiro.</p>
+              <a href="raio-x/" class="solution-link outline">Conhecer o Raio-X</a>
+            </div>
           </div>
+
+          <div class="solution-card">
+            <div class="solution-card-top">
+              <span class="solution-type">Passo 2</span>
+              <h3>Mapa da Reserva Financeira</h3>
+            </div>
+            <div class="solution-card-body">
+              <p>Quanto você precisa guardar e como construir sua reserva. Do diagnóstico ao plano concreto, sem enrolação.</p>
+              <a href="mapa/" class="solution-link outline">Conhecer o Mapa</a>
+            </div>
+          </div>
+
         </div>
-
-        <div class="solution-card">
-          <div class="solution-card-top">
-            <span class="solution-type">Programa Online</span>
-            <h3>Jornada Domine Seu Dinheiro</h3>
-          </div>
-          <div class="solution-card-body">
-            <p>Organize sua vida financeira com clareza e método. Saia da confusão e construa uma base sólida para decisões seguras.</p>
-            <a href="jornada/" class="solution-link outline">Conhecer a jornada</a>
-          </div>
-        </div>
-
-        <div class="solution-card">
-          <div class="solution-card-top">
-            <span class="solution-type">Curso</span>
-            <h3>Reserva que Rende</h3>
-          </div>
-          <div class="solution-card-body">
-            <p>Invista sua reserva de emergência com segurança, clareza e confiança. Sem depender de ninguém para apertar o botão.</p>
-            <a href="reserva/" class="solution-link outline">Conhecer o curso</a>
-          </div>
-        </div>
-
-        <div class="solution-card">
-          <div class="solution-card-top">
-            <span class="solution-type">Comunidade</span>
-            <h3>Clube Trilogia Financeira</h3>
-          </div>
-          <div class="solution-card-body">
-            <p>Para quem já deu o primeiro passo e quer manter o movimento. Constância nas finanças e na vida.</p>
-            <a href="clube/" class="solution-link outline">Conhecer o clube</a>
-          </div>
-        </div>
-
-        <div class="solution-card">
-          <div class="solution-card-top">
-            <span class="solution-type">Mentoria</span>
-            <h3>Mentoria Trilogia Financeira</h3>
-          </div>
-          <div class="solution-card-body">
-            <span class="solution-badge badge-available">Vagas abertas</span>
-            <p>O método completo em 6 encontros individuais. Domínio, Crescimento Patrimonial e Liberdade Financeira.</p>
-            <a href="mentoria/" class="solution-link gold">Aplicar para uma vaga</a>
-          </div>
-        </div>
-
-        <div class="solution-card">
-          <div class="solution-card-top">
-            <span class="solution-type">Mentoria</span>
-            <h3>Trilogia Financeira Private</h3>
-          </div>
-          <div class="solution-card-body">
-            <span class="solution-badge badge-coming">Vagas limitadas</span>
-            <p>A experiência mais completa e personalizada. Arquitetura patrimonial, planejamento tributário e sucessório.</p>
-            <a href="mentoria-private/" class="solution-link gold">Quero saber mais</a>
-          </div>
-        </div>
-
-        <div class="solution-card">
-          <div class="solution-card-top">
-            <span class="solution-type">Assessoria de Investimentos</span>
-            <h3>Investimentos com estratégia</h3>
-          </div>
-          <div class="solution-card-body">
-            <span class="solution-badge badge-free">XP Investimentos</span>
-            <p>Assessoria personalizada credenciada à XP. Carteira estruturada de acordo com seus objetivos e perfil.</p>
-            <a href="assessoria/" class="solution-link outline">Conhecer a assessoria</a>
-          </div>
-        </div>
-
-        <div class="solution-card">
-          <div class="solution-card-top">
-            <span class="solution-type">Livro · Coautoria</span>
-            <h3>Enriqueça Enquanto Dorme</h3>
-          </div>
-          <div class="solution-card-body">
-            <span class="solution-badge badge-coming">Em breve</span>
-            <p>Coleção Educação Financeira Vol. 3. Capítulo de Flávia: "Diversificação: a arte de errar menos."</p>
-            <a href="livro/" class="solution-link outline">Ver o livro</a>
-          </div>
-        </div>
-
       </div>
 
-      <div class="diagnostico-cta">
-        <p>Não sabe qual escolher?</p>
-        <a href="https://seu-dinheiro-conecta.lovable.app/" target="_blank">Faça o diagnóstico gratuito e descubra seu próximo passo →</a>
+      <!-- Grupo 2 -->
+      <div class="eco-group">
+        <div class="eco-group-header"><span>Aprofunde</span></div>
+        <div class="eco-grid-3">
+
+          <div class="solution-card">
+            <div class="solution-card-top">
+              <span class="solution-type">Programa online</span>
+              <h3>Jornada Domine Seu Dinheiro</h3>
+            </div>
+            <div class="solution-card-body">
+              <p>Organize sua vida financeira com clareza e método. Saia da confusão e construa uma base sólida para decisões seguras.</p>
+              <a href="jornada/" class="solution-link outline">Conhecer a jornada</a>
+            </div>
+          </div>
+
+          <div class="solution-card">
+            <div class="solution-card-top">
+              <span class="solution-type">Programa online</span>
+              <h3>Reserva que Rende</h3>
+            </div>
+            <div class="solution-card-body">
+              <p>Invista sua reserva de emergência com segurança, clareza e confiança. Sem depender de ninguém para apertar o botão.</p>
+              <a href="reserva/" class="solution-link outline">Conhecer o programa</a>
+            </div>
+          </div>
+
+          <div class="solution-card">
+            <div class="solution-card-top">
+              <span class="solution-type">Livro · Coautoria</span>
+              <h3>Enriqueça Enquanto Dorme</h3>
+            </div>
+            <div class="solution-card-body">
+              <span class="solution-badge badge-limited">Em breve</span>
+              <p>Coleção Educação Financeira Vol. 3. Capítulo de Flávia: diversificação como estratégia de patrimônio.</p>
+              <a href="livro/" class="solution-link outline">Ver o livro</a>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- Grupo 3 -->
+      <div class="eco-group">
+        <div class="eco-group-header"><span>Acompanhamento</span></div>
+        <div class="eco-grid-2">
+
+          <div class="solution-card destaque">
+            <div class="solution-card-top">
+              <span class="solution-type">Mentoria</span>
+              <h3>Mentoria Trilogia Financeira</h3>
+            </div>
+            <div class="solution-card-body">
+              <span class="solution-badge badge-available">Vagas abertas</span>
+              <p>O método completo em encontros individuais. Domínio, Crescimento Patrimonial e Liberdade Financeira.</p>
+              <a href="mentoria/" class="solution-link gold">Aplicar para uma vaga</a>
+            </div>
+          </div>
+
+          <div class="solution-card">
+            <div class="solution-card-top">
+              <span class="solution-type">Comunidade</span>
+              <h3>Clube Trilogia Financeira</h3>
+            </div>
+            <div class="solution-card-body">
+              <p>Para quem já deu o primeiro passo e quer manter o movimento. Constância nas finanças e na vida.</p>
+              <a href="clube/" class="solution-link outline">Conhecer o clube</a>
+            </div>
+          </div>
+
+          <div class="solution-card">
+            <div class="solution-card-top">
+              <span class="solution-type">Mentoria · High Ticket</span>
+              <h3>Trilogia Financeira Private</h3>
+            </div>
+            <div class="solution-card-body">
+              <span class="solution-badge badge-limited">Vagas limitadas</span>
+              <p>A experiência mais completa e personalizada. Arquitetura patrimonial, planejamento tributário e sucessório.</p>
+              <a href="mentoria-private/" class="solution-link outline">Quero saber mais</a>
+            </div>
+          </div>
+
+          <div class="solution-card">
+            <div class="solution-card-top">
+              <span class="solution-type">Assessoria de Investimentos</span>
+              <h3>Investimentos com estratégia</h3>
+            </div>
+            <div class="solution-card-body">
+              <span class="solution-badge badge-free">XP Investimentos</span>
+              <p>Assessoria personalizada credenciada à XP. Carteira estruturada de acordo com seus objetivos e perfil.</p>
+              <a href="assessoria/" class="solution-link outline">Conhecer a assessoria</a>
+            </div>
+          </div>
+
+        </div>
       </div>
 
     </div>
@@ -457,9 +504,35 @@
       <span class="section-tag" style="color:var(--gold)">Propósito</span>
       <h2 class="section-title">Mudar a forma como você se relaciona com o dinheiro.</h2>
       <p>Para que você aprenda a poupar, a construir e a realizar sonhos. Não com promessas milagrosas. Com estrutura, método e acompanhamento real.</p>
-      <a href="https://wa.me/5511995658658?text=Ol%C3%A1%2C%20Fl%C3%A1via%21%20Quero%20agendar%20minha%20Sess%C3%A3o%20da%20Clareza%20Financeira." class="btn" target="_blank">Agendar minha Sessão da Clareza — gratuita</a>
+      <div class="btn-row">
+        <a href="https://seu-dinheiro-conecta.lovable.app/" class="btn-outline-gold" target="_blank">Fazer o diagnóstico gratuito</a>
+        <a href="https://wa.me/5511995658658?text=Ol%C3%A1%2C%20Fl%C3%A1via%21%20Quero%20agendar%20minha%20Sess%C3%A3o%20da%20Clareza%20Financeira." class="btn" target="_blank">Agendar Sessão da Clareza</a>
+      </div>
     </div>
   </section>
+
+  <!-- CREDENCIAIS -->
+  <div class="credenciais">
+    <div class="container">
+      <div class="cred-row">
+        <div class="cred-item">
+          <div class="cred-item-dot"></div>
+          <div class="cred-item-text">
+            <strong>Assessora de Investimentos</strong>
+            Credenciada à XP Investimentos
+          </div>
+        </div>
+        <div class="cred-divider"></div>
+        <div class="cred-item">
+          <div class="cred-item-dot"></div>
+          <div class="cred-item-text">
+            <strong>Coautora</strong>
+            Enriqueça Enquanto Dorme — Coleção Educação Financeira Vol. 3
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 
   <footer>
     <p>Flávia Schuscimann, CFP® &nbsp;|&nbsp; Assessora credenciada à <a href="https://xpi.com.br" target="_blank">XP Investimentos</a> &nbsp;|&nbsp; <a href="https://www.instagram.com/flavia.schuscimann" target="_blank">@flavia.schuscimann</a></p>

@@ -136,14 +136,21 @@
     /* ESTEIRA */
     .esteira { background: var(--cream); }
     .esteira-inner { max-width: 820px; margin: 0 auto; }
-    .esteira-flow { display: flex; align-items: center; gap: 8px; margin-top: 40px; flex-wrap: wrap; justify-content: center; }
-    .esteira-step { background: var(--white); border: 1px solid var(--border); border-radius: 10px; padding: 16px 20px; text-align: center; flex: 1; min-width: 140px; }
+    .esteira-step { background: var(--white); border: 1px solid var(--border); border-radius: 10px; padding: 16px 20px; text-align: center; }
     .esteira-step.active { background: var(--navy); border-color: var(--navy); }
     .esteira-step.active p { color: var(--white); }
     .esteira-step.active span { color: var(--gold); }
     .esteira-step span { font-size: 10px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: var(--gold-dark); display: block; margin-bottom: 4px; }
     .esteira-step p { font-size: 13px; font-weight: 600; color: var(--navy); line-height: 1.3; }
-    .esteira-arrow { color: var(--gold); font-size: 20px; flex-shrink: 0; }
+    /* Branched esteira */
+    .esteira-branched { display: flex; flex-direction: column; align-items: center; gap: 0; margin-top: 40px; }
+    .branch-row-label { font-size: 10px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: rgba(13,43,69,0.35); margin-bottom: 10px; text-align: center; }
+    .branch-pair { display: flex; gap: 16px; justify-content: center; width: 100%; }
+    .branch-pair .esteira-step { flex: 0 0 210px; }
+    .branch-conv { display: flex; justify-content: space-around; width: 300px; padding: 2px 0; }
+    .branch-conv span { color: rgba(207,174,101,0.55); font-size: 24px; line-height: 1; }
+    .branch-single { display: flex; justify-content: center; width: 100%; padding: 2px 0; }
+    .branch-single .esteira-step { flex: 0 0 260px; }
 
     /* UPSELL */
     .upsell-card { background: var(--navy); border-radius: 16px; padding: 40px; margin-top: 40px; display: flex; gap: 32px; align-items: center; }
@@ -324,7 +331,7 @@
       <div class="position-card">
         <span class="pill" style="background:rgba(207,174,101,0.12);border-color:rgba(207,174,101,0.35);color:var(--gold);">Diferencial</span>
         <h2>Não é controle financeiro. É organizar a <em>mente</em> e o dinheiro ao mesmo tempo.</h2>
-        <p style="margin-top:16px;">A Jornada transforma pessoas que estavam confusas em pessoas com direção, prontas para estruturar uma vida financeira completa. É o passo intermediário entre o primeiro diagnóstico e o acompanhamento aprofundado da Mentoria Trilogia.</p>
+        <p style="margin-top:16px;">A Jornada transforma pessoas que estavam confusas em pessoas com direção, prontas para estruturar uma vida financeira completa. É o passo intermediário entre o Diagnóstico gratuito e o acompanhamento aprofundado da Mentoria Trilogia.</p>
       </div>
     </div>
   </section>
@@ -387,26 +394,43 @@
     <div class="esteira-inner">
       <span class="pill">Sua jornada na esteira</span>
       <h2 class="section-title">Onde a JDD se encaixa.</h2>
-      <div class="esteira-flow">
-        <div class="esteira-step">
-          <span>Entrada</span>
-          <p>Mapa da Reserva</p>
+      <div class="esteira-branched">
+        <p class="branch-row-label">Entradas possíveis</p>
+        <div class="branch-pair">
+          <div class="esteira-step">
+            <span>Funil 1</span>
+            <p>Diagnóstico gratuito</p>
+          </div>
+          <div class="esteira-step">
+            <span>Funil 2</span>
+            <p>Raio-X + Mapa</p>
+          </div>
         </div>
-        <span class="esteira-arrow">→</span>
-        <div class="esteira-step active">
-          <span>Você está aqui</span>
-          <p>JDD</p>
+        <div class="branch-conv">
+          <span>↘</span>
+          <span>↙</span>
         </div>
-        <span class="esteira-arrow">→</span>
-        <div class="esteira-step">
-          <span>Curso</span>
-          <p>Reserva que Rende</p>
+        <div class="branch-single">
+          <div class="esteira-step active">
+            <span>Você está aqui</span>
+            <p>JDD</p>
+          </div>
         </div>
-        <span class="esteira-arrow">→</span>
-        <div class="esteira-step">
-          <span>Mentoria</span>
-          <p>Mentoria Trilogia</p>
+        <div class="branch-conv">
+          <span>↙</span>
+          <span>↘</span>
         </div>
+        <div class="branch-pair">
+          <div class="esteira-step">
+            <span>Programa online</span>
+            <p>Reserva que Rende</p>
+          </div>
+          <div class="esteira-step">
+            <span>Mentoria</span>
+            <p>Mentoria Trilogia</p>
+          </div>
+        </div>
+        <p class="branch-row-label" style="margin-top:10px;">Próximos passos</p>
       </div>
       <div class="upsell-card">
         <div class="upsell-icon">🏆</div>
