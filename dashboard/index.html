@@ -154,6 +154,7 @@
     footer a { color: var(--gold); }
 
     @media (max-width: 768px) { .features-grid { grid-template-columns: 1fr; } .pricing-grid { grid-template-columns: 1fr; } .hero-ctas { flex-direction: column; align-items: center; } }
+    @media (max-width: 700px) { .app-grid { grid-template-columns: 1fr !important; } .app-phone { display: none !important; } }
   </style>
 </head>
 <body>
@@ -258,6 +259,77 @@
             </ul>
           </div>
         </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="gold-line"></div>
+
+  <!-- APP MÓVEL -->
+  <section style="background:var(--navy);padding:80px 24px;">
+    <div class="container">
+      <div class="app-grid" style="max-width:900px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center;">
+
+        <!-- Texto -->
+        <div>
+          <p style="font-size:11px;font-weight:700;letter-spacing:3px;text-transform:uppercase;color:var(--gold);margin-bottom:20px;">Disponível como app</p>
+          <h2 style="font-family:'Playfair Display',serif;font-size:clamp(28px,3.5vw,40px);color:var(--white);line-height:1.2;margin-bottom:20px;">Toda a sua vida financeira <span style="color:var(--gold);">na palma da sua mão.</span></h2>
+          <p style="font-size:16px;color:rgba(255,255,255,0.55);line-height:1.75;margin-bottom:32px;">O Dashboard funciona como app no seu celular — instale direto pelo navegador, sem precisar de App Store. Acesse seu orçamento, patrimônio e reservas de qualquer lugar, a qualquer hora.</p>
+          <ul style="list-style:none;display:flex;flex-direction:column;gap:14px;">
+            <li style="display:flex;align-items:center;gap:14px;font-size:15px;color:rgba(255,255,255,0.8);">
+              <span style="width:36px;height:36px;border-radius:8px;background:rgba(207,174,101,0.12);display:flex;align-items:center;justify-content:center;font-size:17px;flex-shrink:0;">📲</span>
+              Instala em segundos direto pelo Chrome ou Safari
+            </li>
+            <li style="display:flex;align-items:center;gap:14px;font-size:15px;color:rgba(255,255,255,0.8);">
+              <span style="width:36px;height:36px;border-radius:8px;background:rgba(207,174,101,0.12);display:flex;align-items:center;justify-content:center;font-size:17px;flex-shrink:0;">⚡</span>
+              Abre como app — sem barra do navegador
+            </li>
+            <li style="display:flex;align-items:center;gap:14px;font-size:15px;color:rgba(255,255,255,0.8);">
+              <span style="width:36px;height:36px;border-radius:8px;background:rgba(207,174,101,0.12);display:flex;align-items:center;justify-content:center;font-size:17px;flex-shrink:0;">🔔</span>
+              Notificações de orçamento, aportes e vencimentos
+            </li>
+            <li style="display:flex;align-items:center;gap:14px;font-size:15px;color:rgba(255,255,255,0.8);">
+              <span style="width:36px;height:36px;border-radius:8px;background:rgba(207,174,101,0.12);display:flex;align-items:center;justify-content:center;font-size:17px;flex-shrink:0;">🔒</span>
+              Dados seguros — a informação é sua, sempre
+            </li>
+          </ul>
+        </div>
+
+        <!-- Visual de celular -->
+        <div style="display:flex;justify-content:center;align-items:center;">
+          <div style="width:220px;background:var(--navy-dark);border:2px solid var(--border);border-radius:36px;padding:16px 12px;box-shadow:0 32px 64px rgba(0,0,0,0.5),0 0 0 1px rgba(255,255,255,0.04);">
+            <!-- Notch -->
+            <div style="width:60px;height:6px;background:rgba(255,255,255,0.08);border-radius:10px;margin:0 auto 14px;"></div>
+            <!-- Header mockup -->
+            <div style="background:var(--navy);border-radius:12px;padding:12px 14px;margin-bottom:8px;">
+              <div style="font-size:9px;color:var(--gold);font-weight:700;letter-spacing:1px;margin-bottom:6px;">ORÇAMENTO · JUNHO</div>
+              <div style="font-size:19px;font-weight:700;color:var(--white);font-family:'Playfair Display',serif;">R$12.400</div>
+              <div style="font-size:10px;color:rgba(255,255,255,0.4);margin-top:2px;">receita total</div>
+            </div>
+            <!-- Cards mockup -->
+            <div style="display:grid;grid-template-columns:1fr 1fr;gap:6px;margin-bottom:8px;">
+              <div style="background:var(--navy);border-radius:10px;padding:10px 12px;">
+                <div style="font-size:8px;color:rgba(255,255,255,0.4);margin-bottom:4px;">DESPESAS</div>
+                <div style="font-size:13px;font-weight:700;color:#f87171;">R$7.840</div>
+              </div>
+              <div style="background:var(--navy);border-radius:10px;padding:10px 12px;border:1px solid rgba(207,174,101,0.2);">
+                <div style="font-size:8px;color:rgba(255,255,255,0.4);margin-bottom:4px;">SOBRA</div>
+                <div style="font-size:13px;font-weight:700;color:var(--gold);">R$4.560</div>
+              </div>
+            </div>
+            <!-- Barra decorativa -->
+            <div style="background:var(--navy);border-radius:10px;padding:10px 12px;">
+              <div style="font-size:8px;color:rgba(255,255,255,0.4);margin-bottom:6px;">PATRIMÔNIO LÍQUIDO</div>
+              <div style="font-size:14px;font-weight:700;color:var(--white);">R$284.000</div>
+              <div style="height:4px;background:rgba(255,255,255,0.06);border-radius:4px;margin-top:8px;overflow:hidden;">
+                <div style="height:100%;width:68%;background:var(--gold);border-radius:4px;opacity:0.7;"></div>
+              </div>
+            </div>
+            <!-- Home indicator -->
+            <div style="width:40px;height:4px;background:rgba(255,255,255,0.1);border-radius:10px;margin:14px auto 0;"></div>
+          </div>
+        </div>
+
       </div>
     </div>
   </section>
