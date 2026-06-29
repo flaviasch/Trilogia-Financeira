@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<title>Guia de Identidade Visual — Trilogia Financeira</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: 'Inter', sans-serif; background: #F4F1EC; color: #0D2B45; }
+
+  .cover {
+    background: #0D2B45;
+    color: white;
+    padding: 80px;
+    min-height: 320px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    border-bottom: 3px solid #CFAE65;
+  }
+  .cover-tag {
+    font-size: 11px;
+    letter-spacing: 4px;
+    color: #CFAE65;
+    margin-bottom: 24px;
+    border: 1px solid #CFAE65;
+    display: inline-block;
+    padding: 6px 16px;
+  }
+  .cover h1 {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: 56px;
+    font-weight: 700;
+    line-height: 1.1;
+    color: white;
+  }
+  .cover h1 span { color: #CFAE65; }
+  .cover p {
+    margin-top: 16px;
+    font-size: 15px;
+    color: rgba(255,255,255,0.6);
+    letter-spacing: 1px;
+  }
+
+  .section {
+    padding: 60px 80px;
+    border-bottom: 1px solid rgba(13,43,69,0.1);
+    background: white;
+  }
+  .section:nth-child(odd) { background: #F4F1EC; }
+
+  .section-label {
+    font-size: 10px;
+    letter-spacing: 4px;
+    color: #CFAE65;
+    font-weight: 600;
+    margin-bottom: 32px;
+    text-transform: uppercase;
+  }
+  .section h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 32px;
+    color: #0D2B45;
+    margin-bottom: 40px;
+  }
+
+  /* Colors */
+  .color-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 24px;
+  }
+  .color-card { border-radius: 4px; overflow: hidden; box-shadow: 0 2px 12px rgba(0,0,0,0.08); }
+  .color-swatch { height: 120px; }
+  .color-info { padding: 16px; background: white; }
+  .color-info .name { font-weight: 600; font-size: 14px; color: #0D2B45; margin-bottom: 4px; }
+  .color-info .hex { font-size: 12px; color: #666; letter-spacing: 1px; font-family: monospace; }
+  .color-info .usage { font-size: 11px; color: #999; margin-top: 6px; }
+
+  /* Typography */
+  .type-block { margin-bottom: 48px; padding: 40px; background: #0D2B45; border-radius: 4px; }
+  .type-block.light { background: white; border: 1px solid rgba(13,43,69,0.1); }
+  .type-meta { font-size: 10px; letter-spacing: 3px; color: #CFAE65; margin-bottom: 16px; }
+  .type-block.light .type-meta { color: #CFAE65; }
+  .type-sample-serif {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: 48px;
+    font-weight: 700;
+    color: white;
+    line-height: 1.1;
+  }
+  .type-sample-sans {
+    font-family: 'Inter', sans-serif;
+    font-size: 18px;
+    font-weight: 300;
+    color: #0D2B45;
+    line-height: 1.6;
+  }
+  .type-detail { font-size: 11px; color: rgba(255,255,255,0.4); margin-top: 16px; }
+  .type-detail.dark { color: rgba(13,43,69,0.4); }
+
+  /* Type scale */
+  .type-scale { display: flex; flex-direction: column; gap: 24px; }
+  .type-row { display: flex; align-items: baseline; gap: 32px; padding: 20px 0; border-bottom: 1px solid rgba(13,43,69,0.06); }
+  .type-row:last-child { border: none; }
+  .type-row-label { font-size: 10px; letter-spacing: 2px; color: #CFAE65; width: 120px; flex-shrink: 0; }
+  .type-row-size { font-size: 10px; color: #999; width: 80px; flex-shrink: 0; }
+
+  /* Usage */
+  .usage-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
+  .usage-card { padding: 32px; border-radius: 4px; }
+  .usage-card.dark { background: #0D2B45; }
+  .usage-card.light { background: white; border: 1px solid rgba(13,43,69,0.1); }
+  .usage-card h3 { font-family: 'Playfair Display', serif; font-size: 20px; margin-bottom: 12px; }
+  .usage-card.dark h3 { color: white; }
+  .usage-card.light h3 { color: #0D2B45; }
+  .usage-card ul { list-style: none; }
+  .usage-card li { font-size: 13px; padding: 6px 0; border-bottom: 1px solid rgba(255,255,255,0.08); }
+  .usage-card.dark li { color: rgba(255,255,255,0.7); border-color: rgba(255,255,255,0.08); }
+  .usage-card.light li { color: rgba(13,43,69,0.7); border-color: rgba(13,43,69,0.08); }
+  .usage-card li::before { content: "·  "; color: #CFAE65; font-weight: bold; }
+
+  /* Do/Dont */
+  .rules { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
+  .rule-card { padding: 32px; border-radius: 4px; }
+  .rule-card.do { background: #0D2B45; border-left: 3px solid #CFAE65; }
+  .rule-card.dont { background: #f8f8f8; border-left: 3px solid #c0392b; }
+  .rule-card h3 { font-size: 11px; letter-spacing: 3px; margin-bottom: 20px; font-weight: 600; }
+  .rule-card.do h3 { color: #CFAE65; }
+  .rule-card.dont h3 { color: #c0392b; }
+  .rule-card ul { list-style: none; }
+  .rule-card li { font-size: 13px; padding: 8px 0; border-bottom: 1px solid rgba(0,0,0,0.06); }
+  .rule-card.do li { color: rgba(255,255,255,0.8); border-color: rgba(255,255,255,0.08); }
+  .rule-card.dont li { color: rgba(13,43,69,0.7); }
+  .rule-card li::before { content: "✓  "; }
+  .rule-card.dont li::before { content: "✕  "; color: #c0392b; }
+  .rule-card.do li::before { color: #CFAE65; }
+
+  .footer {
+    background: #0D2B45;
+    padding: 48px 80px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .footer-name { font-family: 'Playfair Display', serif; font-size: 24px; color: white; }
+  .footer-detail { font-size: 11px; letter-spacing: 3px; color: rgba(255,255,255,0.4); margin-top: 4px; }
+  .footer-year { font-size: 11px; color: rgba(255,255,255,0.3); letter-spacing: 2px; }
+
+  @media print {
+    .section { break-inside: avoid; }
+  }
+</style>
+</head>
+<body>
+
+<!-- Cover -->
+<div class="cover">
+  <div class="cover-tag">IDENTIDADE VISUAL</div>
+  <h1>Trilogia<br><span>Financeira</span></h1>
+  <p>FLÁVIA SCHUSCIMANN · CFP® · GUIA DE MARCA</p>
+</div>
+
+<!-- Colors -->
+<div class="section">
+  <div class="section-label">01 — PALETA DE CORES</div>
+  <h2>Cores da Marca</h2>
+  <div class="color-grid">
+    <div class="color-card">
+      <div class="color-swatch" style="background:#0D2B45;"></div>
+      <div class="color-info">
+        <div class="name">Azul Noturno</div>
+        <div class="hex">#0D2B45</div>
+        <div class="usage">Cor primária · Fundos · Títulos sobre claro</div>
+      </div>
+    </div>
+    <div class="color-card">
+      <div class="color-swatch" style="background:#CFAE65;"></div>
+      <div class="color-info">
+        <div class="name">Dourado Champagne</div>
+        <div class="hex">#CFAE65</div>
+        <div class="usage">Destaque · CTAs · Elementos decorativos</div>
+      </div>
+    </div>
+    <div class="color-card">
+      <div class="color-swatch" style="background:#FFFFFF; border: 1px solid #eee;"></div>
+      <div class="color-info">
+        <div class="name">Branco</div>
+        <div class="hex">#FFFFFF</div>
+        <div class="usage">Texto sobre escuro · Fundos limpos</div>
+      </div>
+    </div>
+    <div class="color-card">
+      <div class="color-swatch" style="background:#F4F1EC;"></div>
+      <div class="color-info">
+        <div class="name">Creme</div>
+        <div class="hex">#F4F1EC</div>
+        <div class="usage">Fundo secundário · Seções alternadas</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Typography -->
+<div class="section">
+  <div class="section-label">02 — TIPOGRAFIA</div>
+  <h2>Fontes</h2>
+
+  <div class="type-block">
+    <div class="type-meta">TÍTULOS · PLAYFAIR DISPLAY</div>
+    <div class="type-sample-serif">Seu dinheiro,<br><span style="color:#CFAE65;">sua direção.</span></div>
+    <div class="type-detail">Playfair Display Bold · Para headlines, títulos de seção, destaque principal</div>
+  </div>
+
+  <br>
+
+  <div class="type-block light">
+    <div class="type-meta">CORPO · INTER</div>
+    <div class="type-sample-sans">20 anos de mercado financeiro. Um método criado para mulheres que ganham bem e querem, finalmente, construir patrimônio de verdade.</div>
+    <div class="type-detail dark">Inter Light (300) · Para parágrafos, descrições e textos explicativos</div>
+  </div>
+
+  <br>
+  <div class="type-scale">
+    <div class="type-row">
+      <div class="type-row-label">DISPLAY</div>
+      <div class="type-row-size">88–110px</div>
+      <div style="font-family:'Playfair Display',serif;font-size:48px;font-weight:700;color:#0D2B45;line-height:1">Raio-X</div>
+    </div>
+    <div class="type-row">
+      <div class="type-row-label">H1</div>
+      <div class="type-row-size">48–56px</div>
+      <div style="font-family:'Playfair Display',serif;font-size:40px;font-weight:700;color:#0D2B45;">Trilogia Financeira</div>
+    </div>
+    <div class="type-row">
+      <div class="type-row-label">H2</div>
+      <div class="type-row-size">32–40px</div>
+      <div style="font-family:'Playfair Display',serif;font-size:32px;font-weight:400;color:#0D2B45;">Seu método de clareza</div>
+    </div>
+    <div class="type-row">
+      <div class="type-row-label">SUBTÍTULO</div>
+      <div class="type-row-size">18–24px</div>
+      <div style="font-family:'Inter',sans-serif;font-size:20px;font-weight:400;color:#0D2B45;">Planejadora Financeira CFP®</div>
+    </div>
+    <div class="type-row">
+      <div class="type-row-label">BODY</div>
+      <div class="type-row-size">15–18px</div>
+      <div style="font-family:'Inter',sans-serif;font-size:16px;font-weight:300;color:#0D2B45;">Texto corrido, descrições e conteúdo explicativo</div>
+    </div>
+    <div class="type-row">
+      <div class="type-row-label">LABEL/TAG</div>
+      <div class="type-row-size">10–12px</div>
+      <div style="font-family:'Inter',sans-serif;font-size:11px;font-weight:600;letter-spacing:4px;color:#CFAE65;">TRILOGIA FINANCEIRA</div>
+    </div>
+  </div>
+</div>
+
+<!-- Usage -->
+<div class="section">
+  <div class="section-label">03 — APLICAÇÃO</div>
+  <h2>Onde Usar Cada Combinação</h2>
+  <div class="usage-grid">
+    <div class="usage-card dark">
+      <h3 style="color:#CFAE65;">Fundo Escuro</h3>
+      <ul>
+        <li>Capas de produtos digitais</li>
+        <li>Posts de feed do Instagram</li>
+        <li>Banners de vendas</li>
+        <li>Slides de abertura em apresentações</li>
+        <li>Stories com chamada de impacto</li>
+      </ul>
+    </div>
+    <div class="usage-card light">
+      <h3>Fundo Claro</h3>
+      <ul>
+        <li>Páginas de vendas (corpo do texto)</li>
+        <li>E-mails e documentos</li>
+        <li>Carrosséis informativos</li>
+        <li>PDFs de entregáveis</li>
+        <li>Conteúdo educativo</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<!-- Rules -->
+<div class="section">
+  <div class="section-label">04 — REGRAS DE USO</div>
+  <h2>Como Usar a Marca</h2>
+  <div class="rules">
+    <div class="rule-card do">
+      <h3>USE</h3>
+      <ul>
+        <li>Dourado apenas como destaque, nunca em bloco</li>
+        <li>Playfair Display para todos os títulos principais</li>
+        <li>Contraste alto entre fundo e texto sempre</li>
+        <li>Espaço em branco generoso para sofisticação</li>
+        <li>Letra spacing em tags e labels (3–4px)</li>
+        <li>Texto do CTA sempre escuro sobre fundo dourado</li>
+      </ul>
+    </div>
+    <div class="rule-card dont">
+      <h3>EVITE</h3>
+      <ul>
+        <li>Misturar muitas fontes diferentes</li>
+        <li>Usar verde, vermelho ou laranja como destaque</li>
+        <li>Textos brancos sobre dourado</li>
+        <li>Sombras pesadas ou gradientes chamativos</li>
+        <li>Ícones coloridos ou emojis em materiais formais</li>
+        <li>Fontes em caixa baixa nas tags e labels</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<!-- Footer -->
+<div class="footer">
+  <div>
+    <div class="footer-name">Flávia Schusciman</div>
+    <div class="footer-detail">PLANEJADORA FINANCEIRA · CFP®</div>
+  </div>
+  <div class="footer-year">IDENTIDADE VISUAL · 2026</div>
+</div>
+
+</body>
+</html>
