@@ -33,6 +33,23 @@ if (location.hostname === "flaviaschusciman.com.br") {
     a { text-decoration: none; color: inherit; }
     .container { max-width: 1100px; margin: 0 auto; padding: 0 24px; }
 
+    /* ===== NAVBAR ===== */
+    .navbar { position: sticky; top: 0; z-index: 100; background: var(--navy); border-bottom: 1px solid rgba(207,174,101,0.15); }
+    .navbar-inner { max-width: 1100px; margin: 0 auto; padding: 0 24px; display: flex; align-items: center; justify-content: space-between; height: 60px; }
+    .navbar-brand { font-family: 'Playfair Display', serif; font-size: 16px; color: var(--white); font-weight: 600; white-space: nowrap; }
+    .navbar-brand span { color: var(--gold); }
+    .navbar-links { display: flex; align-items: center; gap: 28px; }
+    .navbar-links a { font-size: 13px; font-weight: 500; color: rgba(255,255,255,0.7); transition: color 0.2s; white-space: nowrap; }
+    .navbar-links a:hover { color: var(--white); }
+    .navbar-cta { background: var(--gold); color: var(--navy) !important; font-weight: 700 !important; font-size: 12px !important; padding: 8px 18px; border-radius: 5px; transition: background 0.2s !important; }
+    .navbar-cta:hover { background: var(--gold-light) !important; color: var(--navy) !important; }
+    .navbar-hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; padding: 4px; }
+    .navbar-hamburger span { display: block; width: 22px; height: 2px; background: var(--white); border-radius: 2px; }
+    @media (max-width: 768px) {
+      .navbar-links { display: none; }
+      .navbar-hamburger { display: flex; }
+    }
+
     /* ===== HERO ===== */
     .hero { background: var(--navy); color: var(--white); }
     .hero-inner {
@@ -238,6 +255,31 @@ if (location.hostname === "flaviaschusciman.com.br") {
     footer { background: #081e30; color: rgba(255,255,255,0.5); text-align: center; padding: 32px 24px; font-size: 13px; }
     footer a { color: var(--gold); }
 
+    /* ===== DEPOIMENTOS ===== */
+    .depoimentos { background: var(--cream); }
+    .depo-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; margin-top: 48px; }
+    .depo-card { background: var(--white); border: 1px solid var(--border); border-radius: 10px; padding: 28px 24px; display: flex; flex-direction: column; gap: 16px; }
+    .depo-card blockquote { font-size: 14px; color: var(--text); line-height: 1.75; font-style: italic; flex: 1; }
+    .depo-card blockquote::before { content: '\201C'; font-family: 'Playfair Display', serif; font-size: 40px; color: var(--gold); line-height: 0; vertical-align: -14px; margin-right: 4px; }
+    .depo-result { display: flex; align-items: flex-start; gap: 10px; background: var(--off-white); border-radius: 6px; padding: 12px 14px; }
+    .depo-result-icon { font-size: 18px; flex-shrink: 0; margin-top: 1px; }
+    .depo-result p { font-size: 13px; color: var(--navy); font-weight: 600; line-height: 1.4; }
+    .depo-author { display: flex; align-items: center; gap: 12px; border-top: 1px solid var(--border); padding-top: 16px; }
+    .depo-avatar { width: 40px; height: 40px; border-radius: 50%; background: var(--navy); display: flex; align-items: center; justify-content: center; font-family: 'Playfair Display', serif; font-size: 17px; color: var(--gold); flex-shrink: 0; }
+    .depo-name { font-size: 14px; font-weight: 600; color: var(--navy); }
+    .depo-profile { font-size: 12px; color: var(--gray); margin-top: 2px; }
+    @media (max-width: 900px) { .depo-grid { grid-template-columns: 1fr; } }
+
+    /* ===== PARA QUEM É ===== */
+    .para-quem { background: var(--navy); padding: 72px 24px; }
+    .para-quem .section-tag { color: var(--gold); }
+    .para-quem .section-title { color: var(--white); margin-bottom: 48px; }
+    .pq-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin-bottom: 0; }
+    .pq-item { display: flex; align-items: flex-start; gap: 14px; background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.08); border-radius: 8px; padding: 20px 18px; }
+    .pq-check { width: 24px; height: 24px; background: rgba(207,174,101,0.15); border: 1px solid rgba(207,174,101,0.4); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: var(--gold); font-size: 13px; font-weight: 700; flex-shrink: 0; margin-top: 1px; }
+    .pq-item p { font-size: 15px; color: rgba(255,255,255,0.85); line-height: 1.5; }
+    @media (max-width: 768px) { .pq-grid { grid-template-columns: 1fr; } }
+
     /* ===== RESPONSIVE ===== */
     @media (max-width: 900px) {
       .about-grid { grid-template-columns: 1fr; }
@@ -265,16 +307,36 @@ if (location.hostname === "flaviaschusciman.com.br") {
 </head>
 <body>
 
+  <!-- NAVBAR -->
+  <nav class="navbar">
+    <div class="navbar-inner">
+      <a href="#" class="navbar-brand">Flávia <span>Schuscimann</span></a>
+      <div class="navbar-links">
+        <a href="#sobre">Sobre</a>
+        <a href="#produtos">Produtos</a>
+        <a href="mentoria/">Mentoria</a>
+        <a href="https://wa.me/5511995658658?text=Ol%C3%A1%2C%20Fl%C3%A1via%21%20Quero%20agendar%20minha%20sess%C3%A3o%20de%20diagn%C3%B3stico%20gratuita." class="navbar-cta" target="_blank">Diagnóstico gratuito</a>
+      </div>
+      <div class="navbar-hamburger" onclick="this.closest('nav').querySelector('.navbar-links').style.display = this.closest('nav').querySelector('.navbar-links').style.display === 'flex' ? 'none' : 'flex'; this.closest('nav').querySelector('.navbar-links').style.flexDirection='column'; this.closest('nav').querySelector('.navbar-links').style.position='absolute'; this.closest('nav').querySelector('.navbar-links').style.top='60px'; this.closest('nav').querySelector('.navbar-links').style.left='0'; this.closest('nav').querySelector('.navbar-links').style.right='0'; this.closest('nav').querySelector('.navbar-links').style.background='var(--navy)'; this.closest('nav').querySelector('.navbar-links').style.padding='16px 24px'; this.closest('nav').querySelector('.navbar-links').style.gap='16px'; this.closest('nav').querySelector('.navbar-links').style.borderBottom='1px solid rgba(255,255,255,0.1)';">
+        <span></span><span></span><span></span>
+      </div>
+    </div>
+  </nav>
+
   <!-- HERO -->
   <div class="hero">
     <div class="hero-inner">
       <div class="hero-content">
         <span class="hero-tag">Planejadora Financeira CFP®</span>
         <h1>Flávia<br>Schuscimann.<br><span>Seu dinheiro,<br>sua direção.</span></h1>
-        <p class="hero-desc">20 anos de mercado financeiro. Um método criado para mulheres que ganham bem e querem, finalmente, construir patrimônio de verdade.</p>
+        <p class="hero-desc">Um método criado para mulheres que ganham bem, mas chegam ao fim do mês sem saber onde foi o dinheiro — e querem mudar isso de vez.</p>
         <p style="font-size:14px; font-style:italic; color:var(--gold); letter-spacing:0.03em; margin: -8px 0 24px;">"Porque ganhar bem é o começo, crescer é o método."</p>
+        <div style="display:flex; gap:12px; flex-wrap:wrap; margin-bottom:32px;">
+          <a href="https://seu-dinheiro-conecta.lovable.app/" class="btn" target="_blank" style="font-size:14px; padding:14px 28px;">Faça o diagnóstico gratuito →</a>
+          <a href="#produtos" class="btn-outline-gold" style="font-size:14px; padding:12px 28px;">Conheça os programas ↓</a>
+        </div>
         <div class="hero-credentials">
-          <span class="cred-tag">CFP® há 7 anos</span>
+          <span class="cred-tag">CFP® há 8 anos</span>
           <span class="cred-tag">Assessora XP</span>
           <span class="cred-tag">+200 famílias atendidas</span>
           <span class="cred-tag">Coautora — Enriqueça enquanto dorme</span>
@@ -295,11 +357,12 @@ if (location.hostname === "flaviaschusciman.com.br") {
       <blockquote>
         "Enquanto o mercado te oferece propostas milagrosas e mentirosas sem saber nem o seu perfil, eu pergunto: <em>qual é o seu sonho?</em>"
       </blockquote>
+      <p style="font-size:15px; color:rgba(255,255,255,0.55); max-width:640px; margin:20px auto 0; line-height:1.7;">Aqui o planejamento começa com um diagnóstico real: sua renda, seus gastos, seus comportamentos. Não com o produto da moda.</p>
     </div>
   </div>
 
   <!-- SOBRE -->
-  <section class="about">
+  <section class="about" id="sobre">
     <div class="container">
       <div class="about-grid">
         <div>
@@ -316,6 +379,99 @@ if (location.hostname === "flaviaschusciman.com.br") {
             <div class="stat"><span class="stat-number">7</span><span class="stat-label">anos como CFP®</span></div>
           </div>
         </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="gold-line"></div>
+
+  <!-- NA MÍDIA -->
+  <section style="background: var(--off-white); padding: 80px 24px;">
+  <style>.midia-grid .solution-card-top { min-height: 110px; }</style>
+    <div class="container">
+      <span class="section-tag">Na Mídia</span>
+      <h2 class="section-title">Flávia nas ondas do rádio</h2>
+      <div class="eco-grid-2 midia-grid" style="margin-top: 40px;">
+
+        <div class="solution-card">
+          <div class="solution-card-top">
+            <span class="solution-type">Rádio · Mais FM 102.9 · Organizando Minha Vida Financeira</span>
+            <h3>Planeje seu 2026: Como Definir Metas com Propósito</h3>
+          </div>
+          <div class="solution-card-body">
+            <a href="https://www.youtube.com/live/vXAmeQeIVEg?si=M6NLyCNq9xKSYg-s" class="solution-link outline" target="_blank">Assistir entrevista</a>
+          </div>
+        </div>
+
+        <div class="solution-card">
+          <div class="solution-card-top">
+            <span class="solution-type">Rádio · Mais FM 102.9 · Organizando Minha Vida Financeira</span>
+            <h3>Investimento: Como Começar com Pouco e Ter Resultados Reais</h3>
+          </div>
+          <div class="solution-card-body">
+            <a href="https://www.youtube.com/live/Pkzrom2n-Jo?si=8_aqGjQNFaORtI7m" class="solution-link outline" target="_blank">Assistir entrevista</a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <div class="gold-line"></div>
+
+  <!-- DEPOIMENTOS -->
+  <section class="depoimentos">
+    <div class="container">
+      <span class="section-tag">Resultados reais</span>
+      <h2 class="section-title">O que muda quando você tem método</h2>
+      <p class="section-subtitle">Histórias de quem saiu do "nunca sobra nada" para ter um plano de verdade.</p>
+      <div class="depo-grid">
+
+        <div class="depo-card">
+          <div class="depo-result">
+            <div class="depo-result-icon">📊</div>
+            <p>Reduziu a fatura do cartão em 77% em 2 meses — achando que já era econômica</p>
+          </div>
+          <blockquote>Mais do que o número em si, isso representa mudança de mentalidade, priorização mais consciente e decisões financeiras alinhadas com meus objetivos de longo prazo.</blockquote>
+          <div class="depo-author">
+            <div class="depo-avatar">T</div>
+            <div>
+              <div class="depo-name">Tathiely B.</div>
+              <div class="depo-profile">Mentoria Trilogia Financeira</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="depo-card">
+          <div class="depo-result">
+            <div class="depo-result-icon">💳</div>
+            <p>Zerou 2 cartões com dívidas atrasadas e economizou R$4.000 no primeiro mês</p>
+          </div>
+          <blockquote>Depois das nossas conversas, começamos a enxergar nossas finanças de um jeito totalmente diferente. Criar o hábito de olhar meus gastos me trouxe muito mais consciência da nossa realidade financeira.</blockquote>
+          <div class="depo-author">
+            <div class="depo-avatar">R</div>
+            <div>
+              <div class="depo-name">Rodrigo V. e esposa</div>
+              <div class="depo-profile">Mentoria Trilogia Financeira</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="depo-card">
+          <div class="depo-result">
+            <div class="depo-result-icon">🏦</div>
+            <p>Construiu 3 reservas segmentadas e plano de aportes mensais de R$2.000 a partir de jan/2027</p>
+          </div>
+          <blockquote>A Flávia me ajudou a ter algo que eu buscava há muito tempo: clareza nas minhas finanças. Meu perfil como investidora mudou. Ganhei confiança e hoje me sinto capaz de seguir sozinha.</blockquote>
+          <div class="depo-author">
+            <div class="depo-avatar">M</div>
+            <div>
+              <div class="depo-name">Mariana C.</div>
+              <div class="depo-profile">Fonoaudióloga · Mentoria Trilogia Financeira</div>
+            </div>
+          </div>
+        </div>
+
       </div>
     </div>
   </section>
@@ -367,12 +523,96 @@ if (location.hostname === "flaviaschusciman.com.br") {
 
   <div class="gold-line"></div>
 
+  <!-- PARA QUEM É -->
+  <section class="para-quem">
+    <div class="container">
+      <span class="section-tag">Identificação</span>
+      <h2 class="section-title">Essa página é para você se…</h2>
+      <div class="pq-grid">
+        <div class="pq-item"><div class="pq-check">✓</div><p>Você ganha bem mas não sabe para onde vai o dinheiro no fim do mês</p></div>
+        <div class="pq-item"><div class="pq-check">✓</div><p>Tem medo de investir errado e prefere deixar parado na poupança</p></div>
+        <div class="pq-item"><div class="pq-check">✓</div><p>Quer parar de depender 100% do trabalho ativo para viver bem</p></div>
+        <div class="pq-item"><div class="pq-check">✓</div><p>Está no começo e não sabe por onde começar sem se perder</p></div>
+        <div class="pq-item"><div class="pq-check">✓</div><p>Já sabe que precisa agir — mas falta estrutura, método e alguém do seu lado</p></div>
+        <div class="pq-item"><div class="pq-check">✓</div><p>Quer um plano feito para a sua realidade, não uma fórmula genérica da internet</p></div>
+      </div>
+    </div>
+  </section>
+
+  <div class="gold-line"></div>
+
   <!-- ECOSSISTEMA -->
-  <section class="solutions">
+  <section class="solutions" id="produtos">
     <div class="container">
       <span class="section-tag">Ecossistema</span>
       <h2 class="section-title">Todas as formas de trabalhar comigo</h2>
       <p class="section-subtitle">Encontre a solução certa para o seu momento agora.</p>
+
+      <!-- DIAGRAMA DE JORNADA -->
+      <div style="margin-bottom:56px; overflow-x:auto; -webkit-overflow-scrolling:touch;">
+        <div style="display:flex; align-items:stretch; gap:0; min-width:560px;">
+
+          <a href="https://seu-dinheiro-conecta.lovable.app/" target="_blank" style="flex:1; text-decoration:none;">
+            <div style="background:rgba(207,174,101,0.08); border:1px solid rgba(207,174,101,0.3); border-radius:8px; padding:16px 12px; text-align:center; height:100%; display:flex; flex-direction:column; gap:6px; align-items:center; transition:background 0.2s;" onmouseover="this.style.background='rgba(207,174,101,0.15)'" onmouseout="this.style.background='rgba(207,174,101,0.08)'">
+              <span style="font-size:20px;">🔍</span>
+              <span style="font-size:9px; font-weight:700; letter-spacing:2px; text-transform:uppercase; color:var(--gold);">Grátis</span>
+              <span style="font-size:12px; font-weight:600; color:var(--navy); line-height:1.3;">Diagnóstico Financeiro</span>
+            </div>
+          </a>
+
+          <div style="display:flex; align-items:center; padding:0 6px; color:var(--gold); font-size:18px; flex-shrink:0;">›</div>
+
+          <a href="raio-x/" style="flex:1; text-decoration:none;">
+            <div style="background:var(--off-white); border:1px solid var(--border); border-radius:8px; padding:16px 12px; text-align:center; height:100%; display:flex; flex-direction:column; gap:6px; align-items:center; transition:background 0.2s;" onmouseover="this.style.background='#eef0f3'" onmouseout="this.style.background='var(--off-white)'">
+              <span style="font-size:20px;">📊</span>
+              <span style="font-size:9px; font-weight:700; letter-spacing:2px; text-transform:uppercase; color:var(--gray);">Passo 1</span>
+              <span style="font-size:12px; font-weight:600; color:var(--navy); line-height:1.3;">Raio-X Financeiro</span>
+            </div>
+          </a>
+
+          <div style="display:flex; align-items:center; padding:0 6px; color:var(--gold); font-size:18px; flex-shrink:0;">›</div>
+
+          <a href="mapa/" style="flex:1; text-decoration:none;">
+            <div style="background:var(--off-white); border:1px solid var(--border); border-radius:8px; padding:16px 12px; text-align:center; height:100%; display:flex; flex-direction:column; gap:6px; align-items:center; transition:background 0.2s;" onmouseover="this.style.background='#eef0f3'" onmouseout="this.style.background='var(--off-white)'">
+              <span style="font-size:20px;">🗺️</span>
+              <span style="font-size:9px; font-weight:700; letter-spacing:2px; text-transform:uppercase; color:var(--gray);">Passo 2</span>
+              <span style="font-size:12px; font-weight:600; color:var(--navy); line-height:1.3;">Mapa da Reserva</span>
+            </div>
+          </a>
+
+          <div style="display:flex; align-items:center; padding:0 6px; color:var(--gold); font-size:18px; flex-shrink:0;">›</div>
+
+          <a href="jornada/" style="flex:1; text-decoration:none;">
+            <div style="background:var(--off-white); border:1px solid var(--border); border-radius:8px; padding:16px 12px; text-align:center; height:100%; display:flex; flex-direction:column; gap:6px; align-items:center; transition:background 0.2s;" onmouseover="this.style.background='#eef0f3'" onmouseout="this.style.background='var(--off-white)'">
+              <span style="font-size:20px;">📚</span>
+              <span style="font-size:9px; font-weight:700; letter-spacing:2px; text-transform:uppercase; color:var(--gray);">Programa</span>
+              <span style="font-size:12px; font-weight:600; color:var(--navy); line-height:1.3;">Jornada Domine</span>
+            </div>
+          </a>
+
+          <div style="display:flex; align-items:center; padding:0 6px; color:var(--gold); font-size:18px; flex-shrink:0;">›</div>
+
+          <a href="mentoria/" style="flex:1; text-decoration:none;">
+            <div style="background:var(--navy); border:1px solid rgba(207,174,101,0.4); border-radius:8px; padding:16px 12px; text-align:center; height:100%; display:flex; flex-direction:column; gap:6px; align-items:center; transition:background 0.2s;" onmouseover="this.style.background='var(--navy-light)'" onmouseout="this.style.background='var(--navy)'">
+              <span style="font-size:20px;">🌙</span>
+              <span style="font-size:9px; font-weight:700; letter-spacing:2px; text-transform:uppercase; color:var(--gold);">Destaque</span>
+              <span style="font-size:12px; font-weight:600; color:var(--white); line-height:1.3;">Mentoria Trilogia</span>
+            </div>
+          </a>
+
+          <div style="display:flex; align-items:center; padding:0 6px; color:var(--gold); font-size:18px; flex-shrink:0;">›</div>
+
+          <a href="mentoria-private/" style="flex:1; text-decoration:none;">
+            <div style="background:linear-gradient(135deg,rgba(207,174,101,0.12),rgba(207,174,101,0.05)); border:1px solid rgba(207,174,101,0.5); border-radius:8px; padding:16px 12px; text-align:center; height:100%; display:flex; flex-direction:column; gap:6px; align-items:center; transition:background 0.2s;" onmouseover="this.style.background='rgba(207,174,101,0.18)'" onmouseout="this.style.background='linear-gradient(135deg,rgba(207,174,101,0.12),rgba(207,174,101,0.05))'">
+              <span style="font-size:20px;">💎</span>
+              <span style="font-size:9px; font-weight:700; letter-spacing:2px; text-transform:uppercase; color:var(--gold);">High Ticket</span>
+              <span style="font-size:12px; font-weight:600; color:var(--navy); line-height:1.3;">Trilogia Private</span>
+            </div>
+          </a>
+
+        </div>
+        <p style="font-size:12px; color:var(--gray); margin-top:12px; text-align:center;">Não sabe onde você está? <a href="https://seu-dinheiro-conecta.lovable.app/" target="_blank" style="color:var(--navy); font-weight:600; text-decoration:underline;">Faça o diagnóstico gratuito →</a></p>
+      </div>
 
       <!-- Grupo 1 -->
       <div class="eco-group">
@@ -397,7 +637,8 @@ if (location.hostname === "flaviaschusciman.com.br") {
               <h3>Raio-X Financeiro</h3>
             </div>
             <div class="solution-card-body">
-              <p>Diagnóstico completo da sua situação financeira atual. Entenda onde está, onde está vazando e o que precisa mudar primeiro.</p>
+              <p>Sessão de 1h online. Você recebe um relatório com os pontos de vazamento do seu dinheiro, o que cortar primeiro e qual o próximo passo ideal para o seu perfil.</p>
+              <span class="solution-price">R$67 <small>· pagamento único</small></span>
               <a href="raio-x/" class="solution-link outline">Conhecer o Raio-X</a>
             </div>
           </div>
@@ -408,7 +649,8 @@ if (location.hostname === "flaviaschusciman.com.br") {
               <h3>Mapa da Reserva Financeira</h3>
             </div>
             <div class="solution-card-body">
-              <p>Quanto você precisa guardar e como construir sua reserva. Do diagnóstico ao plano concreto, sem enrolação.</p>
+              <p>Você recebe um plano com o valor exato que precisa guardar por mês, em qual produto investir e em quanto tempo sua reserva estará completa.</p>
+              <span class="solution-price">R$67 <small>· pagamento único</small></span>
               <a href="mapa/" class="solution-link outline">Conhecer o Mapa</a>
             </div>
           </div>
@@ -427,7 +669,7 @@ if (location.hostname === "flaviaschusciman.com.br") {
               <h3>Jornada Domine Seu Dinheiro</h3>
             </div>
             <div class="solution-card-body">
-              <p>Organize sua vida financeira com clareza e método. Saia da confusão e construa uma base sólida para decisões seguras.</p>
+              <p>Você vai saber para onde vai cada real do seu salário e terá seu primeiro orçamento funcionando de verdade — sem planilha complicada, sem achismo.</p>
               <a href="jornada/" class="solution-link outline">Conhecer a jornada</a>
             </div>
           </div>
@@ -438,7 +680,7 @@ if (location.hostname === "flaviaschusciman.com.br") {
               <h3>Reserva que Rende</h3>
             </div>
             <div class="solution-card-body">
-              <p>Invista sua reserva de emergência com segurança, clareza e confiança. Sem depender de ninguém para apertar o botão.</p>
+              <p>Ao final do curso, você vai escolher, abrir e aplicar na sua própria reserva — sem precisar ligar para o banco ou pedir opinião de ninguém.</p>
               <a href="reserva/" class="solution-link outline">Conhecer o programa</a>
             </div>
           </div>
@@ -469,7 +711,7 @@ if (location.hostname === "flaviaschusciman.com.br") {
             </div>
             <div class="solution-card-body">
               <span class="solution-badge badge-available">Vagas abertas</span>
-              <p>O método completo em encontros individuais. Domínio, Crescimento Patrimonial e Liberdade Financeira.</p>
+              <p><strong style="color:var(--navy)">Domínio:</strong> você para de perder dinheiro sem saber como.<br><strong style="color:var(--navy)">Crescimento Patrimonial:</strong> sua carteira começa a trabalhar por você.<br><strong style="color:var(--navy)">Liberdade Financeira:</strong> você tem um horizonte claro de quando pode parar de depender 100% do trabalho ativo.</p>
               <a href="mentoria/" class="solution-link gold">Aplicar para uma vaga</a>
             </div>
           </div>
@@ -493,7 +735,7 @@ if (location.hostname === "flaviaschusciman.com.br") {
             </div>
             <div class="solution-card-body">
               <span class="solution-badge badge-limited">Vagas limitadas</span>
-              <p>A experiência mais completa e personalizada. Arquitetura patrimonial, planejamento tributário e sucessório.</p>
+              <p>Para quem já tem patrimônio formado e quer proteger, multiplicar e organizar a herança. Arquitetura patrimonial, tributário e sucessório. Vagas por indicação ou aplicação.</p>
               <a href="mentoria-private/" class="solution-link outline">Quero saber mais</a>
             </div>
           </div>
@@ -516,48 +758,14 @@ if (location.hostname === "flaviaschusciman.com.br") {
     </div>
   </section>
 
-  <div class="gold-line"></div>
-
-  <!-- NA MÍDIA -->
-  <section style="background: var(--off-white); padding: 80px 24px;">
-  <style>.midia-grid .solution-card-top { min-height: 110px; }</style>
-    <div class="container">
-      <span class="section-tag">Na Mídia</span>
-      <h2 class="section-title">Flávia nas ondas do rádio</h2>
-      <div class="eco-grid-2 midia-grid" style="margin-top: 40px;">
-
-        <div class="solution-card">
-          <div class="solution-card-top">
-            <span class="solution-type">Rádio · Mais FM 102.9 · Organizando Minha Vida Financeira</span>
-            <h3>Planeje seu 2026: Como Definir Metas com Propósito</h3>
-          </div>
-          <div class="solution-card-body">
-            <a href="https://www.youtube.com/live/vXAmeQeIVEg?si=M6NLyCNq9xKSYg-s" class="solution-link outline" target="_blank">Assistir entrevista</a>
-          </div>
-        </div>
-
-        <div class="solution-card">
-          <div class="solution-card-top">
-            <span class="solution-type">Rádio · Mais FM 102.9 · Organizando Minha Vida Financeira</span>
-            <h3>Investimento: Como Começar com Pouco e Ter Resultados Reais</h3>
-          </div>
-          <div class="solution-card-body">
-            <a href="https://www.youtube.com/live/Pkzrom2n-Jo?si=8_aqGjQNFaORtI7m" class="solution-link outline" target="_blank">Assistir entrevista</a>
-          </div>
-        </div>
-
-      </div>
-    </div>
-  </section>
-
   <!-- PROPÓSITO -->
   <section class="purpose">
     <div class="container">
       <span class="section-tag" style="color:var(--gold)">Propósito</span>
       <h2 class="section-title">Mudar a forma como você se relaciona com o dinheiro.</h2>
-      <p>Para que você aprenda a poupar, a construir e a realizar sonhos. Não com promessas milagrosas. Com estrutura, método e acompanhamento real.</p>
+      <p>Para que em 12 meses você olhe para a sua conta e veja um número crescendo — e saiba exatamente por que. Sem milagre. Com método, acompanhamento e um plano feito para a sua realidade.</p>
       <div class="btn-row">
-        <a href="https://wa.me/5511995658658?text=Ol%C3%A1%2C%20Fl%C3%A1via%21%20Quero%20agendar%20minha%20sess%C3%A3o%20de%20diagn%C3%B3stico%20gratuita." class="btn" target="_blank">Agendar sessão de diagnóstico de 30 min gratuita</a>
+        <a href="https://wa.me/5511995658658?text=Ol%C3%A1%2C%20Fl%C3%A1via%21%20Quero%20agendar%20minha%20sess%C3%A3o%20de%20diagn%C3%B3stico%20gratuita." class="btn" target="_blank">Descubra por onde começar — 30 min, sem compromisso</a>
       </div>
     </div>
   </section>
