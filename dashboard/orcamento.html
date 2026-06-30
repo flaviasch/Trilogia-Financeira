@@ -2409,7 +2409,7 @@
         if (fgToggles) fgToggles.style.display = 'none';
       } else {
         if (!_catLocked) document.getElementById('mCategoria').value = '';
-        document.getElementById('mData').value      = new Date().toISOString().split('T')[0];
+        const _h = new Date(); document.getElementById('mData').value = `${_h.getFullYear()}-${String(_h.getMonth()+1).padStart(2,'0')}-${String(_h.getDate()).padStart(2,'0')}`;
         document.getElementById('mDescricao').value = '';
         document.getElementById('mValor').value     = '';
         // Cartão: sempre oculto em novos lançamentos (usar botão '💳 Lançar no cartão')
@@ -5156,7 +5156,7 @@
       // ── Extrai data ───────────────────────────────────────────────────────
       // Padrões: 30/05/2026 | 30/05 | 30 de maio
       const mesesNomes = ['jan','fev','mar','abr','mai','jun','jul','ago','set','out','nov','dez'];
-      let dataISO = new Date().toISOString().split('T')[0]; // fallback: hoje
+      const _hj = new Date(); let dataISO = `${_hj.getFullYear()}-${String(_hj.getMonth()+1).padStart(2,'0')}-${String(_hj.getDate()).padStart(2,'0')}`; // fallback: hoje
       const regexData1 = /(\d{1,2})\/(\d{1,2})(?:\/(\d{2,4}))?/;
       const regexData2 = new RegExp(`(\\d{1,2})\\s+de\\s+(${mesesNomes.join('|')})`, 'i');
       const mData1 = t.match(regexData1);
