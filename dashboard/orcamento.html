@@ -1859,7 +1859,7 @@
       <div class="aporte-distribuido" id="aporteDistribuido">—</div>
       <div class="modal-actions">
         <button class="btn-cancel" id="btnCancelarReservas">Cancelar</button>
-        <button class="btn-save" id="btnProximoClasse">Próximo →</button>
+        <button class="btn-save" id="btnProximoClasse" onclick="window._btnProximoClasse()">Próximo →</button>
       </div>
     </div>
   </div>
@@ -2715,7 +2715,7 @@
       }
     });
 
-    document.getElementById('btnProximoClasse').addEventListener('click', () => {
+    window._btnProximoClasse = () => {
       const inputs = document.querySelectorAll('#reservasAporteList .reserva-aporte-input');
       const distribuido = [...inputs].reduce((s, i) => s + readMoney(i), 0);
 
@@ -2772,7 +2772,8 @@
       document.getElementById('modalClasseSub').textContent =
         `Confirme a classe para atualizar o patrimônio agora (${brl(valorAportePendente)}), ou clique em Pular e importe o extrato da corretora depois.`;
       modalClasse.classList.remove('hidden');
-    });
+    };
+    document.getElementById('btnProximoClasse').addEventListener('click', window._btnProximoClasse);
 
     // ── Passo 2: modal de classe ──────────────────────────────────────────────
     document.getElementById('btnCancelarClasse').addEventListener('click', () => {
