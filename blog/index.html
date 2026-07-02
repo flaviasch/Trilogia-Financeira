@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Blog | Flávia Schuscimann — Educação Financeira para Mulheres</title>
+  <meta name="description" content="Artigos sobre planejamento financeiro, reserva de emergência, investimentos e construção de patrimônio. Conteúdo de Flávia Schuscimann, CFP®." />
+  <meta name="keywords" content="blog finanças pessoais, educação financeira para mulheres, planejamento financeiro, reserva de emergência, investimentos, CFP, Flávia Schuscimann, Flavia Schuscimann" />
+  <link rel="canonical" href="https://flaviaschusciman.com/blog/" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://flaviaschusciman.com/blog/" />
+  <meta property="og:title" content="Blog | Flávia Schuscimann — Educação Financeira para Mulheres" />
+  <meta property="og:description" content="Artigos sobre planejamento financeiro, reserva de emergência, investimentos e construção de patrimônio." />
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Blog",
+    "name": "Blog Flávia Schuscimann",
+    "description": "Educação financeira para mulheres que ganham bem e querem construir patrimônio de verdade.",
+    "url": "https://flaviaschusciman.com/blog/",
+    "author": { "@type": "Person", "name": "Flávia Schuscimann", "url": "https://flaviaschusciman.com" }
+  }
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --navy: #0D2B45; --navy-light: #1a3d5c; --navy-dark: #081e30;
+      --gold: #CFAE65; --gold-light: #e8d49b; --gold-dark: #a88a3f;
+      --white: #FFFFFF; --off-white: #F9F7F4; --cream: #F4F0E8;
+      --gray: #6B7280; --gray-light: #F3F4F6; --text: #1F2937; --border: #E5E7EB;
+    }
+    html { scroll-behavior: smooth; }
+    body { font-family: 'Inter', sans-serif; color: var(--text); background: var(--white); }
+
+    /* NAV */
+    nav {
+      background: var(--navy);
+      padding: 18px 40px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .nav-logo {
+      font-family: 'Playfair Display', serif;
+      font-size: 18px;
+      color: var(--gold);
+      text-decoration: none;
+      font-weight: 600;
+    }
+    .nav-links { display: flex; gap: 32px; align-items: center; }
+    .nav-links a {
+      color: rgba(255,255,255,0.75);
+      text-decoration: none;
+      font-size: 14px;
+      font-weight: 500;
+      transition: color .2s;
+    }
+    .nav-links a:hover { color: var(--gold); }
+    .nav-links a.active { color: var(--gold); }
+    .nav-cta {
+      background: var(--gold);
+      color: var(--navy) !important;
+      padding: 8px 20px;
+      border-radius: 6px;
+      font-weight: 600 !important;
+    }
+    .nav-cta:hover { background: var(--gold-light) !important; color: var(--navy) !important; }
+
+    /* HERO DO BLOG */
+    .blog-hero {
+      background: var(--navy);
+      padding: 72px 40px 60px;
+      text-align: center;
+    }
+    .blog-hero .eyebrow {
+      color: var(--gold);
+      font-size: 13px;
+      font-weight: 600;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      margin-bottom: 16px;
+    }
+    .blog-hero h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(32px, 5vw, 52px);
+      color: var(--white);
+      font-weight: 700;
+      line-height: 1.15;
+      max-width: 680px;
+      margin: 0 auto 20px;
+    }
+    .blog-hero p {
+      color: rgba(255,255,255,0.65);
+      font-size: 17px;
+      max-width: 520px;
+      margin: 0 auto;
+      line-height: 1.7;
+    }
+
+    /* ARTIGOS */
+    .blog-section {
+      max-width: 1080px;
+      margin: 0 auto;
+      padding: 72px 40px;
+    }
+
+    .artigos-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+      gap: 40px;
+    }
+
+    .artigo-card {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      overflow: hidden;
+      transition: box-shadow .25s, transform .25s;
+      text-decoration: none;
+      color: var(--text);
+      display: flex;
+      flex-direction: column;
+    }
+    .artigo-card:hover {
+      box-shadow: 0 8px 32px rgba(13,43,69,.12);
+      transform: translateY(-3px);
+    }
+
+    .artigo-tag-bar {
+      background: var(--navy);
+      padding: 10px 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .artigo-tag {
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      color: var(--gold);
+    }
+    .artigo-tempo {
+      font-size: 11px;
+      color: rgba(255,255,255,.5);
+    }
+
+    .artigo-body {
+      padding: 28px 24px 24px;
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+    }
+    .artigo-body h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: 20px;
+      font-weight: 700;
+      line-height: 1.35;
+      color: var(--navy);
+      margin-bottom: 12px;
+    }
+    .artigo-body p {
+      font-size: 14px;
+      color: var(--gray);
+      line-height: 1.65;
+      flex: 1;
+    }
+    .artigo-footer {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-top: 20px;
+      padding-top: 16px;
+      border-top: 1px solid var(--border);
+    }
+    .artigo-data { font-size: 12px; color: var(--gray); }
+    .artigo-link {
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--gold-dark);
+    }
+
+    /* FOOTER */
+    footer {
+      background: var(--navy-dark);
+      padding: 48px 40px;
+      text-align: center;
+    }
+    footer .logo {
+      font-family: 'Playfair Display', serif;
+      font-size: 22px;
+      color: var(--gold);
+      font-weight: 700;
+      margin-bottom: 12px;
+    }
+    footer p { color: rgba(255,255,255,.45); font-size: 13px; line-height: 1.7; }
+    footer a { color: rgba(255,255,255,.45); text-decoration: none; }
+    footer a:hover { color: var(--gold); }
+    .footer-links { display: flex; gap: 24px; justify-content: center; margin: 16px 0; flex-wrap: wrap; }
+
+    @media (max-width: 640px) {
+      nav { padding: 16px 20px; }
+      .nav-links { gap: 16px; }
+      .nav-links a:not(.nav-cta) { display: none; }
+      .blog-hero { padding: 56px 20px 48px; }
+      .blog-section { padding: 48px 20px; }
+      footer { padding: 40px 20px; }
+    }
+  </style>
+</head>
+<body>
+
+<nav>
+  <a href="/" class="nav-logo">Flávia Schuscimann</a>
+  <div class="nav-links">
+    <a href="/#produtos">Produtos</a>
+    <a href="/mentoria/">Mentoria</a>
+    <a href="/blog/" class="active">Blog</a>
+    <a href="https://diagnosticofinanceiro.scoreapp.com/" target="_blank" class="nav-cta">Diagnóstico gratuito</a>
+  </div>
+</nav>
+
+<section class="blog-hero">
+  <p class="eyebrow">Blog</p>
+  <h1>Dinheiro com clareza.<br>Patrimônio com método.</h1>
+  <p>Artigos sobre planejamento financeiro, investimentos e construção de patrimônio para mulheres que ganham bem e querem ir além do salário.</p>
+</section>
+
+<section class="blog-section">
+  <div class="artigos-grid">
+
+    <a href="/blog/reserva-de-emergencia-valor-onde-guardar/" class="artigo-card">
+      <div class="artigo-tag-bar">
+        <span class="artigo-tag">Reserva de Emergência</span>
+        <span class="artigo-tempo">7 min de leitura</span>
+      </div>
+      <div class="artigo-body">
+        <h2>Reserva de emergência: o valor exato, onde guardar e como começar</h2>
+        <p>Sabe que precisa ter uma reserva, mas não sabe quanto é suficiente nem onde colocar esse dinheiro. Este artigo responde as três perguntas com números reais.</p>
+        <div class="artigo-footer">
+          <span class="artigo-data">Julho 2026</span>
+          <span class="artigo-link">Ler artigo →</span>
+        </div>
+      </div>
+    </a>
+
+  </div>
+</section>
+
+<footer>
+  <p class="logo">Flávia Schuscimann</p>
+  <div class="footer-links">
+    <a href="/">Início</a>
+    <a href="/mentoria/">Mentoria</a>
+    <a href="/blog/">Blog</a>
+    <a href="https://www.instagram.com/flaviaschuscimann" target="_blank">Instagram</a>
+  </div>
+  <p>CFP® · Planejadora Financeira · Assessora XP Investimentos</p>
+</footer>
+
+</body>
+</html>
