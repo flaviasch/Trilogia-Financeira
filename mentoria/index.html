@@ -16,10 +16,9 @@
     "@context": "https://schema.org",
     "@type": "Service",
     "name": "Mentoria Trilogia Financeira",
-    "provider": { "@type": "Person", "name": "Flávia Schusciman", "url": "https://flaviaschusciman.com" },
-    "description": "Mentoria individual para mulheres que ganham bem mas ainda não construíram patrimônio de verdade. Método completo: Domínio, Crescimento Patrimonial e Liberdade Financeira.",
+    "description": "Mentoria financeira individual para mulheres que ganham bem e querem construir patrimônio.",
     "url": "https://flaviaschusciman.com/mentoria/",
-    "areaServed": "BR"
+    "provider": { "@type": "Person", "name": "Flávia Schusciman", "url": "https://flaviaschusciman.com" }
   }
   </script>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -54,7 +53,7 @@
 
     .container { max-width: 1100px; margin: 0 auto; padding: 0 24px; }
 
-    /* ���� HERO ���� */
+    /* ── HERO ── */
     .hero {
       background: var(--navy);
       color: var(--white);
@@ -139,13 +138,13 @@
       color: rgba(255,255,255,0.45);
     }
 
-    /* ���� DIVIDER ���� */
+    /* ── DIVIDER ── */
     .gold-line {
       height: 3px;
       background: linear-gradient(90deg, transparent, var(--gold), transparent);
     }
 
-    /* ���� SECTION BASE ���� */
+    /* ── SECTION BASE ── */
     section { padding: 80px 24px; }
 
     .section-tag {
@@ -171,7 +170,7 @@
       line-height: 1.7;
     }
 
-    /* ���� PROMESSA ���� */
+    /* ── PROMESSA ── */
     .promise {
       background: var(--off-white);
       padding: 72px 24px;
@@ -187,7 +186,7 @@
     }
     .promise-text em { color: var(--gold); font-style: normal; }
 
-    /* ���� FRASE DE POSICIONAMENTO ���� */
+    /* ── FRASE DE POSICIONAMENTO ── */
     .positioning {
       background: var(--navy);
       padding: 64px 24px;
@@ -205,7 +204,7 @@
 
     .positioning blockquote em { color: var(--gold); font-style: normal; }
 
-    /* ���� PARA QUEM �0 ���� */
+    /* ── PARA QUEM É ── */
     .for-who { background: var(--off-white); }
 
     .for-who .container { max-width: 1100px; }
@@ -226,7 +225,7 @@
 
     .for-who-card p { color: var(--text); font-size: 15px; line-height: 1.7; }
 
-    /* ���� DOR / TRANSFORMA�!ÒO ���� */
+    /* ── DOR / TRANSFORMAÇÃO ── */
     .transformation .container {
       display: grid;
       grid-template-columns: 1fr 1fr;
@@ -256,15 +255,15 @@
     }
 
     .transform-list li::before {
-      content: '⬢';
+      content: '•';
       color: var(--gold);
       flex-shrink: 0;
       margin-top: 1px;
     }
 
-    .transform-list.after li::before { content: '�S'; color: var(--gold); font-weight: 700; }
+    .transform-list.after li::before { content: '✓'; color: var(--gold); font-weight: 700; }
 
-    /* ���� FLÁVIA ���� */
+    /* ── FLÁVIA ── */
     .about { background: var(--navy); color: var(--white); }
 
     .about-grid {
@@ -325,7 +324,7 @@
       letter-spacing: 0.3px;
     }
 
-    /* ���� M�0TODO ���� */
+    /* ── MÉTODO ── */
     .method { background: var(--off-white); }
 
     .pillars {
@@ -373,7 +372,7 @@
 
     .pillar-card p { font-size: 14px; color: var(--gray); line-height: 1.7; }
 
-    /* ���� JORNADA ���� */
+    /* ── JORNADA ── */
     .journey { background: var(--white); }
 
     .journey-grid {
@@ -434,7 +433,7 @@
       top: 1px;
     }
 
-    /* ���� INVESTIMENTO ���� */
+    /* ── INVESTIMENTO ── */
     .investment { background: var(--navy); color: var(--white); text-align: center; }
 
     .investment .section-title { color: var(--white); }
@@ -512,7 +511,7 @@
       line-height: 1.6;
     }
 
-    /* ���� DEPOIMENTOS ���� */
+    /* ── DEPOIMENTOS ── */
     .testimonials { background: var(--navy); }
     .testimonials .section-tag { color: var(--gold); }
     .testimonials .section-title { color: var(--white); }
@@ -549,7 +548,7 @@
     }
     @media (max-width: 900px) { .testimonials-grid { grid-template-columns: 1fr; } }
 
-    /* ���� FAQ ���� */
+    /* ── FAQ ── */
     .faq { background: var(--off-white); }
 
     .faq-list {
@@ -577,7 +576,7 @@
 
     .faq-item p { font-size: 14px; color: var(--gray); line-height: 1.7; }
 
-    /* ���� CTA FINAL ���� */
+    /* ── CTA FINAL ── */
     .final-cta {
       background: var(--navy);
       padding: 100px 24px;
@@ -601,7 +600,7 @@
       margin: 0 auto 48px;
     }
 
-    /* ���� FOOTER ���� */
+    /* ── FOOTER ── */
     footer {
       background: #08192b;
       padding: 32px 24px;
@@ -610,7 +609,7 @@
       font-size: 12px;
     }
 
-    /* ���� RESPONSIVE ���� */
+    /* ── RESPONSIVE ── */
     @media (max-width: 768px) {
       .transformation .container { grid-template-columns: 1fr; gap: 40px; }
       .about-grid { grid-template-columns: 1fr; }
@@ -637,7 +636,7 @@
   <section class="hero">
     <div class="hero-inner">
       <div>
-        <span class="hero-tag">�S� Mentoria Trilogia Financeira</span>
+        <span class="hero-tag">✦ Mentoria Trilogia Financeira</span>
         <h1>Você ganha bem.<br><span>Agora é hora de construir</span><br>patrimônio de verdade.</h1>
         <p>O primeiro passo é uma conversa gratuita de 60 minutos. Você me conta sua situação, eu entendo seu cenário e você sai com clareza e direção real. Sem compromisso.</p>
         <a href="https://forms.gle/Qnvhmc8CBwgue9DH7" class="btn" target="_blank">Agendar minha Sessão da Clareza</a>
@@ -646,7 +645,7 @@
         <img src="Flavia%201.jpg" alt="Flávia Schusciman" class="hero-photo" />
         <div class="floating-card">
           <p class="floating-card-label">Vagas Limitadas</p>
-          <p class="floating-card-value">Mentoria Individual<br>�S� Vagas Limitadas</p>
+          <p class="floating-card-value">Mentoria Individual<br>✦ Vagas Limitadas</p>
         </div>
       </div>
     </div>
@@ -670,7 +669,7 @@
     </div>
   </div>
 
-  <!-- PARA QUEM �0 -->
+  <!-- PARA QUEM É -->
   <section class="for-who">
     <div class="container">
       <span class="section-tag">Para quem é</span>
@@ -693,7 +692,7 @@
     </div>
   </section>
 
-  <!-- TRANSFORMA�!ÒO -->
+  <!-- TRANSFORMAÇÃO -->
   <section class="transformation">
     <div class="container">
       <div class="transform-col">
@@ -747,7 +746,7 @@
     </div>
   </section>
 
-  <!-- M�0TODO -->
+  <!-- MÉTODO -->
   <section class="method">
     <div class="container">
       <span class="section-tag">O Método</span>
@@ -863,7 +862,7 @@
         </div>
 
         <div class="testimonial-card">
-          <p class="testimonial-text">"Antes do nosso planejamento, eu achava que tinha noção das minhas finanças � mas a verdade é que eu vivia sem clareza do que estava me sabotando. Você conseguiu organizar tudo de um jeito tão leve, prático e sem julgamentos, que me fez sentir segura pra olhar de frente pra minha relação com o dinheiro. Hoje tenho uma visão muito mais estratégica, sei onde estou e pra onde quero ir. Foi um divisor de águas pra mim."</p>
+          <p class="testimonial-text">"Antes do nosso planejamento, eu achava que tinha noção das minhas finanças — mas a verdade é que eu vivia sem clareza do que estava me sabotando. Você conseguiu organizar tudo de um jeito tão leve, prático e sem julgamentos, que me fez sentir segura pra olhar de frente pra minha relação com o dinheiro. Hoje tenho uma visão muito mais estratégica, sei onde estou e pra onde quero ir. Foi um divisor de águas pra mim."</p>
           <p class="testimonial-author">Paula</p>
           <p class="testimonial-result">Visão estratégica e paz com o dinheiro</p>
         </div>
@@ -877,14 +876,14 @@
     <div class="container">
       <span class="section-tag">Processo Seletivo</span>
       <h2 class="section-title">Vagas limitadas por turma.</h2>
-      <p class="section-subtitle">A mentoria tem número reduzido de vagas para garantir acompanhamento real. O processo começa com uma conversa gratuita � você me conta sua situação e eu avalio se faz sentido avançarmos juntas.</p>
+      <p class="section-subtitle">A mentoria tem número reduzido de vagas para garantir acompanhamento real. O processo começa com uma conversa gratuita — você me conta sua situação e eu avalio se faz sentido avançarmos juntas.</p>
 
       <div class="price-box">
         <p class="price-label">Como funciona o processo</p>
         <div style="text-align:left;margin-bottom:32px;">
           <div style="display:flex;gap:14px;padding:14px 0;border-bottom:1px solid rgba(207,174,101,0.2);">
             <span style="font-family:'Playfair Display',serif;font-size:20px;color:var(--gold);font-weight:700;flex-shrink:0;min-width:28px;">01</span>
-            <span style="font-size:15px;color:rgba(255,255,255,0.85);padding-top:2px;">Você agenda a Sessão da Clareza Financeira � gratuita e sem compromisso</span>
+            <span style="font-size:15px;color:rgba(255,255,255,0.85);padding-top:2px;">Você agenda a Sessão da Clareza Financeira — gratuita e sem compromisso</span>
           </div>
           <div style="display:flex;gap:14px;padding:14px 0;border-bottom:1px solid rgba(207,174,101,0.2);">
             <span style="font-family:'Playfair Display',serif;font-size:20px;color:var(--gold);font-weight:700;flex-shrink:0;min-width:28px;">02</span>
