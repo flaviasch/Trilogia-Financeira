@@ -1,0 +1,8 @@
+User-agent: *
+Allow: /
+Disallow: /obrigado/
+Disallow: /raio-x/obrigado/
+Disallow: /dashboard/orcamento.html
+Disallow: /identidade-visual/
+
+Sitemap: https://flaviaschusciman.com/sitemap.xml
