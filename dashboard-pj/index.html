@@ -1,0 +1,545 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dashboard PJ Trilogia Financeira | Flávia Schusciman</title>
+  <meta name="description" content="Notas, recebimentos, impostos, contas a pagar, DRE e reservas da sua empresa em um só lugar. Dashboard PJ Trilogia Financeira, por Flávia Schusciman, CFP®." />
+  <meta name="keywords" content="dashboard financeiro empresa, controle financeiro MEI, controle financeiro ME, DRE simplificado, fluxo de caixa, ponto de equilíbrio, CFP, Flávia Schusciman" />
+  <link rel="canonical" href="https://flaviaschusciman.com/dashboard-pj/" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://flaviaschusciman.com/dashboard-pj/" />
+  <meta property="og:title" content="Dashboard PJ Trilogia Financeira | Flávia Schusciman" />
+  <meta property="og:description" content="Notas, recebimentos, impostos, contas a pagar, DRE e reservas da sua empresa em um só lugar." />
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "Dashboard PJ Trilogia Financeira",
+    "provider": { "@type": "Person", "name": "Flávia Schusciman", "url": "https://flaviaschusciman.com" },
+    "description": "App de finanças da empresa para donas de MEI e ME: notas, recebimentos, impostos, contas a pagar, DRE, fluxo de caixa e reservas em um só lugar.",
+    "url": "https://flaviaschusciman.com/dashboard-pj/",
+    "applicationCategory": "FinanceApplication",
+    "inLanguage": "pt-BR"
+  }
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --navy: #0D2B45;
+      --navy-light: #1a3d5c;
+      --navy-dark: #081e30;
+      --gold: #CFAE65;
+      --gold-light: #e8d49b;
+      --gold-dark: #a88a3f;
+      --white: #FFFFFF;
+      --off-white: #F9F7F4;
+      --gray: #6B7280;
+      --gray-light: #F3F4F6;
+      --text: #1F2937;
+      --border: rgba(255,255,255,0.1);
+      --card-bg: rgba(255,255,255,0.05);
+    }
+    html { scroll-behavior: smooth; }
+    body { font-family: 'Inter', sans-serif; color: var(--white); background: var(--navy); line-height: 1.6; }
+    h1, h2, h3, h4 { font-family: 'Playfair Display', serif; line-height: 1.2; }
+    a { text-decoration: none; color: inherit; }
+    .container { max-width: 1100px; margin: 0 auto; padding: 0 24px; }
+
+    /* NAV */
+    nav { background: rgba(8,30,48,0.95); padding: 16px 24px; border-bottom: 1px solid var(--border); backdrop-filter: blur(8px); position: sticky; top: 0; z-index: 100; }
+    .nav-inner { max-width: 1100px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; }
+    .nav-logo { font-family: 'Playfair Display', serif; color: var(--white); font-size: 16px; font-weight: 600; }
+    .nav-logo span { color: var(--gold); }
+    .nav-back { font-size: 13px; color: rgba(255,255,255,0.6); border: 1px solid var(--border); padding: 6px 16px; border-radius: 100px; transition: all 0.2s; }
+    .nav-back:hover { color: var(--white); border-color: rgba(255,255,255,0.5); }
+
+    /* HERO */
+    .hero { background: var(--navy-dark); padding: 120px 24px 140px; text-align: center; position: relative; overflow: hidden; }
+    .hero::before { content: ''; position: absolute; inset: 0; background: radial-gradient(ellipse at top, rgba(207,174,101,0.08) 0%, transparent 70%); pointer-events: none; }
+    .hero-tag { display: block; font-size: 12px; font-weight: 700; letter-spacing: 4px; text-transform: uppercase; color: var(--gold); margin-bottom: 32px; opacity: 0.9; }
+    .hero h1 { font-size: clamp(36px, 6vw, 68px); font-weight: 700; max-width: 860px; margin: 0 auto 24px; line-height: 1.08; }
+    .hero h1 span { color: var(--gold); }
+    .hero-desc { font-size: clamp(16px, 2vw, 20px); color: rgba(255,255,255,0.65); max-width: 640px; margin: 0 auto 52px; line-height: 1.75; }
+    .hero-ctas { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; }
+    .btn-hero { display: inline-block; background: var(--gold); color: var(--navy); font-weight: 700; font-size: 16px; padding: 18px 52px; border-radius: 8px; transition: background 0.2s, transform 0.2s; }
+    .btn-hero:hover { background: var(--gold-light); transform: translateY(-2px); }
+    .btn-hero-outline { display: inline-block; border: 1.5px solid rgba(207,174,101,0.5); color: var(--gold); font-weight: 600; font-size: 15px; padding: 17px 36px; border-radius: 8px; transition: all 0.2s; }
+    .btn-hero-outline:hover { border-color: var(--gold); background: rgba(207,174,101,0.08); }
+
+    .gold-line { height: 2px; background: linear-gradient(90deg, transparent, rgba(207,174,101,0.4), transparent); }
+
+    /* SHARED */
+    section { padding: 80px 24px; }
+    .section-title { font-size: clamp(28px, 4vw, 50px); color: var(--white); margin-bottom: 16px; }
+    .section-title span { color: var(--gold); }
+    .section-subtitle { font-size: 17px; color: rgba(255,255,255,0.55); max-width: 600px; line-height: 1.7; margin: 0 auto; }
+
+    /* O QUE É */
+    .what-is { background: var(--navy-dark); }
+    .what-is .section-title { text-align: center; margin-bottom: 48px; }
+    .what-is-box { max-width: 800px; margin: 0 auto; border: 1px solid var(--border); border-radius: 16px; padding: 40px; }
+    .what-is-box .icon-row { display: flex; align-items: center; gap: 14px; margin-bottom: 20px; }
+    .what-is-box .icon { width: 44px; height: 44px; border-radius: 10px; background: var(--gold); display: flex; align-items: center; justify-content: center; font-size: 20px; flex-shrink: 0; }
+    .what-is-box h3 { font-size: 18px; color: var(--white); }
+    .what-is-box p { font-size: 15px; color: rgba(255,255,255,0.6); line-height: 1.75; margin-bottom: 24px; }
+    .what-is-list { list-style: none; }
+    .what-is-list li { display: flex; align-items: center; gap: 12px; padding: 12px 0; border-bottom: 1px solid var(--border); font-size: 15px; color: rgba(255,255,255,0.8); }
+    .what-is-list li:last-child { border-bottom: none; }
+    .what-is-list li span.check { width: 28px; height: 28px; border-radius: 50%; background: rgba(207,174,101,0.2); display: flex; align-items: center; justify-content: center; font-size: 13px; color: var(--gold); flex-shrink: 0; }
+    .what-is-note { margin-top: 24px; padding-top: 20px; border-top: 1px solid var(--border); text-align: center; }
+    .what-is-note p { font-size: 15px; color: var(--gold); font-weight: 600; }
+
+    /* MÓDULOS */
+    .features { background: var(--navy); }
+    .features .section-title { text-align: center; margin-bottom: 56px; }
+    .features-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; max-width: 880px; margin: 0 auto; }
+    .feature-card { border: 1px solid var(--border); border-radius: 12px; overflow: hidden; transition: border-color 0.2s; }
+    .feature-card:hover { border-color: rgba(207,174,101,0.3); }
+    .feature-top { background: rgba(255,255,255,0.04); padding: 20px 24px; border-bottom: 1px solid var(--border); display: flex; align-items: center; gap: 14px; }
+    .feature-icon { width: 40px; height: 40px; border-radius: 10px; background: rgba(207,174,101,0.12); display: flex; align-items: center; justify-content: center; font-size: 18px; flex-shrink: 0; }
+    .feature-top h3 { font-size: 16px; color: var(--white); }
+    .feature-body { padding: 20px 24px; }
+    .feature-items { list-style: none; }
+    .feature-items li { font-size: 13px; color: rgba(255,255,255,0.55); padding: 6px 0; border-bottom: 1px solid var(--border); display: flex; gap: 8px; }
+    .feature-items li:last-child { border-bottom: none; }
+    .feature-items li::before { content: '·'; color: var(--gold); flex-shrink: 0; }
+
+    /* PREÇOS */
+    .pricing { background: var(--navy-dark); }
+    .pricing .section-title { text-align: center; margin-bottom: 56px; }
+    .pricing-group { max-width: 820px; margin: 0 auto 48px; }
+    .pricing-group:last-of-type { margin-bottom: 0; }
+    .group-label { font-size: 11px; font-weight: 700; letter-spacing: 3px; text-transform: uppercase; color: rgba(255,255,255,0.35); margin-bottom: 16px; padding-left: 4px; }
+    .pricing-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+    .price-card { border: 1px solid var(--border); border-radius: 16px; padding: 32px 28px; position: relative; }
+    .price-card.featured { border-color: rgba(207,174,101,0.5); background: rgba(207,174,101,0.04); }
+    .price-card.annual { border-color: rgba(255,255,255,0.18); background: rgba(255,255,255,0.02); }
+    .featured-badge { position: absolute; top: -14px; left: 50%; transform: translateX(-50%); background: var(--gold); color: var(--navy); font-size: 11px; font-weight: 700; padding: 5px 16px; border-radius: 100px; white-space: nowrap; }
+    .plan-name { font-size: 13px; font-weight: 700; color: var(--white); margin-bottom: 4px; }
+    .plan-name.featured-name { color: var(--gold); }
+    .plan-desc { font-size: 13px; color: rgba(255,255,255,0.45); margin-bottom: 20px; }
+    .price-anchor { font-size: 13px; color: rgba(255,255,255,0.3); text-decoration: line-through; margin-bottom: 2px; }
+    .price-value { font-family: 'Playfair Display', serif; font-size: 44px; font-weight: 700; color: var(--white); line-height: 1; }
+    .price-value span { font-size: 16px; font-weight: 400; color: rgba(255,255,255,0.5); }
+    .price-value.featured-price { color: var(--gold); }
+    .price-economy { display: inline-block; background: rgba(207,174,101,0.2); color: var(--gold); font-size: 11px; font-weight: 700; padding: 3px 10px; border-radius: 100px; margin-top: 6px; margin-bottom: 20px; }
+    .price-divider { height: 1px; background: var(--border); margin: 16px 0; }
+    .price-features { list-style: none; margin-bottom: 24px; }
+    .price-features li { display: flex; gap: 10px; padding: 7px 0; border-bottom: 1px solid var(--border); font-size: 13px; color: rgba(255,255,255,0.75); }
+    .price-features li:last-child { border-bottom: none; }
+    .price-features li::before { content: '✓'; color: var(--gold); font-weight: 700; flex-shrink: 0; }
+    .btn-plan { display: block; padding: 14px 24px; border-radius: 8px; text-align: center; font-size: 14px; font-weight: 700; transition: all 0.2s; }
+    .btn-plan.outline { border: 1.5px solid var(--gold); color: var(--gold); }
+    .btn-plan.outline:hover { background: rgba(207,174,101,0.1); }
+    .btn-plan.solid { background: var(--gold); color: var(--navy); }
+    .btn-plan.solid:hover { background: var(--gold-light); transform: translateY(-2px); }
+    .pricing-separator { max-width: 820px; margin: 0 auto 40px; height: 1px; background: var(--border); }
+
+    /* FAQ */
+    .faq { background: var(--navy); }
+    .faq .section-title { text-align: center; margin-bottom: 48px; }
+    .faq-list { max-width: 760px; margin: 0 auto; display: flex; flex-direction: column; gap: 8px; }
+    .faq-item { border: 1px solid var(--border); border-radius: 10px; overflow: hidden; }
+    .faq-question { width: 100%; background: transparent; border: none; color: var(--white); font-size: 16px; font-family: 'Inter', sans-serif; font-weight: 500; padding: 20px 24px; display: flex; align-items: center; justify-content: space-between; cursor: pointer; text-align: left; gap: 16px; transition: background 0.2s; }
+    .faq-question:hover { background: rgba(255,255,255,0.04); }
+    .faq-chevron { flex-shrink: 0; font-size: 14px; color: var(--gold); transition: transform 0.3s; }
+    .faq-answer { max-height: 0; overflow: hidden; transition: max-height 0.35s ease; }
+    .faq-answer-inner { padding: 0 24px 20px; font-size: 15px; color: rgba(255,255,255,0.6); line-height: 1.75; border-top: 1px solid var(--border); padding-top: 16px; }
+    .faq-item.open .faq-answer { max-height: 320px; }
+    .faq-item.open .faq-chevron { transform: rotate(180deg); }
+
+    /* CTA FINAL */
+    .cta-final { background: var(--navy-dark); text-align: center; padding: 100px 24px; position: relative; overflow: hidden; }
+    .cta-final::before { content: ''; position: absolute; inset: 0; background: radial-gradient(ellipse at center, rgba(207,174,101,0.07) 0%, transparent 70%); pointer-events: none; }
+    .cta-final h2 { font-size: clamp(28px, 4vw, 48px); color: var(--white); max-width: 620px; margin: 0 auto 20px; }
+    .cta-final h2 span { color: var(--gold); }
+    .cta-final p { font-size: 17px; color: rgba(255,255,255,0.55); max-width: 500px; margin: 0 auto 44px; line-height: 1.7; }
+
+    footer { background: #040f18; color: rgba(255,255,255,0.4); text-align: center; padding: 32px 24px; font-size: 13px; }
+    footer a { color: var(--gold); }
+
+    @media (max-width: 768px) { .features-grid { grid-template-columns: 1fr; } .pricing-grid { grid-template-columns: 1fr; } .hero-ctas { flex-direction: column; align-items: center; } }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <div class="nav-inner">
+      <span class="nav-logo">Flávia <span>Schusciman</span></span>
+      <a href="../" class="nav-back">Voltar ao início</a>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="container">
+      <span class="hero-tag">Dashboard PJ Trilogia Financeira</span>
+      <h1>As finanças da sua empresa, <span>organizadas como as suas.</span></h1>
+      <p class="hero-desc">Notas emitidas, recebimentos, impostos previstos, contas a pagar, lucro real e reservas do negócio — em um só lugar, sem precisar entender de contabilidade.</p>
+      <div class="hero-ctas">
+        <a href="https://pay.kiwify.com.br/i1yEzFs" class="btn-hero" target="_blank">Assinar o Dashboard PJ →</a>
+        <a href="#planos" class="btn-hero-outline">Ver combos com o Dashboard PF</a>
+      </div>
+    </div>
+  </section>
+
+  <div class="gold-line"></div>
+
+  <!-- O QUE É -->
+  <section class="what-is">
+    <div class="container">
+      <h2 class="section-title" style="text-align:center;margin-bottom:48px;">O que é o <span>Dashboard PJ?</span></h2>
+      <div class="what-is-box">
+        <div class="icon-row">
+          <div class="icon">◆</div>
+          <h3>Ferramenta de Gestão Financeira da Empresa</h3>
+        </div>
+        <p>Feito para donas de MEI e ME que precisam saber, com clareza, quanto a empresa fatura, quanto deve de imposto, quanto pode tirar de retirada sem comprometer o caixa e quanto sobra de lucro no fim do mês. Você lança as notas e despesas, o sistema devolve os cálculos prontos — sem depender de planilha nem de contador para o dia a dia.</p>
+        <div class="what-is-note">
+          <p>Você não precisa ser mentorada da Trilogia Financeira para assinar.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- MÓDULOS -->
+  <section class="features">
+    <div class="container">
+      <h2 class="section-title" style="text-align:center;margin-bottom:56px;">Seis módulos. Uma <span>visão completa do negócio.</span></h2>
+      <div class="features-grid">
+        <div class="feature-card">
+          <div class="feature-top">
+            <div class="feature-icon">🧾</div>
+            <h3>Notas &amp; Recebimentos</h3>
+          </div>
+          <div class="feature-body">
+            <ul class="feature-items">
+              <li>Emissão de nota com forma de pagamento</li>
+              <li>Parcelamento no cartão calculado automaticamente</li>
+              <li>Valor líquido já com taxa e prazo da adquirente</li>
+              <li>Cobrança de clientes com lembrete pronto</li>
+            </ul>
+          </div>
+        </div>
+        <div class="feature-card">
+          <div class="feature-top">
+            <div class="feature-icon">💰</div>
+            <h3>Impostos sob controle</h3>
+          </div>
+          <div class="feature-body">
+            <ul class="feature-items">
+              <li>Provisionamento automático por competência</li>
+              <li>Configuração por regime — MEI, Simples ou Presumido</li>
+              <li>Data real de vencimento de cada tributo</li>
+              <li>Sem susto na hora de pagar o DAS ou os impostos</li>
+            </ul>
+          </div>
+        </div>
+        <div class="feature-card">
+          <div class="feature-top">
+            <div class="feature-icon">📥</div>
+            <h3>Contas a Pagar + IA</h3>
+          </div>
+          <div class="feature-body">
+            <ul class="feature-items">
+              <li>Despesas fixas, parceladas e avulsas</li>
+              <li>Importação de extrato com IA — revisão antes de salvar</li>
+              <li>Reconhece pagamento de imposto e evita duplicidade</li>
+              <li>Confirmação de pagamento com um clique</li>
+            </ul>
+          </div>
+        </div>
+        <div class="feature-card">
+          <div class="feature-top">
+            <div class="feature-icon">📊</div>
+            <h3>DRE &amp; Ponto de Equilíbrio</h3>
+          </div>
+          <div class="feature-body">
+            <ul class="feature-items">
+              <li>Lucro líquido real do período, regime de competência</li>
+              <li>Faturamento mínimo pra não operar no vermelho</li>
+              <li>Retirada mínima desejada configurável</li>
+              <li>Separado do fluxo de caixa — sem misturar competência com caixa</li>
+            </ul>
+          </div>
+        </div>
+        <div class="feature-card">
+          <div class="feature-top">
+            <div class="feature-icon">💧</div>
+            <h3>Fluxo de Caixa</h3>
+          </div>
+          <div class="feature-body">
+            <ul class="feature-items">
+              <li>Saldo projetado do mês, dia a dia</li>
+              <li>Recebimentos reais e previstos</li>
+              <li>Despesas, impostos e outras entradas de caixa</li>
+              <li>Timing real de quando o dinheiro entra e sai</li>
+            </ul>
+          </div>
+        </div>
+        <div class="feature-card">
+          <div class="feature-top">
+            <div class="feature-icon">🎯</div>
+            <h3>Reservas da Empresa</h3>
+          </div>
+          <div class="feature-body">
+            <ul class="feature-items">
+              <li>Capital de giro, calculado pelo ciclo financeiro real</li>
+              <li>Reserva de emergência da empresa</li>
+              <li>Reserva de investimento com meta livre</li>
+              <li>Retirada sugerida a partir do lucro do período</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="gold-line"></div>
+
+  <!-- COMBO COM O PF -->
+  <section style="background:var(--navy-dark);padding:80px 24px;">
+    <div class="container">
+      <h2 class="section-title" style="text-align:center;margin-bottom:12px;">A empresa é sua. <span>As finanças pessoais também.</span></h2>
+      <p style="text-align:center;font-size:17px;color:rgba(255,255,255,0.5);max-width:640px;margin:0 auto 56px;line-height:1.75;">Quem toca um negócio também precisa organizar a vida financeira pessoal — sem misturar os números das duas coisas. Por isso o Dashboard PJ também existe em combo com o Dashboard PF, e com o Clube Trilogia.</p>
+
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:24px;max-width:900px;margin:0 auto;">
+        <div style="border:1px solid var(--border);border-radius:16px;padding:36px 32px;">
+          <div style="display:flex;align-items:center;gap:12px;margin-bottom:20px;">
+            <div style="width:40px;height:40px;border-radius:10px;background:rgba(207,174,101,0.15);display:flex;align-items:center;justify-content:center;font-size:18px;flex-shrink:0;">🏢</div>
+            <div>
+              <p style="font-size:10px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--gold);margin-bottom:2px;">Dashboard PJ</p>
+              <h3 style="font-size:18px;color:var(--white);font-family:'Playfair Display',serif;">A empresa</h3>
+            </div>
+          </div>
+          <p style="font-size:15px;color:rgba(255,255,255,0.55);line-height:1.75;">Notas, recebimentos, impostos, contas a pagar, DRE, fluxo de caixa e reservas do negócio.</p>
+        </div>
+        <div style="border:1px solid var(--border);border-radius:16px;padding:36px 32px;">
+          <div style="display:flex;align-items:center;gap:12px;margin-bottom:20px;">
+            <div style="width:40px;height:40px;border-radius:10px;background:rgba(207,174,101,0.15);display:flex;align-items:center;justify-content:center;font-size:18px;flex-shrink:0;">◆</div>
+            <div>
+              <p style="font-size:10px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--gold);margin-bottom:2px;">Dashboard PF</p>
+              <h3 style="font-size:18px;color:var(--white);font-family:'Playfair Display',serif;">Você</h3>
+            </div>
+          </div>
+          <p style="font-size:15px;color:rgba(255,255,255,0.55);line-height:1.75;">Orçamento pessoal, patrimônio, reservas e perfil de investidor.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="gold-line"></div>
+
+  <!-- PLANOS -->
+  <section class="pricing" id="planos">
+    <div class="container">
+      <h2 class="section-title" style="text-align:center;margin-bottom:56px;">Escolha seu <span>acesso</span></h2>
+
+      <!-- Dashboard PJ avulso -->
+      <div class="pricing-group">
+        <p class="group-label">Dashboard PJ</p>
+        <div class="pricing-grid">
+          <div class="price-card">
+            <p class="plan-name">Mensal</p>
+            <p class="plan-desc">Flexibilidade para começar</p>
+            <p class="price-value">R$67 <span>/mês</span></p>
+            <div class="price-divider"></div>
+            <ul class="price-features">
+              <li>Notas e recebimentos</li>
+              <li>Impostos previstos por regime</li>
+              <li>Contas a pagar + importação com IA</li>
+              <li>DRE, fluxo de caixa e reservas</li>
+            </ul>
+            <a href="https://pay.kiwify.com.br/i1yEzFs" class="btn-plan outline" target="_blank">Assinar mensal</a>
+          </div>
+          <div class="price-card annual">
+            <span class="featured-badge">2 meses grátis</span>
+            <p class="plan-name">Anual</p>
+            <p class="plan-desc">Consistência com melhor custo</p>
+            <p class="price-anchor">De R$804/ano</p>
+            <p class="price-value">R$670 <span>/ano</span></p>
+            <span class="price-economy">Economia de R$134</span>
+            <div class="price-divider"></div>
+            <ul class="price-features">
+              <li>Notas e recebimentos</li>
+              <li>Impostos previstos por regime</li>
+              <li>Contas a pagar + importação com IA</li>
+              <li>DRE, fluxo de caixa e reservas</li>
+            </ul>
+            <a href="https://pay.kiwify.com.br/SAVfOaO" class="btn-plan outline" target="_blank">Assinar anual</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="pricing-separator"></div>
+
+      <!-- Combo PJ + PF -->
+      <div class="pricing-group">
+        <p class="group-label">Combo Dashboard PJ + PF</p>
+        <div class="pricing-grid">
+          <div class="price-card">
+            <p class="plan-name">Mensal</p>
+            <p class="plan-desc">Empresa e vida pessoal, no mesmo plano</p>
+            <p class="price-value">R$117 <span>/mês</span></p>
+            <div class="price-divider"></div>
+            <ul class="price-features">
+              <li>Dashboard PJ completo</li>
+              <li>Dashboard PF completo</li>
+              <li>Orçamento, patrimônio e reservas pessoais</li>
+              <li>Notas, impostos e DRE da empresa</li>
+            </ul>
+            <a href="https://pay.kiwify.com.br/av1I9m1" class="btn-plan outline" target="_blank">Assinar mensal</a>
+          </div>
+          <div class="price-card annual">
+            <span class="featured-badge">2 meses grátis</span>
+            <p class="plan-name">Anual</p>
+            <p class="plan-desc">Melhor custo pra quem quer as duas visões</p>
+            <p class="price-anchor">De R$1.404/ano</p>
+            <p class="price-value">R$1.170 <span>/ano</span></p>
+            <span class="price-economy">Economia de R$234</span>
+            <div class="price-divider"></div>
+            <ul class="price-features">
+              <li>Dashboard PJ completo</li>
+              <li>Dashboard PF completo</li>
+              <li>Orçamento, patrimônio e reservas pessoais</li>
+              <li>Notas, impostos e DRE da empresa</li>
+            </ul>
+            <a href="https://pay.kiwify.com.br/11AGIaz" class="btn-plan outline" target="_blank">Assinar anual</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="pricing-separator"></div>
+
+      <!-- Combo PJ + PF + Clube -->
+      <div class="pricing-group">
+        <p class="group-label">Combo Dashboard PJ + PF + Clube</p>
+        <div class="pricing-grid">
+          <div class="price-card">
+            <p class="plan-name">Mensal</p>
+            <p class="plan-desc">Visão completa + suporte comportamental</p>
+            <p class="price-value">R$147 <span>/mês</span></p>
+            <div class="price-divider"></div>
+            <ul class="price-features">
+              <li>Dashboard PJ + Dashboard PF completos</li>
+              <li>Live mensal Mês com Clareza</li>
+              <li>Drops semanais de comportamento financeiro</li>
+              <li>Revisão trimestral de rota com a Flávia</li>
+            </ul>
+            <a href="https://pay.kiwify.com.br/lGzHzxi" class="btn-plan outline" target="_blank">Assinar mensal</a>
+          </div>
+          <div class="price-card featured">
+            <span class="featured-badge">★ Melhor escolha</span>
+            <p class="plan-name featured-name">Anual</p>
+            <p class="plan-desc">Máxima economia, experiência completa</p>
+            <p class="price-anchor">De R$1.764/ano</p>
+            <p class="price-value featured-price">R$1.470 <span>/ano</span></p>
+            <span class="price-economy">Economia de R$294</span>
+            <div class="price-divider"></div>
+            <ul class="price-features">
+              <li>Dashboard PJ + Dashboard PF completos</li>
+              <li>Live mensal Mês com Clareza</li>
+              <li>Drops semanais de comportamento financeiro</li>
+              <li>Revisão trimestral de rota com a Flávia</li>
+            </ul>
+            <a href="https://pay.kiwify.com.br/o2eGY1x" class="btn-plan solid" target="_blank">✦ Assinar anual</a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="faq">
+    <div class="container">
+      <h2 class="section-title" style="text-align:center;margin-bottom:48px;">Perguntas <span>frequentes</span></h2>
+      <div class="faq-list">
+        <div class="faq-item">
+          <button class="faq-question" onclick="toggleFaq(this)">
+            Para quem é o Dashboard PJ?
+            <span class="faq-chevron">▼</span>
+          </button>
+          <div class="faq-answer">
+            <div class="faq-answer-inner">Para donas de MEI e ME que querem ter controle real do caixa, dos impostos e do lucro da empresa, sem depender de planilha nem de acesso constante ao contador para decisões do dia a dia.</div>
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question" onclick="toggleFaq(this)">
+            Preciso ser mentorada da Trilogia Financeira pra assinar?
+            <span class="faq-chevron">▼</span>
+          </button>
+          <div class="faq-answer">
+            <div class="faq-answer-inner">Não. O Dashboard PJ funciona sozinho, com base nos dados que você mesma insere — notas emitidas e despesas da empresa. Não é necessário ter feito a mentoria nem ser mentorada ativa.</div>
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question" onclick="toggleFaq(this)">
+            Funciona pra qualquer regime tributário?
+            <span class="faq-chevron">▼</span>
+          </button>
+          <div class="faq-answer">
+            <div class="faq-answer-inner">O módulo de Impostos é configurável por regime — MEI (DAS fixo), Simples Nacional ou Lucro Presumido. Você escolhe o seu na configuração e o sistema aplica a lógica correspondente.</div>
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question" onclick="toggleFaq(this)">
+            O Dashboard PJ substitui o contador?
+            <span class="faq-chevron">▼</span>
+          </button>
+          <div class="faq-answer">
+            <div class="faq-answer-inner">Não. Ele organiza os números e devolve clareza sobre caixa, impostos previstos e lucro — mas não faz a apuração fiscal oficial nem substitui a contabilidade formal da empresa.</div>
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question" onclick="toggleFaq(this)">
+            Qual a diferença entre o avulso e os combos?
+            <span class="faq-chevron">▼</span>
+          </button>
+          <div class="faq-answer">
+            <div class="faq-answer-inner">O avulso é só o Dashboard PJ (finanças da empresa). O Combo PJ + PF soma o Dashboard PF (orçamento, patrimônio e reservas pessoais). O Combo PJ + PF + Clube adiciona também o Clube Trilogia, com suporte comportamental mensal.</div>
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question" onclick="toggleFaq(this)">
+            Posso cancelar a qualquer momento?
+            <span class="faq-chevron">▼</span>
+          </button>
+          <div class="faq-answer">
+            <div class="faq-answer-inner">Sim. A assinatura é recorrente e pode ser cancelada quando quiser, sem multa. Seu acesso permanece ativo até o fim do período já pago.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA FINAL -->
+  <section class="cta-final">
+    <div class="container">
+      <h2>Sua empresa também merece <span>clareza financeira.</span></h2>
+      <p>Notas, impostos, contas a pagar, lucro real e reservas — organizados, sem depender de planilha.</p>
+      <div class="hero-ctas">
+        <a href="https://pay.kiwify.com.br/i1yEzFs" class="btn-hero" target="_blank">Assinar o Dashboard PJ →</a>
+        <a href="#planos" class="btn-hero-outline">Ver todos os planos</a>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <p>Flávia Schusciman, CFP® &nbsp;|&nbsp; <a href="https://www.instagram.com/flavia.schuscimann" target="_blank">@flavia.schuscimann</a> &nbsp;|&nbsp; <a href="../">flaviaschusciman.com</a></p>
+    <p style="margin-top:8px">2026 © Todos os direitos reservados</p>
+  </footer>
+
+  <script>
+    function toggleFaq(btn) {
+      const item = btn.parentElement;
+      item.classList.toggle('open');
+    }
+  </script>
+
+</body>
+</html>
