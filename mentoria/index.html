@@ -1,949 +1,1482 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Mentoria Trilogia Financeira | Flávia Schusciman</title>
-  <meta name="description" content="Transforme sua renda em patrimônio real. Mentoria individual com Flávia Schusciman, CFP®, para mulheres que ganham bem mas ainda não construíram a estrutura financeira que merecem." />
-  <meta name="keywords" content="mentoria financeira individual, mentoria planejamento financeiro, mentoria CFP, alta renda finanças, mulheres e dinheiro, construir patrimônio, planejadora financeira, Flávia Schusciman" />
-  <link rel="canonical" href="https://flaviaschusciman.com/mentoria/" />
-  <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://flaviaschusciman.com/mentoria/" />
-  <meta property="og:title" content="Mentoria Trilogia Financeira | Flávia Schusciman" />
-  <meta property="og:description" content="Transforme sua renda em patrimônio real. Mentoria individual com Flávia Schusciman, CFP®, para mulheres que ganham bem mas ainda não construíram a estrutura financeira que merecem." />
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "Service",
-    "name": "Mentoria Trilogia Financeira",
-    "description": "Mentoria financeira individual para mulheres que ganham bem e querem construir patrimônio.",
-    "url": "https://flaviaschusciman.com/mentoria/",
-    "provider": { "@type": "Person", "name": "Flávia Schusciman", "url": "https://flaviaschusciman.com" }
+  <head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Flávia Schusciman | Mentoria Trilogia Financeira</title>
+<meta name="description" content="Para mulheres que ganham bem e sabem que deveriam ter mais a mostrar por isso. A Mentoria Trilogia Financeira muda isso.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400;1,9..144,500;1,9..144,600&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link href="https://fonts.cdnfonts.com/css/doulos" rel="stylesheet">
+<style>
+/* ============================================
+   FLÁVIA SCHUSCIMAN — MENTORIA TRILOGIA FINANCEIRA
+   Design tokens
+   ============================================ */
+
+/* Uncomment and point to licensed font files when available:
+@font-face {
+  font-family: 'TT Ramillas';
+  src: url('assets/fonts/TTRamillas-Regular.woff2') format('woff2');
+  font-weight: 400; font-style: normal; font-display: swap;
+}
+@font-face {
+  font-family: 'TT Ramillas';
+  src: url('assets/fonts/TTRamillas-Italic.woff2') format('woff2');
+  font-weight: 400; font-style: italic; font-display: swap;
+}
+@font-face {
+  font-family: 'TT Hoves';
+  src: url('assets/fonts/TTHoves-Regular.woff2') format('woff2');
+  font-weight: 400; font-style: normal; font-display: swap;
+}
+*/
+
+:root {
+  /* Colors */
+  --cream:        #F8F1E7;
+  --cream-soft:   #EFE2CE;
+  --brown:        #573422;
+  --brown-deep:   #3A2115;
+  --peach:        #FFCA98;
+  --peach-soft:   #FFE3C4;
+  --terracotta:   #A85D35;
+  --terracotta-dark: #8A4826;
+  --navy:         #0D2B45;
+  --navy-deep:    #081C2E;
+  --gold:         #CFAE65;
+  --gold-light:   #E8CD8C;
+  --red:          #D14A3E;
+  --red-soft:     rgba(209, 74, 62, 0.14);
+  --green:        #3E8E5B;
+  --green-soft:   rgba(62, 142, 91, 0.14);
+  --white:        #FFFFFF;
+  --ink:          #2B1B10;
+
+  /* Type */
+  --font-display: 'TT Ramillas', 'Fraunces', Georgia, serif;
+  --font-h1: 'Doulos SIL', 'TT Ramillas', 'Fraunces', Georgia, serif;
+  --font-body: 'TT Hoves', 'Manrope', -apple-system, BlinkMacSystemFont, sans-serif;
+
+  --container: 1180px;
+}
+
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; overflow-x: hidden; }
+
+body {
+  margin: 0;
+  background: var(--cream);
+  color: var(--ink);
+  font-family: var(--font-body);
+  font-size: 17px;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
+
+img { max-width: 100%; display: block; }
+
+
+
+
+h1, h2, h3 {
+  font-family: 'Doulos SIL';
+  font-weight: 500;
+  margin: 0;
+  color: var(--navy);
+  line-height: 1.15;
+}
+
+h1 { font-family: var(--font-h1); }
+
+p { margin: 0 0 1em; }
+
+em { font-style: italic; }
+
+.mark {
+  position: relative;
+  font-style: italic;
+  white-space: nowrap;
+  padding: 0 .1em;
+}
+.mark::after {
+  content: '';
+  position: absolute;
+  left: -2%;
+  right: -2%;
+  bottom: 0.05em;
+  height: 0.42em;
+  background: var(--peach);
+  z-index: -1;
+  border-radius: 2px 6px 2px 6px;
+  transform: rotate(-0.6deg);
+}
+
+.section-tag {
+  display: inline-block;
+  font-family: var(--font-body);
+  font-size: 12.5px;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--terracotta);
+  margin-bottom: 18px;
+}
+.section-tag--light { color: var(--gold); }
+
+.section-head {
+  max-width: 780px;
+  margin: 0 auto 48px;
+  text-align: center;
+}
+.section-head h2 {
+  font-size: clamp(30px, 4.2vw, 46px);
+}
+.section-head--light { text-align: left; margin: 0 0 32px; }
+.section-head--light h2 { font-size: clamp(28px, 3.6vw, 40px); }
+
+/* Buttons */
+.btn {
+  font-family: var(--font-body);
+  font-weight: 700;
+  font-size: 15.5px;
+  letter-spacing: 0.01em;
+  padding: 17px 30px;
+  border-radius: 100px;
+  border: none;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+  transition: transform .25s ease, box-shadow .25s ease, background .25s ease;
+}
+
+.btn--primary {
+    background: #dbb56a;
+    color: var(--navy-deep);
+    box-shadow: 0 8px 24px -8px rgba(237, 198, 116, 0.905);
+}
+
+.btn--primary:hover {
+    background: var(--gold-light);
+    color: var(--navy-deep);
+    transform: translateY(-2px);
+}
+
+
+
+.btn--outline-light {
+  background: var(--gold);
+  color: var(--navy-deep);
+  box-shadow: 0 8px 24px -8px rgba(237, 198, 116, 0.905);
+}
+.btn--outline-light:hover {
+  background: var(--gold-light);
+  color: var(--navy-deep);
+  transform: translateY(-2px);
+};
+
+
+
+.btn__arrow { transition: transform .25s ease; }
+.btn:hover .btn__arrow { transform: translateX(4px); }
+
+/* Reveal-on-scroll */
+.reveal {
+  opacity: 0;
+  transform: translateY(22px);
+  transition: opacity .7s cubic-bezier(.2,.7,.3,1), transform .7s cubic-bezier(.2,.7,.3,1);
+}
+.reveal.is-visible { opacity: 1; transform: translateY(0); }
+
+@media (prefers-reduced-motion: reduce) {
+  .reveal { opacity: 1; transform: none; transition: none; }
+  html { scroll-behavior: auto; }
+}
+
+/* ============ BRAND LOCKUP (logo + wordmark) ============ */
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+}
+.brand__logo {
+  width: 40px;
+  height: 40px;
+  border-radius: 10px;
+  object-fit: cover;
+  flex-shrink: 0;
+}
+.brand__text {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.1;
+}
+.brand__title {
+  font-family: var(--font-display);
+  font-size: 17px;
+  color: var(--navy);
+}
+.brand__title em { color: var(--terracotta); font-style: italic; }
+.brand__subtitle {
+  font-size: 10.5px;
+  font-weight: 700;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-top: 2px;
+}
+
+/* ============ NAV ============ */
+.nav {
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  z-index: 100;
+  background: rgba(248, 241, 231, 0.88);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(13,43,69,0.1);
+  transition: transform .3s ease;
+}
+.nav__inner {
+  max-width: var(--container);
+  margin: 0 auto;
+  padding: 12px 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.nav__logo {
+  font-family: var(--font-display);
+  font-size: 19px;
+  color: var(--navy);
+}
+.nav__logo em { color: var(--terracotta); }
+.nav__cta {
+  display: inline-block;
+  font-family: var(--font-body);
+  font-weight: 700;
+  font-size: 13.5px;
+  background: var(--navy);
+  color: var(--cream);
+  border: none;
+  padding: 11px 20px;
+  border-radius: 100px;
+  cursor: pointer;
+  text-decoration: none;
+  white-space: nowrap;
+  transition: background .25s ease, color .25s ease;
+}
+.nav__cta:hover { background: var(--gold); color: var(--navy-deep); }
+
+/* ============ HERO ============ */
+.hero {
+  display: grid;
+  grid-template-columns: 1.05fr 0.95fr;
+  align-items: center;
+  gap: 40px;
+  max-width: var(--container);
+  margin: 0 auto;
+  padding: 132px 24px 80px;
+}
+.eyebrow {
+  font-size: 14.5px;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+  color: var(--terracotta);
+  margin-bottom: 22px;
+}
+.hero__headline {
+  font-size: clamp(30px, 3.6vw, 44px);
+  margin-bottom: 22px;
+}
+.hero__headline--serif {
+  display: block;
+  font-style: italic;
+  color: var(--terracotta);
+  margin-top: 6px;
+  font-size: 0.86em;
+}
+.hero__sub {
+  font-size: 17.5px;
+  max-width: 480px;
+  color: var(--navy);
+  opacity: 0.88;
+}
+.hero__sub--bold { font-weight: 700; opacity: 1; }
+.hero__micro {
+  font-size: 15px;
+  opacity: 0.75;
+  max-width: 460px;
+  margin-bottom: 28px;
+}
+.hero__note {
+  font-size: 13px;
+  opacity: 0.6;
+  margin-top: 14px;
+}
+.hero__media {
+  border-radius: 22px;
+  overflow: hidden;
+  aspect-ratio: 4/5;
+  min-height: 320px;
+  background: var(--cream-soft);
+  box-shadow: 0 30px 60px -20px rgba(13,43,69,0.35);
+}
+.hero__media img { width: 100%; height: 100%; object-fit: cover; display: block; }
+
+/* ============ IMPACT ============ */
+.impact {
+  background: var(--navy-deep);
+  color: var(--cream);
+  padding: 110px 24px;
+}
+.impact__inner { max-width: 760px; margin: 0 auto; text-align: center; }
+.impact__line {
+  font-family: var(--font-display);
+  font-size: clamp(24px, 3.4vw, 34px);
+  color: rgba(248,241,231,0.55);
+  margin-bottom: 4px;
+}
+.impact__line--serif {
+  font-style: italic;
+  color: var(--gold);
+  margin-bottom: 30px;
+}
+.impact__small { font-size: 15px; opacity: 0.7; margin-bottom: 46px; }
+.impact__quote {
+  font-family: var(--font-display);
+  font-style: italic;
+  font-size: clamp(19px, 2.1vw, 24px);
+  line-height: 1.55;
+  color: var(--cream);
+  margin: 0;
+  border-top: 1px solid rgba(207,174,101,0.3);
+  padding-top: 38px;
+}
+
+/* ============ FOR WHO ============ */
+.for-who { max-width: var(--container); margin: 0 auto; padding: 110px 24px; }
+.for-who__story {
+  max-width: 700px;
+  margin: 0 auto 44px;
+  font-size: 18px;
+  color: var(--navy);
+}
+.for-who__lead { font-weight: 700; font-size: 19px; }
+.for-who__intro {
+  text-align: center;
+  font-family: var(--font-display);
+  font-style: italic;
+  font-size: 22px;
+  color: var(--terracotta);
+  margin-bottom: 36px;
+}
+.checklist {
+  max-width: 780px;
+  margin: 0 auto;
+  display: grid;
+  gap: 18px;
+}
+.checklist__item {
+  display: flex;
+  gap: 18px;
+  align-items: flex-start;
+  background: var(--white);
+  border-radius: 16px;
+  padding: 26px 28px;
+  border-left: 3px solid var(--gold);
+  box-shadow: 0 4px 18px -8px rgba(13,43,69,0.14);
+}
+.checklist__mark { color: var(--gold); font-size: 20px; margin-top: 2px; }
+.checklist__item p { margin: 0; font-size: 16px; color: var(--navy); }
+
+/* ============ TODAY (comparison) ============ */
+.today {
+  background: var(--navy-deep);
+  color: var(--cream);
+  display: grid;
+  grid-template-columns: 0.85fr 1.15fr;
+}
+.today__media { min-height: 100%; background: var(--navy); }
+.today__media img { width: 100%; height: 100%; object-fit: cover; min-height: 340px; display: block; }
+.today__content { padding: 100px 48px; max-width: 760px; }
+.today__content h2, .today__content .section-tag { color: var(--gold); }
+.today__content h2 em { color: var(--cream); }
+.today__text { opacity: 0.85; font-size: 16.5px; margin-bottom: 40px; }
+.compare { display: grid; grid-template-columns: 1fr 1fr; gap: 22px; }
+.compare__col {
+  border-radius: 18px;
+  padding: 30px 26px;
+  border: 1px solid transparent;
+}
+.compare__col--now { background: var(--red-soft); border-color: rgba(209,74,62,0.35); }
+.compare__col--future { background: var(--green-soft); border-color: rgba(62,142,91,0.4); }
+.compare__col h3 {
+  font-family: var(--font-body);
+  font-size: 13px;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  margin-bottom: 18px;
+}
+.compare__col--now h3 { color: #F0958B; }
+.compare__col--future h3 { color: #8FD1A6; }
+.compare__col ul { margin: 0; padding: 0; list-style: none; }
+.compare__col li {
+  font-size: 14.5px;
+  line-height: 1.55;
+  padding-left: 24px;
+  position: relative;
+  margin-bottom: 14px;
+  opacity: 0.92;
+}
+.compare__col--now li::before {
+  content: '×';
+  position: absolute;
+  left: 0; top: -2px;
+  color: var(--red);
+  background: rgba(209,74,62,0.18);
+  width: 18px; height: 18px;
+  border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 13px;
+  font-weight: 700;
+}
+.compare__col--future li::before {
+  content: '✓';
+  position: absolute;
+  left: 0; top: -2px;
+  color: var(--gold);
+  background: rgba(207,174,101,0.22);
+  width: 18px; height: 18px;
+  border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 11px;
+  font-weight: 700;
+}
+
+/* ============ WHY NOT ============ */
+.why-not { max-width: var(--container); margin: 0 auto; padding: 110px 24px; }
+.why-not__intro { max-width: 680px; margin: 0 auto 56px; text-align: center; font-size: 17px; color: var(--navy); opacity: 0.85; }
+.tried-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 22px;
+  margin-bottom: 60px;
+}
+.tried-card {
+  background: var(--white);
+  border-radius: 18px;
+  padding: 32px;
+  border: 1px solid rgba(13,43,69,0.08);
+  border-top: 3px solid var(--navy);
+}
+.tried-card__num {
+  display: block;
+  font-family: var(--font-display);
+  font-style: italic;
+  font-size: 15px;
+  color: var(--gold);
+  opacity: 0.9;
+  margin-bottom: 14px;
+}
+.tried-card h3 { font-size: 19px; margin-bottom: 10px; }
+.tried-card p { font-size: 15px; color: var(--navy); opacity: 0.8; margin: 0; }
+.why-not__close {
+  max-width: 640px;
+  margin: 0 auto;
+  text-align: center;
+}
+.why-not__close p { font-size: 18px; color: var(--navy); }
+.why-not__final { font-family: var(--font-display); font-style: italic; font-size: 21px; color: var(--terracotta); margin-top: 20px; }
+
+/* ============ ABOUT ============ */
+.about {
+  background: var(--navy-deep);
+  color: var(--cream);
+  display: grid;
+  grid-template-columns: 0.8fr 1.2fr;
+}
+.about__media { background: var(--navy); }
+.about__media img { width: 100%; height: 100%; object-fit: cover; min-height: 340px; display: block; }
+.about__content { padding: 100px 56px; max-width: 760px; }
+.about__content h2, .about__content .section-tag { color: var(--gold); }
+.about__content h2 em { color: var(--cream); }
+.about__text { font-size: 16.5px; opacity: 0.88; margin-bottom: 36px; }
+.about__emph { font-family: var(--font-display); font-style: italic; font-size: 21px; color: var(--gold-light); opacity: 1; margin-bottom: 6px; }
+.about__question {
+  font-family: var(--font-display);
+  font-style: italic;
+  font-size: 24px;
+  color: var(--cream);
+  border-left: 3px solid var(--gold);
+  padding-left: 20px;
+  margin: 28px 0;
+}
+.about__lead { font-weight: 700; font-size: 18px; opacity: 1; color: var(--cream); }
+.credentials {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+  border-top: 1px solid rgba(207,174,101,0.25);
+  padding-top: 32px;
+}
+.credentials__item { display: flex; flex-direction: column; gap: 4px; }
+.credentials__item strong { font-family: var(--font-display); font-size: 20px; color: var(--gold); }
+.credentials__item span { font-size: 12.5px; opacity: 0.75; }
+
+/* ============ METHOD ============ */
+.method { max-width: var(--container); margin: 0 auto; padding: 110px 24px; }
+.method__sub { font-style: italic; font-family: var(--font-display); font-size: 19px; color: var(--terracotta); margin-top: 8px; }
+.method__intro { max-width: 720px; margin: 0 auto 60px; text-align: center; font-size: 17px; color: var(--navy); opacity: 0.85; }
+.pillars {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 26px;
+}
+.pillar {
+  background: var(--white);
+  border-radius: 20px;
+  padding: 38px 32px;
+  border-top: 3px solid var(--gold);
+}
+.pillar__num {
+  display: block;
+  font-family: var(--font-display);
+  font-size: 15px;
+  color: var(--navy);
+  opacity: 0.6;
+  margin-bottom: 18px;
+}
+.pillar h3 { font-size: 26px; margin-bottom: 10px; }
+.pillar__tag { font-weight: 700; font-size: 15px; color: var(--terracotta); margin-bottom: 16px; }
+.pillar p:not(.pillar__tag) { font-size: 15px; color: var(--navy); opacity: 0.85; }
+
+/* ============ JOURNEY ============ */
+.journey {
+  background: var(--navy);
+  color: var(--cream);
+  display: grid;
+  grid-template-columns: 0.75fr 1.25fr;
+}
+.journey__media { position: relative; background: var(--navy-deep); }
+.journey__media img { width: 100%; height: 100%; object-fit: cover; min-height: 300px; display: block; }
+.journey__badge {
+  position: absolute;
+  bottom: 32px;
+  left: 32px;
+  background: var(--navy-deep);
+  color: var(--gold);
+  border: 1px solid rgba(207,174,101,0.4);
+  border-radius: 16px;
+  padding: 18px 22px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  box-shadow: 0 12px 30px -10px rgba(0,0,0,0.5);
+}
+.journey__badge strong { font-family: var(--font-display); font-size: 30px; line-height: 1; }
+.journey__badge span { font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.04em; line-height: 1.3; }
+.journey__content { padding: 100px 56px; }
+.journey__content h2, .journey__content .section-tag { color: var(--gold); }
+.journey__content h2 em { color: var(--cream); }
+.journey__intro { max-width: 620px; opacity: 0.85; margin-bottom: 44px; }
+.timeline { list-style: none; margin: 0 0 44px; padding: 0; max-width: 680px; }
+.timeline__item {
+  display: grid;
+  grid-template-columns: 52px 1fr;
+  gap: 20px;
+  padding: 22px 0;
+  border-bottom: 1px solid rgba(207,174,101,0.18);
+}
+.timeline__item:last-child { border-bottom: none; }
+.timeline__num {
+  font-family: var(--font-display);
+  font-style: italic;
+  font-size: 22px;
+  color: var(--gold);
+}
+.timeline__item h3 { font-size: 18px; color: var(--cream); margin-bottom: 6px; }
+.timeline__item p { font-size: 14.5px; opacity: 0.8; margin-bottom: 6px; }
+.timeline__deliv { font-size: 12.5px; opacity: 0.55; font-style: italic; margin: 0; }
+
+/* ============ PROOF ============ */
+.proof { padding: 110px 0; }
+.proof .section-head { padding: 0 24px; }
+.proof__sub { color: var(--navy); opacity: 0.75; font-size: 16px; margin-top: 6px; }
+.proof__carousel-wrap { padding-left: 24px; }
+.proof__carousel {
+  display: flex;
+  gap: 20px;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+  padding: 6px 24px 26px 0;
+  scrollbar-width: thin;
+  scrollbar-color: var(--gold) transparent;
+}
+.proof__carousel::-webkit-scrollbar { height: 6px; }
+.proof__carousel::-webkit-scrollbar-thumb { background: var(--gold); border-radius: 10px; }
+.proof-card {
+  scroll-snap-align: start;
+  flex: 0 0 340px;
+  background: var(--white);
+  border-radius: 20px;
+  padding: 32px 28px;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  border: 1px solid rgba(13,43,69,0.08);
+  border-bottom: 3px solid var(--navy);
+}
+.proof-card__stat {
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 16px;
+  border-bottom: 1px solid rgba(13,43,69,0.12);
+}
+.proof-card__stat strong {
+  font-family: var(--font-display);
+  font-size: 30px;
+  color: var(--navy);
+  line-height: 1;
+}
+.proof-card__stat span { font-size: 12.5px; color: var(--navy); opacity: 0.65; margin-top: 6px; }
+.proof-card__quote { font-size: 14.5px; color: var(--navy); opacity: 0.85; flex: 1; margin: 0; }
+.proof-card__quote--solo { font-family: var(--font-display); font-style: italic; font-size: 17px; opacity: 1; }
+.proof-card__name { font-weight: 700; font-size: 13.5px; color: var(--terracotta); margin: 0; }
+.proof__drag { text-align: center; font-size: 12px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--navy); opacity: 0.4; margin-top: 4px; }
+
+/* ============ PROCESS ============ */
+.process { max-width: var(--container); margin: 0 auto; padding: 110px 24px; text-align: center; }
+.process__intro { max-width: 560px; margin: 0 auto 56px; font-size: 17px; color: var(--navy); opacity: 0.85; }
+.process-steps {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  margin-bottom: 50px;
+  text-align: left;
+}
+.process-step__num { font-size: 30px; display: block; margin-bottom: 16px; color: var(--gold); font-family: var(--font-display); }
+.process-step h3 { font-size: 18.5px; margin-bottom: 10px; }
+.process-step p { font-size: 15px; color: var(--navy); opacity: 0.8; margin: 0; }
+.process__note { font-size: 13.5px; opacity: 0.55; margin-top: 18px; }
+
+/* ============ FAQ ============ */
+.faq { max-width: 820px; margin: 0 auto; padding: 110px 24px; }
+.accordion__item {
+  border-bottom: 1px solid rgba(13,43,69,0.15);
+}
+.accordion__trigger {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  background: none;
+  border: none;
+  padding: 26px 4px;
+  text-align: left;
+  font-family: var(--font-body);
+  font-weight: 700;
+  font-size: 16.5px;
+  color: var(--navy);
+  cursor: pointer;
+}
+.accordion__icon {
+  flex-shrink: 0;
+  width: 30px; height: 30px;
+  border-radius: 50%;
+  background: rgba(207,174,101,0.22);
+  color: var(--terracotta);
+  display: flex; align-items: center; justify-content: center;
+  font-size: 18px;
+  transition: transform .3s ease, background .3s ease;
+}
+.accordion__item.is-open .accordion__icon { transform: rotate(45deg); background: var(--navy); color: var(--gold); }
+.accordion__panel {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height .4s ease;
+}
+.accordion__panel p { padding: 0 4px 26px; font-size: 15.5px; color: var(--navy); opacity: 0.82; max-width: 640px; margin: 0; }
+
+/* ============ FINAL CTA ============ */
+.final-cta {
+  background: var(--navy-deep);
+  color: var(--cream);
+  padding: 120px 24px;
+}
+.final-cta__inner { max-width: 620px; margin: 0 auto; text-align: center; }
+.final-cta h2 { color: var(--cream); font-size: clamp(32px, 5vw, 50px); margin-bottom: 26px; }
+.final-cta h2 em { color: var(--gold); }
+.final-cta p { font-size: 16.5px; opacity: 0.82; }
+.final-cta__urgency { font-weight: 700; opacity: 1; color: var(--gold); }
+.final-cta__lead { font-family: var(--font-display); font-style: italic; font-size: 21px; opacity: 1; color: var(--cream); margin: 24px 0; }
+.final-cta__form {
+  display: flex;
+  justify-content: center;
+  margin: 36px 0 18px;
+}
+.final-cta__form .btn { justify-content: center; }
+.final-cta__note { font-size: 13px; opacity: 0.55; }
+
+/* ============ FOOTER ============ */
+.footer {
+  background: var(--navy-deep);
+  text-align: center;
+  padding: 44px 24px 36px;
+}
+.footer__brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 18px;
+}
+.footer__logo { width: 44px; height: 44px; border-radius: 10px; object-fit: cover; }
+.footer__wordmark { text-align: left; line-height: 1.15; }
+.footer__wordmark strong {
+  display: block;
+  font-family: var(--font-display);
+  font-size: 18px;
+  color: var(--gold);
+}
+.footer__wordmark span {
+  display: block;
+  font-size: 11px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--cream);
+  opacity: 0.65;
+  margin-top: 2px;
+}
+.footer p.footer__copy { margin: 0; font-size: 13px; color: var(--cream); opacity: 0.5; }
+
+/* ============================================
+   RESPONSIVE
+   ============================================ */
+
+/* ---- Large tablet / small laptop (edge case between desktop and tablet) ---- */
+@media (max-width: 1180px) {
+  .hero { padding-left: 20px; padding-right: 20px; }
+  .for-who, .why-not, .method, .process, .faq { padding-left: 20px; padding-right: 20px; }
+}
+
+/* ---- Tablets (portrait & landscape) ---- */
+@media (max-width: 1024px) {
+  .hero {
+    grid-template-columns: 1fr;
+    padding-top: 112px;
+    gap: 36px;
   }
-  </script>
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
-  <style>
-    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-
-    :root {
-      --navy: #0D2B45;
-      --navy-light: #1a3d5c;
-      --gold: #CFAE65;
-      --gold-light: #e8d49b;
-      --white: #FFFFFF;
-      --off-white: #F9F7F4;
-      --gray: #6B7280;
-      --text: #1F2937;
-    }
-
-    html { scroll-behavior: smooth; }
-
-    body {
-      font-family: 'Inter', sans-serif;
-      color: var(--text);
-      background: var(--white);
-      line-height: 1.6;
-    }
-
-    h1, h2, h3, h4 { font-family: 'Playfair Display', serif; line-height: 1.2; }
-
-    a { text-decoration: none; color: inherit; }
-
-    .container { max-width: 1100px; margin: 0 auto; padding: 0 24px; }
-
-    /* ── HERO ── */
-    .hero {
-      background: var(--navy);
-      color: var(--white);
-      padding: 80px 24px 100px;
-      position: relative;
-      overflow: hidden;
-    }
-
-    .hero::before {
-      content: '';
-      position: absolute;
-      top: -60px; right: -60px;
-      width: 400px; height: 400px;
-      border-radius: 50%;
-      background: rgba(207,174,101,0.06);
-      pointer-events: none;
-    }
-
-    .hero-inner { max-width: 1000px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: center; }
-
-    .hero-tag {
-      display: inline-block;
-      border: 1px solid var(--gold);
-      color: var(--gold);
-      font-size: 12px;
-      font-weight: 600;
-      letter-spacing: 2px;
-      text-transform: uppercase;
-      padding: 6px 18px;
-      border-radius: 100px;
-      margin-bottom: 32px;
-    }
-
-    .hero h1 {
-      font-size: clamp(32px, 5vw, 52px);
-      font-weight: 700;
-      margin: 0 0 24px;
-      line-height: 1.15;
-    }
-
-    .hero h1 span { color: var(--gold); }
-
-    .hero p {
-      font-size: clamp(16px, 2vw, 18px);
-      color: rgba(255,255,255,0.75);
-      margin: 0 0 40px;
-    }
-
-    .hero-visual { position: relative; }
-    .hero-photo { width: 100%; border-radius: 12px; display: block; object-fit: cover; aspect-ratio: 4/5; object-position: top; border: 2px solid rgba(207,174,101,0.25); }
-    .floating-card { position: absolute; background: var(--white); border-radius: 10px; padding: 14px 18px; box-shadow: 0 8px 32px rgba(0,0,0,0.25); bottom: 32px; left: -20px; }
-    .floating-card .floating-card-label { font-size: 10px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: var(--gold); margin-bottom: 4px; }
-    .floating-card .floating-card-value { font-size: 13px; font-weight: 600; color: var(--navy); line-height: 1.4; margin: 0; }
-
-    @media (max-width: 768px) { .hero-inner { grid-template-columns: 1fr; } .hero-visual { display: none; } }
-
-    .btn {
-      display: inline-block;
-      background: var(--gold);
-      color: var(--navy);
-      font-weight: 700;
-      font-size: 16px;
-      padding: 18px 48px;
-      border-radius: 4px;
-      transition: background 0.2s, transform 0.2s;
-      letter-spacing: 0.3px;
-    }
-
-    .btn:hover { background: var(--gold-light); transform: translateY(-2px); }
-
-    .btn-outline {
-      background: transparent;
-      border: 2px solid var(--gold);
-      color: var(--gold);
-    }
-
-    .btn-outline:hover { background: var(--gold); color: var(--navy); }
-
-    .hero-sub {
-      margin-top: 20px;
-      font-size: 13px;
-      color: rgba(255,255,255,0.45);
-    }
-
-    /* ── DIVIDER ── */
-    .gold-line {
-      height: 3px;
-      background: linear-gradient(90deg, transparent, var(--gold), transparent);
-    }
-
-    /* ── SECTION BASE ── */
-    section { padding: 80px 24px; }
-
-    .section-tag {
-      display: block;
-      font-size: 11px;
-      font-weight: 700;
-      letter-spacing: 3px;
-      text-transform: uppercase;
-      color: var(--navy);
-      margin-bottom: 16px;
-    }
-
-    .section-title {
-      font-size: clamp(26px, 3.5vw, 42px);
-      color: var(--navy);
-      margin-bottom: 16px;
-    }
-
-    .section-subtitle {
-      font-size: 18px;
-      color: var(--gray);
-      max-width: 600px;
-      line-height: 1.7;
-    }
-
-    /* ── PROMESSA ── */
-    .promise {
-      background: var(--off-white);
-      padding: 72px 24px;
-      text-align: center;
-    }
-    .promise-text {
-      font-family: 'Playfair Display', serif;
-      font-size: clamp(22px, 3vw, 36px);
-      color: var(--navy);
-      max-width: 780px;
-      margin: 0 auto;
-      line-height: 1.5;
-    }
-    .promise-text em { color: var(--gold); font-style: normal; }
-
-    /* ── FRASE DE POSICIONAMENTO ── */
-    .positioning {
-      background: var(--navy);
-      padding: 64px 24px;
-      text-align: center;
-    }
-
-    .positioning blockquote {
-      font-family: 'Playfair Display', serif;
-      font-size: clamp(20px, 3vw, 32px);
-      color: var(--white);
-      max-width: 820px;
-      margin: 0 auto;
-      line-height: 1.5;
-    }
-
-    .positioning blockquote em { color: var(--gold); font-style: normal; }
-
-    /* ── PARA QUEM É ── */
-    .for-who { background: var(--off-white); }
-
-    .for-who .container { max-width: 1100px; }
-
-    .for-who-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 24px;
-      margin-top: 48px;
-    }
-
-    .for-who-card {
-      background: var(--white);
-      border-left: 3px solid var(--gold);
-      padding: 28px 24px;
-      border-radius: 0 4px 4px 0;
-    }
-
-    .for-who-card p { color: var(--text); font-size: 15px; line-height: 1.7; }
-
-    /* ── DOR / TRANSFORMAÇÃO ── */
-    .transformation .container {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 64px;
-      align-items: start;
-    }
-
-    @media (max-width: 768px) {
-      .transformation .container { grid-template-columns: 1fr; gap: 48px; }
-    }
-
-    .transform-col h3 {
-      font-size: 22px;
-      margin-bottom: 24px;
-      color: var(--navy);
-    }
-
-    .transform-list { list-style: none; }
-
-    .transform-list li {
-      display: flex;
-      gap: 12px;
-      margin-bottom: 16px;
-      font-size: 15px;
-      color: var(--text);
-      line-height: 1.6;
-    }
-
-    .transform-list li::before {
-      content: '•';
-      color: var(--gold);
-      flex-shrink: 0;
-      margin-top: 1px;
-    }
-
-    .transform-list.after li::before { content: '✓'; color: var(--gold); font-weight: 700; }
-
-    /* ── FLÁVIA ── */
-    .about { background: var(--navy); color: var(--white); }
-
-    .about-grid {
-      display: grid;
-      grid-template-columns: 1fr 1.4fr;
-      gap: 64px;
-      align-items: center;
-    }
-
-    @media (max-width: 768px) {
-      .about-grid { grid-template-columns: 1fr; }
-      .about-img { max-width: 300px; margin: 0 auto; }
-    }
-
-    .about-img img {
-      width: 100%;
-      border-radius: 4px;
-      display: block;
-      border: 3px solid rgba(207,174,101,0.3);
-    }
-
-    .about-img-placeholder {
-      width: 100%;
-      aspect-ratio: 3/4;
-      background: rgba(207,174,101,0.1);
-      border: 2px dashed rgba(207,174,101,0.3);
-      border-radius: 4px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: rgba(207,174,101,0.5);
-      font-size: 13px;
-      text-align: center;
-      padding: 24px;
-    }
-
-    .about .section-tag { color: var(--gold); }
-
-    .about .section-title { color: var(--white); }
-
-    .about p { color: rgba(255,255,255,0.8); margin-bottom: 20px; font-size: 16px; line-height: 1.8; }
-
-    .credentials {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 12px;
-      margin-top: 32px;
-    }
-
-    .credential-tag {
-      background: rgba(207,174,101,0.15);
-      border: 1px solid rgba(207,174,101,0.3);
-      color: var(--gold);
-      font-size: 12px;
-      font-weight: 600;
-      padding: 6px 14px;
-      border-radius: 100px;
-      letter-spacing: 0.3px;
-    }
-
-    /* ── MÉTODO ── */
-    .method { background: var(--off-white); }
-
-    .pillars {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 24px;
-      margin-top: 48px;
-    }
-
-    @media (max-width: 640px) {
-      .pillars { grid-template-columns: 1fr; }
-    }
-
-    .pillar-card {
-      background: var(--white);
-      padding: 40px 28px;
-      border-radius: 4px;
-      text-align: center;
-      position: relative;
-      overflow: hidden;
-    }
-
-    .pillar-card::after {
-      content: '';
-      position: absolute;
-      bottom: 0; left: 0; right: 0;
-      height: 3px;
-      background: var(--gold);
-    }
-
-    .pillar-number {
-      font-family: 'Playfair Display', serif;
-      font-size: 48px;
-      color: rgba(207,174,101,0.2);
-      font-weight: 700;
-      line-height: 1;
-      margin-bottom: 8px;
-    }
-
-    .pillar-card h3 {
-      font-size: 22px;
-      color: var(--navy);
-      margin-bottom: 16px;
-    }
-
-    .pillar-card p { font-size: 14px; color: var(--gray); line-height: 1.7; }
-
-    /* ── JORNADA ── */
-    .journey { background: var(--white); }
-
-    .journey-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-      gap: 20px;
-      margin-top: 48px;
-    }
-
-    .journey-card {
-      border: 1px solid #E5E7EB;
-      border-radius: 4px;
-      padding: 28px 24px;
-      transition: border-color 0.2s, box-shadow 0.2s;
-    }
-
-    .journey-card:hover {
-      border-color: var(--gold);
-      box-shadow: 0 4px 24px rgba(207,174,101,0.1);
-    }
-
-    .journey-number {
-      font-size: 11px;
-      font-weight: 700;
-      letter-spacing: 2px;
-      color: var(--gold);
-      text-transform: uppercase;
-      margin-bottom: 8px;
-    }
-
-    .journey-card h4 {
-      font-size: 17px;
-      color: var(--navy);
-      margin-bottom: 12px;
-    }
-
-    .journey-card ul {
-      list-style: none;
-      display: flex;
-      flex-direction: column;
-      gap: 6px;
-    }
-
-    .journey-card ul li {
-      font-size: 13px;
-      color: var(--gray);
-      padding-left: 14px;
-      position: relative;
-    }
-
-    .journey-card ul li::before {
-      content: '·';
-      position: absolute;
-      left: 0;
-      color: var(--gold);
-      font-size: 18px;
-      line-height: 1;
-      top: 1px;
-    }
-
-    /* ── INVESTIMENTO ── */
-    .investment { background: var(--navy); color: var(--white); text-align: center; }
-
-    .investment .section-title { color: var(--white); }
-
-    .investment .section-subtitle { color: rgba(255,255,255,0.65); margin: 0 auto 48px; }
-
-    .anchor-table {
-      max-width: 580px;
-      margin: 0 auto 48px;
-      border: 1px solid rgba(207,174,101,0.2);
-      border-radius: 4px;
-      overflow: hidden;
-    }
-
-    .anchor-row {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 16px 24px;
-      border-bottom: 1px solid rgba(207,174,101,0.1);
-      font-size: 14px;
-    }
-
-    .anchor-row:last-child { border-bottom: none; }
-
-    .anchor-row span:first-child { color: rgba(255,255,255,0.7); }
-    .anchor-row span:last-child { color: rgba(255,255,255,0.5); font-size: 13px; }
-
-    .anchor-row.total {
-      background: rgba(207,174,101,0.08);
-      font-weight: 600;
-    }
-
-    .anchor-row.total span:first-child { color: var(--gold); font-size: 15px; }
-    .anchor-row.total span:last-child { color: rgba(255,255,255,0.5); }
-
-    .price-box {
-      max-width: 480px;
-      margin: 0 auto 40px;
-      background: rgba(207,174,101,0.08);
-      border: 2px solid var(--gold);
-      border-radius: 4px;
-      padding: 40px;
-    }
-
-    .price-label {
-      font-size: 12px;
-      font-weight: 600;
-      letter-spacing: 2px;
-      text-transform: uppercase;
-      color: var(--gold);
-      margin-bottom: 12px;
-    }
-
-    .price-main {
-      font-family: 'Playfair Display', serif;
-      font-size: 52px;
-      font-weight: 700;
-      color: var(--white);
-      line-height: 1;
-      margin-bottom: 8px;
-    }
-
-    .price-installment {
-      font-size: 14px;
-      color: rgba(255,255,255,0.55);
-      margin-bottom: 32px;
-    }
-
-    .investment-note {
-      font-size: 13px;
-      color: rgba(255,255,255,0.45);
-      max-width: 480px;
-      margin: 24px auto 0;
-      line-height: 1.6;
-    }
-
-    /* ── DEPOIMENTOS ── */
-    .testimonials { background: var(--navy); }
-    .testimonials .section-tag { color: var(--gold); }
-    .testimonials .section-title { color: var(--white); }
-    .testimonials-grid {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 24px;
-      margin-top: 48px;
-    }
-    .testimonial-card {
-      background: rgba(255,255,255,0.05);
-      border: 1px solid rgba(207,174,101,0.2);
-      border-top: 3px solid var(--gold);
-      border-radius: 4px;
-      padding: 32px 28px;
-    }
-    .testimonial-text {
-      font-size: 15px;
-      color: rgba(255,255,255,0.85);
-      line-height: 1.75;
-      margin-bottom: 24px;
-      font-style: italic;
-    }
-    .testimonial-author {
-      font-size: 13px;
-      font-weight: 600;
-      color: var(--gold);
-      letter-spacing: 0.5px;
-    }
-    .testimonial-result {
-      font-size: 12px;
-      color: rgba(255,255,255,0.45);
-      margin-top: 4px;
-    }
-    @media (max-width: 900px) { .testimonials-grid { grid-template-columns: 1fr; } }
-
-    /* ── FAQ ── */
-    .faq { background: var(--off-white); }
-
-    .faq-list {
-      max-width: 720px;
-      margin: 48px auto 0;
-      display: flex;
-      flex-direction: column;
-      gap: 16px;
-    }
-
-    .faq-item {
-      background: var(--white);
-      border-left: 3px solid var(--gold);
-      padding: 24px;
-      border-radius: 0 4px 4px 0;
-    }
-
-    .faq-item h4 {
-      font-size: 16px;
-      color: var(--navy);
-      margin-bottom: 10px;
-      font-family: 'Inter', sans-serif;
-      font-weight: 600;
-    }
-
-    .faq-item p { font-size: 14px; color: var(--gray); line-height: 1.7; }
-
-    /* ── CTA FINAL ── */
-    .final-cta {
-      background: var(--navy);
-      padding: 100px 24px;
-      text-align: center;
-      color: var(--white);
-    }
-
-    .final-cta h2 {
-      font-size: clamp(28px, 4vw, 48px);
-      color: var(--white);
-      max-width: 700px;
-      margin: 0 auto 24px;
-    }
-
-    .final-cta h2 span { color: var(--gold); }
-
-    .final-cta p {
-      color: rgba(255,255,255,0.65);
-      font-size: 17px;
-      max-width: 520px;
-      margin: 0 auto 48px;
-    }
-
-    /* ── FOOTER ── */
-    footer {
-      background: #08192b;
-      padding: 32px 24px;
-      text-align: center;
-      color: rgba(255,255,255,0.35);
-      font-size: 12px;
-    }
-
-    /* ── RESPONSIVE ── */
-    @media (max-width: 768px) {
-      .transformation .container { grid-template-columns: 1fr; gap: 40px; }
-      .about-grid { grid-template-columns: 1fr; }
-      .about-img { max-width: 320px; margin: 0 auto; }
-    }
-    @media (max-width: 640px) {
-      section { padding: 60px 20px; }
-      .hero { padding: 60px 20px 80px; }
-      .pillars { grid-template-columns: 1fr; }
-      .pillar-card { padding: 28px 20px; }
-      .price-box { padding: 28px 20px; }
-      .price-main { font-size: 40px; }
-      .journey-grid { grid-template-columns: 1fr; }
-    }
-    @media (max-width: 480px) {
-      .price-box { padding: 20px 16px; }
-      .faq-item { padding: 18px; }
-    }
-  </style>
-</head>
+  .hero__media { order: -1; aspect-ratio: 16/9; min-height: 240px; }
+  .hero__sub, .hero__micro { max-width: 100%; }
+
+  .today, .about, .journey { grid-template-columns: 1fr; }
+  .today__media, .about__media { min-height: 260px; }
+  .today__media img, .about__media img { min-height: 260px; }
+  .journey__media { min-height: 240px; }
+  .today__content, .about__content, .journey__content { padding: 60px 32px; }
+
+  .compare { grid-template-columns: 1fr; }
+
+  .pillars { grid-template-columns: repeat(2, 1fr); }
+  .pillars .pillar:last-child { grid-column: span 2; max-width: 480px; margin: 0 auto; }
+
+  .tried-grid { grid-template-columns: repeat(2, 1fr); }
+
+  .process-steps { grid-template-columns: repeat(2, 1fr); text-align: left; }
+  .process-steps .process-step:last-child { grid-column: span 2; max-width: 480px; margin: 0 auto; text-align: center; }
+  .process-steps .process-step:last-child .process-step__num { margin-left: auto; margin-right: auto; }
+
+  .credentials { grid-template-columns: repeat(3, 1fr); }
+
+  .proof-card { flex: 0 0 300px; }
+}
+
+/* ---- Small tablets / large phones ---- */
+@media (max-width: 800px) {
+  .section-head h2 { font-size: clamp(26px, 5vw, 34px); }
+  .section-head--light h2 { font-size: clamp(24px, 4.6vw, 30px); }
+
+  .pillars { grid-template-columns: 1fr; }
+  .pillars .pillar:last-child { grid-column: auto; max-width: 100%; }
+
+  .tried-grid { grid-template-columns: 1fr; }
+
+  .process-steps { grid-template-columns: 1fr; text-align: center; }
+  .process-steps .process-step:last-child { grid-column: auto; max-width: 100%; }
+  .process-step { display: flex; flex-direction: column; align-items: center; }
+
+  .credentials { grid-template-columns: repeat(2, 1fr); }
+
+  .timeline__item { grid-template-columns: 40px 1fr; gap: 14px; }
+}
+
+/* ---- Phones ---- */
+@media (max-width: 640px) {
+  body { font-size: 16px; }
+
+  .nav__inner { padding: 10px 16px; }
+  .brand__logo { width: 32px; height: 32px; border-radius: 8px; }
+  .brand__title { font-size: 14px; }
+  .brand__subtitle { font-size: 9px; }
+  .nav__cta { font-size: 11.5px; padding: 9px 13px; }
+
+  .eyebrow { font-size: 13px; }
+  .hero { padding-top: 96px; padding-bottom: 56px; }
+  .hero__headline { font-size: clamp(26px, 7.5vw, 34px); }
+  .hero__media { border-radius: 16px; aspect-ratio: 4/5; min-height: 280px; }
+
+  .section-tag { font-size: 11.5px; }
+  .section-head h2 { font-size: clamp(24px, 7vw, 30px); }
+
+  .impact { padding: 72px 20px; }
+  .impact__quote { font-size: 18px; padding-top: 30px; }
+
+  .for-who, .why-not, .method, .process, .faq { padding: 64px 20px; }
+  .for-who__story { font-size: 16.5px; }
+  .checklist__item { padding: 20px; flex-direction: column; gap: 10px; }
+
+  .today__content, .about__content, .journey__content { padding: 52px 20px; }
+  .today__media, .about__media, .today__media img, .about__media img { min-height: 220px; }
+  .journey__media, .journey__media img { min-height: 200px; }
+  .about__question { font-size: 19px; padding-left: 16px; }
+
+  .tried-card { padding: 26px 22px; }
+
+  .pillar { padding: 30px 24px; }
+  .pillar h3 { font-size: 22px; }
+
+  .journey__badge { left: 18px; bottom: 18px; padding: 14px 18px; }
+  .journey__badge strong { font-size: 24px; }
+  .timeline__item { grid-template-columns: 34px 1fr; padding: 18px 0; }
+  .timeline__num { font-size: 18px; }
+  .timeline__item h3 { font-size: 16.5px; }
+
+  .credentials { grid-template-columns: 1fr 1fr; gap: 14px; }
+  .credentials__item strong { font-size: 17px; }
+
+  .proof__carousel-wrap { padding-left: 20px; }
+  .proof__carousel { padding-right: 20px; gap: 14px; }
+  .proof-card { flex: 0 0 82vw; padding: 26px 22px; }
+
+  .process-step__num { font-size: 26px; }
+
+  .accordion__trigger { font-size: 15px; padding: 22px 2px; gap: 12px; }
+  .accordion__panel p { font-size: 14.5px; }
+
+  .final-cta { padding: 72px 20px; }
+  .final-cta h2 { font-size: 30px; }
+  .final-cta__lead { font-size: 18px; }
+
+  .footer__brand { flex-direction: column; text-align: center; gap: 8px; }
+  .footer__wordmark { text-align: center; }
+}
+
+/* ---- Very small phones ---- */
+@media (max-width: 375px) {
+  .hero__headline { font-size: 24px; }
+  .btn { padding: 15px 22px; font-size: 14px; }
+  .brand__title { font-size: 13px; }
+}
+
+#titulo {
+  font-size: 65px;
+}
+
+#sub {
+    font-size: 35px;
+    color: #8A4826;
+}
+
+</style>
+  </head>
 <body>
 
-  <!-- HERO -->
-  <section class="hero">
-    <div class="hero-inner">
-      <div>
-        <span class="hero-tag">✦ Mentoria Trilogia Financeira</span>
-        <h1>Você ganha bem.<br><span>Agora é hora de construir</span><br>patrimônio de verdade.</h1>
-        <p>O primeiro passo é uma conversa gratuita de 60 minutos. Você me conta sua situação, eu entendo seu cenário e você sai com clareza e direção real. Sem compromisso.</p>
-        <a href="https://forms.gle/Qnvhmc8CBwgue9DH7" class="btn" target="_blank">Agendar minha Sessão da Clareza</a>
-      </div>
-      <div class="hero-visual">
-        <img src="Flavia%201.jpg" alt="Flávia Schusciman" class="hero-photo" />
-        <div class="floating-card">
-          <p class="floating-card-label">Vagas Limitadas</p>
-          <p class="floating-card-value">Mentoria Individual<br>✦ Vagas Limitadas</p>
-        </div>
-      </div>
-    </div>
-  </section>
+<!-- ============ NAV ============ -->
+<header class="nav" id="nav">
+  <div class="nav__inner">
+    <a class="brand" href="#hero">
+      <img class="brand__logo" src="assets/img/logo-trilogia.jpg" alt="Logo Trilogia Financeira" loading="eager">
+      <span class="brand__text">
+        <span class="brand__title">Trilogia <em>Financeira</em></span>
+        <span class="brand__subtitle">Flávia Schusciman</span>
+      </span>
+    </a>
+    <a class="nav__cta" href="https://docs.google.com/forms/d/e/1FAIpQLScvtFqhDfdSCXQN659Zp-4TFm5kOIoUTYQQyG6I-tX5j8EaFQ/viewform" target="_blank" rel="noopener">Agendar Sessão da Clareza</a>
+  </div>
+</header>
 
-  <div class="gold-line"></div>
+<main>
 
-  <!-- PROMESSA -->
-  <div class="promise">
-    <div class="container">
-      <p class="promise-text">Da ansiedade de abrir o app do banco para a <em>leveza de quem sabe exatamente o que está construindo.</em></p>
-    </div>
+<!-- ============ SEÇÃO 1 — HERO ============ -->
+<section class="hero" id="hero">
+  <div class="hero__content">
+    <p class="eyebrow reveal">Para mulheres que ganham bem. E sabem que deveriam <br>ter mais a mostrar por isso.</p>
+    <h1 class="hero__headline reveal">
+      <h1 id="titulo">Você ganha acima de <br><strong>$20 mil</strong> por mês.</h1>
+      
+      <h1 id="sub">Mas o patrimônio que você tem não é proporcional ao que você entrega.</h1>
+    </h1>
+    <br>
+    <br>
+    <p class="hero__sub reveal">
+      Não é falta de disciplina. Não é má sorte. É que ninguém nunca montou uma estrutura para o seu perfil de renda — com os seus objetivos reais, no ritmo da sua vida.
+    </p>
+    <p class="hero__sub hero__sub--bold reveal">A Mentoria Trilogia Financeira muda isso.</p>
+    <p class="hero__micro reveal">O primeiro passo é uma conversa gratuita de 60 minutos comigo. Você me conta sua situação real. Você sai com clareza e um caminho concreto — sem compromisso.</p>
+    <a class="btn btn--primary reveal" href="https://docs.google.com/forms/d/e/1FAIpQLScvtFqhDfdSCXQN659Zp-4TFm5kOIoUTYQQyG6I-tX5j8EaFQ/viewform" target="_blank" rel="noopener">
+      Agendar minha Sessão da Clareza Financeira
+      <span class="btn__arrow">→</span>
+    </a>
+    <p class="hero__note reveal">Gratuita. Sem compromisso. Vagas limitadas.</p>
+  </div>
+  <div class="hero__media reveal">
+    <img src="assets/img/flavia-hero.jpg" alt="Flávia Schusciman, planejadora financeira, trabalhando" loading="eager">
+  </div>
+</section>
+
+<!-- ============ SEÇÃO 2 — FRASE DE IMPACTO ============ -->
+<section class="impact">
+  <div class="impact__inner">
+    <p class="impact__line reveal">Da ansiedade de abrir o app do banco...</p>
+    <p class="impact__line impact__line--serif reveal">...para a leveza de quem sabe exatamente o que está construindo.</p>
+    <p class="impact__small reveal">Isso é possível. E começa com uma conversa honesta.</p>
+    <blockquote class="impact__quote reveal">
+      "Enquanto o mercado te oferece propostas milagrosas sem saber nem o seu perfil, eu pergunto: qual é o seu sonho?"
+    </blockquote>
+  </div>
+</section>
+
+<!-- ============ SEÇÃO 3 — PARA QUEM É ============ -->
+<section class="for-who" id="for-who">
+  <div class="section-head reveal">
+    <span class="section-tag">Para quem é</span>
+    <h2>Para mulheres que já chegaram longe.<br><em>E querem que o dinheiro chegue também.</em></h2>
   </div>
 
-  <!-- POSICIONAMENTO -->
-  <div class="positioning">
-    <div class="container">
-      <blockquote>
-        "Enquanto o mercado te oferece propostas milagrosas e mentirosas sem saber nem o seu perfil, eu pergunto: <em>qual é o seu sonho?</em>"
-      </blockquote>
-    </div>
+  <div class="for-who__story reveal">
+    <p>Deixa eu te descrever.</p>
+    <p>Você ganha bem. Você trabalha muito. Você não faz gastos absurdos que justifiquem o fato de não sobrar nada no fim do mês.</p>
+    <p>E mesmo assim — o dinheiro some. Ou sobra pouco. Ou vai para investimentos que você não sabe se são os certos para você.</p>
+    <p>Você adia olhar o extrato porque isso gera um desconforto que prefere não sentir. Mas quando abre, o que vê te dá uma sensação estranha: não tem um vilão claro. Foram várias coisas pequenas. Nenhuma absurda. No total, <span class="mark">sumiu</span>.</p>
+    <p class="for-who__lead">Você tem renda. Você não tem clareza. E essa diferença está custando caro — não só no bolso, mas na sua cabeça.</p>
   </div>
 
-  <!-- PARA QUEM É -->
-  <section class="for-who">
-    <div class="container">
-      <span class="section-tag">Para quem é</span>
-      <h2 class="section-title">Para mulheres que já chegaram longe.<br>E querem que o dinheiro chegue também.</h2>
-      <p class="section-subtitle">A mentoria foi criada para você que:</p>
-      <div class="for-who-grid">
-        <div class="for-who-card">
-          <p>Ganha acima de R$20 mil por mês, mas não sabe exatamente para onde vai o dinheiro e isso gera uma ansiedade silenciosa que ninguém vê.</p>
-        </div>
-        <div class="for-who-card">
-          <p>Investe, mas não sabe se está indo na direção certa. Tem CDB, fundo, ação mas sem nenhum objetivo conectado a isso.</p>
-        </div>
-        <div class="for-who-card">
-          <p>Adia organizar o financeiro porque abrir o extrato gera desconforto. Sabe que precisa, mas empurra para "quando tiver mais tempo".</p>
-        </div>
-        <div class="for-who-card">
-          <p>Trabalha muito, ganha bem, vive bem mas sente que não está construindo nada proporcional ao que entrega. E isso cansa.</p>
-        </div>
-      </div>
-    </div>
-  </section>
+  <p class="for-who__intro reveal">A mentoria foi criada para você que:</p>
 
-  <!-- TRANSFORMAÇÃO -->
-  <section class="transformation">
-    <div class="container">
-      <div class="transform-col">
+  <div class="checklist">
+    <div class="checklist__item reveal">
+      <span class="checklist__mark">✦</span>
+      <p>Ganha acima de R$20 mil por mês, mas não sabe exatamente para onde vai o dinheiro — e essa desconexão silenciosa te incomoda mais do que você costuma admitir em voz alta.</p>
+    </div>
+    <div class="checklist__item reveal">
+      <span class="checklist__mark">✦</span>
+      <p>Tem investimentos, mas não sabe se está indo na direção certa. CDB, fundo, ações — sem nenhum objetivo real conectado a cada um deles.</p>
+    </div>
+    <div class="checklist__item reveal">
+      <span class="checklist__mark">✦</span>
+      <p>Adia organizar o financeiro porque abrir o extrato ainda gera desconforto. Você sabe que precisa. E empurra para "quando tiver mais tempo".</p>
+    </div>
+    <div class="checklist__item reveal">
+      <span class="checklist__mark">✦</span>
+      <p>Trabalha muito, ganha bem, vive bem — mas sente que não está construindo nada proporcional ao que entrega. E isso cansa de um jeito que é difícil de explicar para quem está de fora.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============ SEÇÃO 4 — ONDE VOCÊ ESTÁ HOJE ============ -->
+<section class="today" id="today">
+  <div class="today__media reveal">
+    <img src="assets/img/flavia-window.jpg" alt="Flávia Schusciman em ambiente iluminado">
+  </div>
+  <div class="today__content">
+    <div class="section-head section-head--light reveal">
+      <span class="section-tag">Onde você está hoje</span>
+      <h2>Eu sei onde você está.<br><em>Porque já estive lá.</em></h2>
+    </div>
+    <div class="today__text reveal">
+      <p>O que você está vivendo não é falta de conhecimento. Você sabe o que é reserva de emergência. Você sabe que deveria estar investindo mais. Você até faz algumas coisas certas.</p>
+      <p>O que falta não é informação. É uma estrutura montada para a sua realidade — com a sua renda, o seu histórico, o que você quer construir de verdade.</p>
+      <p>E ninguém nunca fez isso por você. Porque o mercado financeiro não foi construído para o seu perfil.</p>
+    </div>
+
+    <div class="compare reveal">
+      <div class="compare__col compare__col--now">
         <h3>Onde você está hoje</h3>
-        <ul class="transform-list">
-          <li>O dinheiro entra e sai sem um destino claro</li>
-          <li>Você adia olhar para os números e sente culpa por isso</li>
-          <li>Tem renda, mas não tem reserva ou ela nunca cresce</li>
-          <li>Investe por obrigação, sem saber se é a estratégia certa</li>
-          <li>Trabalha muito e não vê patrimônio crescendo proporcionalmente</li>
-          <li>Cada decisão financeira gera dúvida, não clareza</li>
+        <ul>
+          <li>O dinheiro entra. Em 30 dias, some — sem um gasto único que explique tudo.</li>
+          <li>Você adia olhar para os números. E quando olha, sente culpa por ter adiado.</li>
+          <li>Tem renda, mas a reserva nunca cresce no ritmo que deveria.</li>
+          <li>Investe por obrigação ou por indicação, sem saber se é a estratégia certa para você.</li>
+          <li>Trabalha muito. Não vê patrimônio crescendo no mesmo ritmo.</li>
+          <li>Cada decisão financeira gera dúvida. Nunca clareza.</li>
         </ul>
       </div>
-      <div class="transform-col">
+      <div class="compare__col compare__col--future">
         <h3>Onde você vai chegar</h3>
-        <ul class="transform-list after">
-          <li>Clareza total sobre para onde vai cada real que você ganha</li>
-          <li>Reserva construída com método não com sobra de fim de mês</li>
-          <li>Investimentos alinhados a objetivos reais, não a modas do mercado</li>
-          <li>Uma rotina financeira que funciona mesmo nos meses difíceis</li>
-          <li>Patrimônio crescendo de forma estruturada e previsível</li>
-          <li>Paz financeira: você sabe o que tem, o que deve e para onde vai</li>
+        <ul>
+          <li>Clareza total sobre para onde vai cada real que você ganha — sem surpresa no fim do mês.</li>
+          <li>Reserva construída com método — não com sobra de fim de mês, não com força de vontade.</li>
+          <li>Investimentos alinhados a objetivos reais — não a modas do mercado ou indicações genéricas.</li>
+          <li>Uma rotina financeira que funciona mesmo nos meses difíceis, nos meses de imprevisto.</li>
+          <li>Patrimônio crescendo de forma estruturada e previsível — sem depender de você estar presente para cada decisão.</li>
+          <li><strong>Paz financeira real</strong>: você sabe o que tem, o que deve e para onde está indo.</li>
         </ul>
       </div>
     </div>
-  </section>
+  </div>
+</section>
 
-  <!-- SOBRE FLÁVIA -->
-  <section class="about">
-    <div class="container">
-      <div class="about-grid">
-        <div class="about-img">
-          <img src="flavia.jpg" alt="Flávia Schusciman" style="width:100%;aspect-ratio:3/4;object-fit:cover;object-position:top;border-radius:4px;border:3px solid rgba(207,174,101,0.3);display:block;">
-        </div>
+<!-- ============ SEÇÃO 5 — POR QUE VOCÊ AINDA NÃO RESOLVEU ============ -->
+<section class="why-not" id="why-not">
+  <div class="section-head reveal">
+    <span class="section-tag">Por que você ainda não resolveu</span>
+    <h2>Você já tentou.<br><em>E não é sua culpa não ter conseguido.</em></h2>
+  </div>
+  <p class="why-not__intro reveal">O mercado financeiro não foi construído para o seu perfil. Ele foi construído para quem já tem patrimônio consolidado — ou para quem está começando do zero. Quem ganha bem e ainda não tem nada proporcional ficou no meio. Sem solução específica.</p>
+
+  <div class="tried-grid">
+    <div class="tried-card reveal">
+      <span class="tried-card__num">01</span>
+      <h3>Planilha e app de controle de gastos</h3>
+      <p>Registram para onde foi o dinheiro. Não resolvem por que ele some. São úteis, mas não suficientes — é como pesar o lixo em vez de mudar o que você joga fora.</p>
+    </div>
+    <div class="tried-card reveal">
+      <span class="tried-card__num">02</span>
+      <h3>Assessor de banco ou corretora</h3>
+      <p>Ganha pela comissão do produto que vende — não pelo resultado que você tem. O interesse dele e o seu não são o mesmo. Você já sentiu isso, mesmo que nunca tenha dito em voz alta.</p>
+    </div>
+    <div class="tried-card reveal">
+      <span class="tried-card__num">03</span>
+      <h3>Curso de finanças pessoais</h3>
+      <p>Ensina conceito. Não constrói estrutura. Você assiste, entende, e volta para a mesma realidade — porque ninguém te acompanhou aplicando.</p>
+    </div>
+    <div class="tried-card reveal">
+      <span class="tried-card__num">04</span>
+      <h3>"Vou organizar quando a situação melhorar"</h3>
+      <p>Quanto tempo você passou esperando esse momento? Ele não chega sozinho. A situação não melhora sem estrutura — e a estrutura não se monta sozinha enquanto você espera.</p>
+    </div>
+  </div>
+
+  <div class="why-not__close reveal">
+    <p>O que eu faço é diferente. Não começo pela ponta do investimento. <span class="mark">Começo antes.</span></p>
+    <p>Começo entendendo para onde seu dinheiro de verdade vai. O que está consumindo o salário antes de sobrar qualquer coisa. E só depois de resolver isso — a gente fala em construir patrimônio.</p>
+    <p class="why-not__final">Essa é a ordem que o mercado ignorou para o seu perfil. É a que eu uso.</p>
+  </div>
+</section>
+
+<!-- ============ SEÇÃO 6 — QUEM É A FLÁVIA ============ -->
+<section class="about" id="about">
+  <div class="about__media reveal">
+    <img src="assets/img/flavia-serious.jpg" alt="Flávia Schusciman, CFP, planejadora financeira">
+  </div>
+  <div class="about__content">
+    <div class="section-head section-head--light reveal">
+      <span class="section-tag">Quem é a Flávia</span>
+      <h2>20 anos de mercado financeiro.<br><em>E uma história que você vai reconhecer.</em></h2>
+    </div>
+    <div class="about__text reveal">
+      <p>Trabalhei 14 anos em grandes bancos como gerente de relacionamento. Me tornei assessora de investimentos. Cheguei a sócia de um escritório credenciado à XP. Liderava um time de 10 pessoas.</p>
+      <p class="about__emph">Sabia tudo sobre o dinheiro dos outros.</p>
+      <p class="about__emph">E o meu sumia todo mês.</p>
+      <p>No ano em que recebi mais de R$300 mil em renda e bônus — fechei com zero guardado.</p>
+      <p>Não eram gastos absurdos. O dinheiro ia para tudo: condomínio, cartão, família, imprevistos. Sem nenhum destino real antes de cair na conta. E no fim do ano, quando eu somava tudo, a diferença entre o que tinha entrado e o que estava guardado era absurda.</p>
+      <p>Foi quando me fiz uma pergunta que mudou tudo:</p>
+      <p class="about__question">"Será que vou precisar trabalhar para sempre?"</p>
+      <p>Essa pergunta virou a chave de tudo. Me tornei CFP®, me especializei em finanças comportamentais e criei um método pensado para quem vive exatamente o que eu vivia: ganha bem, trabalha muito, e ainda não tem nada a mostrar proporcional a isso.</p>
+      <p class="about__lead">Nos últimos 7 anos, ajudei mais de 200 famílias a saírem desse ciclo.</p>
+      <p>Não por teoria. Por método. E por ter passado pelo mesmo lugar que você.</p>
+    </div>
+
+    <div class="credentials reveal">
+      <div class="credentials__item"><strong>CFP®</strong><span>Certificada</span></div>
+      <div class="credentials__item"><strong>XP</strong><span>Assessora de Investimentos</span></div>
+      <div class="credentials__item"><strong>+200</strong><span>Famílias atendidas</span></div>
+      <div class="credentials__item"><strong>20</strong><span>Anos de mercado financeiro</span></div>
+      <div class="credentials__item"><strong>Coautora</strong><span>"Enriqueça enquanto dorme"</span></div>
+      <div class="credentials__item"><strong>Especialista</strong><span>Finanças Comportamentais</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ SEÇÃO 7 — O MÉTODO ============ -->
+<section class="method" id="method">
+  <div class="section-head reveal">
+    <span class="section-tag">O método</span>
+    <h2>Enquanto o mercado começa pelo investimento,<br><em>eu começo pela base.</em></h2>
+    <p class="method__sub">Porque ninguém investe bem o que ainda não controla.</p>
+  </div>
+
+  <p class="method__intro reveal">A maioria das soluções do mercado financeiro resolve o problema na ordem errada. Ensinam onde colocar o dinheiro antes de entender por que ele some. O resultado? Você investe aqui, o dinheiro escapa ali, e a sensação de que não está construindo nada proporcional ao que entrega permanece. <span class="mark">A Trilogia Financeira começa onde o problema de verdade está.</span></p>
+
+  <div class="pillars">
+    <article class="pillar reveal">
+      <span class="pillar__num">01</span>
+      <h3>Domínio</h3>
+      <p class="pillar__tag">Ver com clareza para assumir o controle real.</p>
+      <p>Antes de qualquer decisão, você precisa enxergar de verdade para onde está indo o seu dinheiro. Não uma estimativa. Um mapeamento real, feito junto, sem julgamento.</p>
+      <p>A gente abre o extrato juntas. A gente encontra o padrão. E o que estava invisível fica visível. É o fim da desconexão silenciosa.</p>
+    </article>
+    <article class="pillar reveal">
+      <span class="pillar__num">02</span>
+      <h3>Crescimento</h3>
+      <p class="pillar__tag">Construir uma estrutura que funciona mesmo quando você não está.</p>
+      <p>Com clareza de onde o dinheiro vai, a gente cria um sistema onde seu patrimônio cresce de forma automática — independente do seu cansaço ou da sua disposição emocional naquele dia.</p>
+      <p>Não depende de você lembrar. Não para quando o mês fica difícil.</p>
+    </article>
+    <article class="pillar reveal">
+      <span class="pillar__num">03</span>
+      <h3>Liberdade</h3>
+      <p class="pillar__tag">Dar destino real ao dinheiro — para que ele compre o que importa.</p>
+      <p>Com domínio e crescimento funcionando, a gente direciona o que ficou para o que você quer de verdade na sua vida.</p>
+      <p>Não é liberdade financeira como conceito abstrato. É poder fazer escolhas com segurança — e sem culpa.</p>
+    </article>
+  </div>
+</section>
+
+<!-- ============ SEÇÃO 8 — A JORNADA ============ -->
+<section class="journey" id="journey">
+  <div class="journey__media reveal">
+    <img src="assets/img/flavia-sofa.jpg" alt="Flávia Schusciman trabalhando">
+    <div class="journey__badge">
+      <strong>7</strong>
+      <span>encontros<br>3 meses</span>
+    </div>
+  </div>
+  <div class="journey__content">
+    <div class="section-head section-head--light reveal">
+      <span class="section-tag">A jornada</span>
+      <h2>Uma estrutura financeira completa —<br><em>construída com você.</em></h2>
+    </div>
+    <p class="journey__intro reveal">Cada encontro tem um foco específico, ferramentas práticas e entregáveis concretos. Você não recebe material para resolver sozinha. Você constrói, comigo, dentro do processo.</p>
+
+    <ol class="timeline reveal">
+      <li class="timeline__item">
+        <span class="timeline__num">01</span>
         <div>
-          <span class="section-tag">Quem é Flávia</span>
-          <h2 class="section-title">20 anos de mercado financeiro. Uma história que você vai reconhecer.</h2>
-          <p>Trabalhei 14 anos em grandes bancos como gerente de relacionamento. Fui assessora de investimentos, me tornei sócia de um escritório credenciado à XP e liderei um time de 10 pessoas.</p>
-          <p>Mas durante anos, mesmo sabendo tudo sobre o dinheiro dos outros, o meu sumia. No ano em que recebi mais de R$300 mil em renda e bônus, fechei com zero guardado. Foi quando me perguntei: <em>será que vou precisar trabalhar para sempre?</em></p>
-          <p>Essa pergunta virou a chave de tudo. Me tornei CFP®, me especializei em finanças comportamentais, criei um método e nos últimos 7 anos ajudei mais de 200 famílias a saírem do mesmo ciclo que eu vivia.</p>
-          <div class="credentials">
-            <span class="credential-tag">CFP® Certificada</span>
-            <span class="credential-tag">Assessora XP Investimentos</span>
-            <span class="credential-tag">+200 famílias atendidas</span>
-            <span class="credential-tag">20 anos de mercado</span>
-            <span class="credential-tag">Coautora: Enriqueça enquanto dorme</span>
-            <span class="credential-tag">Especialista em Finanças Comportamentais</span>
-          </div>
+          <h3>Diagnóstico &amp; Clareza</h3>
+          <p>Mapeamos onde você está hoje. Seus padrões com dinheiro, seus vieses comportamentais, seu ponto de partida real — sem julgamento, sem receita pronta.</p>
+          <p class="timeline__deliv">Diário das Histórias com o Dinheiro · Quiz de Vieses Comportamentais · Índice Febraban</p>
         </div>
+      </li>
+      <li class="timeline__item">
+        <span class="timeline__num">02</span>
+        <div>
+          <h3>Segurança e Mentalidade</h3>
+          <p>Construímos o primeiro pilar: sua reserva. Com método, com meta, com um caminho real — não dependendo de sobra de fim de mês.</p>
+          <p class="timeline__deliv">Mapa da Reserva Financeira · Mapa do Ambiente Financeiro</p>
+        </div>
+      </li>
+      <li class="timeline__item">
+        <span class="timeline__num">03</span>
+        <div>
+          <h3>Orçamento + Planejamento</h3>
+          <p>Criamos seu orçamento do zero — feito para a sua renda, não uma planilha genérica. E você aprende a usar uma ferramenta que mantém isso funcionando no dia a dia.</p>
+          <p class="timeline__deliv">Planilha Orçamento Sob Medida · Dashboard Financeiro (ativação)</p>
+        </div>
+      </li>
+      <li class="timeline__item">
+        <span class="timeline__num">04</span>
+        <div>
+          <h3>Comportamento &amp; Dashboard</h3>
+          <p>Trabalhamos o que nenhum app resolve: o comportamento. Você aprende a ler seu Dashboard Financeiro e entende os padrões por trás dos seus próprios gastos.</p>
+          <p class="timeline__deliv">Dashboard Financeiro: apresentação e leitura · Diagnóstico comportamental</p>
+        </div>
+      </li>
+      <li class="timeline__item">
+        <span class="timeline__num">05</span>
+        <div>
+          <h3>Constância &amp; Disciplina</h3>
+          <p>Por que você gasta quando está cansada. Como criar consistência que não depende de motivação — com ferramentas práticas para sustentar isso no dia a dia.</p>
+          <p class="timeline__deliv">Checklist P.A.R.I.S. + Desafio de 7 Dias · Plano Financeiro Comportamental · Calculadora da Distância da Liberdade</p>
+        </div>
+      </li>
+      <li class="timeline__item">
+        <span class="timeline__num">06</span>
+        <div>
+          <h3>Consolidação &amp; Liberdade</h3>
+          <p>Com a base construída, direcionamos para o que cresce. Investimentos alinhados ao seu perfil real e aos seus objetivos concretos.</p>
+          <p class="timeline__deliv">Mapa da Liberdade Financeira · Questionário de Perfil de Investidor · Plano de Investimento Inicial</p>
+        </div>
+      </li>
+      <li class="timeline__item">
+        <span class="timeline__num">07</span>
+        <div>
+          <h3>Fechamento &amp; Revisão</h3>
+          <p>Medimos o que mudou. Você vê o antes e o depois — não como sensação, como dado concreto.</p>
+          <p class="timeline__deliv">Índice de Saúde Financeira, + Checklist de revisão · Relatório final de progresso</p>
+        </div>
+      </li>
+    </ol>
+
+    <a class="btn btn--outline-light reveal" href="https://docs.google.com/forms/d/e/1FAIpQLScvtFqhDfdSCXQN659Zp-4TFm5kOIoUTYQQyG6I-tX5j8EaFQ/viewform" target="_blank" rel="noopener">
+      Quero agendar minha Sessão da Clareza
+    </a>
+  </div>
+</section>
+
+<!-- ============ SEÇÃO 9 — PROVA SOCIAL ============ -->
+<section class="proof" id="proof">
+  <div class="section-head reveal">
+    <h2>Resultado não é promessa.<br><em>É o que aconteceu.</em></h2>
+    <p class="proof__sub">Estas são mulheres e homens que passaram pelo mesmo lugar que você está agora.</p>
+  </div>
+
+  <div class="proof__carousel-wrap reveal">
+    <div class="proof__carousel" id="proofCarousel">
+
+      <article class="proof-card">
+        <div class="proof-card__stat">
+          <strong>−77%</strong>
+          <span>nos gastos com cartão de crédito</span>
+        </div>
+        <p class="proof-card__quote">"No primeiro mês já reduzi minha fatura em cerca de 34%. No seguinte, aprofundei ainda mais os ajustes e alcancei uma nova redução de aproximadamente 65%. Mais do que o número em si, isso representa mudança de mentalidade."</p>
+        <p class="proof-card__name">Tathiely B.</p>
+      </article>
+
+      <article class="proof-card">
+        <div class="proof-card__stat">
+          <strong>R$3.773</strong>
+          <span>investidos após 2 meses de processo</span>
+        </div>
+        <p class="proof-card__quote">"Esse mês foi o primeiro em que me paguei primeiro e depois cuidei das contas, e isso, pra mim, é uma vitória enorme. Quero te agradecer demais por toda a ajuda e direcionamento. Isso aqui é só o começo."</p>
+        <p class="proof-card__name">Rodrigo Victori</p>
+      </article>
+
+      <article class="proof-card">
+        <div class="proof-card__stat">
+          <strong>Zero</strong>
+          <span>reserva de emergência antes de começar</span>
+        </div>
+        <p class="proof-card__quote">"Eu não guardava dinheiro pra nada... ganhava, gastava e no final do mês nem sabia pra onde tinha ido. Hoje tenho clareza de onde vai o meu dinheiro, consigo me organizar e ter a minha reserva."</p>
+        <p class="proof-card__name">Ana Paula</p>
+      </article>
+
+      <article class="proof-card">
+        <div class="proof-card__stat">
+          <strong>2 cartões</strong>
+          <span>com dívidas atrasadas, zerados</span>
+        </div>
+        <p class="proof-card__quote">"A gente vivia num looping: só pagava contas e, no fim do mês, o dinheiro sumia. Com a planilha que a Flávia sugeriu, percebi que boa parte ia para besteiras. Só de começar já sentimos uma diferença enorme."</p>
+        <p class="proof-card__name">Rodrigo &amp; esposa</p>
+      </article>
+
+      <article class="proof-card">
+        <div class="proof-card__stat">
+          <strong>4 meses</strong>
+          <span>até resultados muito além do esperado</span>
+        </div>
+        <p class="proof-card__quote">"Como médico, nunca tive conhecimento adequado para administrar meu patrimônio. Elaboramos um planejamento totalmente compreensível para mim, leigo na área, mas muito eficiente. Hoje me sinto seguro para confiar em cada movimento."</p>
+        <p class="proof-card__name">Cliente médico</p>
+      </article>
+
+      <article class="proof-card">
+        <p class="proof-card__quote proof-card__quote--solo">"Estou até agora organizando e revendo as planilhas. Fiquei refletindo depois da nossa conversa e queria te agradecer de verdade por toda a mentoria. Foi um divisor de águas pra mim em muitos pontos."</p>
+        <p class="proof-card__name">Juliana Porto</p>
+      </article>
+
+      <article class="proof-card">
+        <p class="proof-card__quote proof-card__quote--solo">"Você conseguiu organizar tudo de um jeito tão leve, prático e sem julgamentos, que me fez sentir segura para olhar de frente para a minha relação com o dinheiro. Foi um divisor de águas para mim."</p>
+        <p class="proof-card__name">Paula</p>
+      </article>
+
+    </div>
+    <p class="proof__drag">arraste para o lado →</p>
+  </div>
+</section>
+
+<!-- ============ SEÇÃO 10 — COMO FUNCIONA ============ -->
+<section class="process" id="process">
+  <div class="section-head reveal">
+    <span class="section-tag">Como funciona</span>
+    <h2>O primeiro passo é mais simples<br><em>do que você está imaginando.</em></h2>
+  </div>
+  <p class="process__intro reveal">Não tem formulário longo. Não tem questionário de horas. É uma conversa. Gratuita. Só você e eu.</p>
+
+  <div class="process-steps">
+    <div class="process-step reveal">
+      <span class="process-step__num">①</span>
+      <h3>Você agenda a Sessão da Clareza Financeira</h3>
+      <p>Gratuita, individual, sem compromisso. Você escolhe o melhor horário e reserva sua vaga.</p>
+    </div>
+    <div class="process-step reveal">
+      <span class="process-step__num">②</span>
+      <h3>A gente conversa por 60 a 90 minutos</h3>
+      <p>Você me conta sua situação real. Eu entendo seu cenário — sem julgamento, sem pressa. Você sai sabendo qual é o próximo passo concreto, mesmo que a mentoria não seja para você agora.</p>
+    </div>
+    <div class="process-step reveal">
+      <span class="process-step__num">③</span>
+      <h3>Se fizer sentido para as duas partes, avançamos</h3>
+      <p>Apresento as condições e a estrutura da mentoria. Se não fizer sentido, tudo bem — você já sai com mais clareza do que chegou.</p>
+    </div>
+  </div>
+
+  <a class="btn btn--primary reveal" href="https://docs.google.com/forms/d/e/1FAIpQLScvtFqhDfdSCXQN659Zp-4TFm5kOIoUTYQQyG6I-tX5j8EaFQ/viewform" target="_blank" rel="noopener">Agendar minha Sessão da Clareza</a>
+  <p class="process__note reveal">Vagas limitadas por turma. A mentoria tem número reduzido de participantes para garantir acompanhamento real.</p>
+</section>
+
+<!-- ============ SEÇÃO 11 — OBJEÇÕES ============ -->
+<section class="faq" id="faq">
+  <div class="section-head reveal">
+    <span class="section-tag">Dúvidas frequentes</span>
+    <h2>Talvez você esteja<br><em>pensando...</em></h2>
+  </div>
+
+  <div class="accordion reveal">
+    <div class="accordion__item">
+      <button class="accordion__trigger">
+        <span>"Preciso me organizar um pouco antes de buscar ajuda."</span>
+        <span class="accordion__icon">+</span>
+      </button>
+      <div class="accordion__panel">
+        <p>Você não precisa estar organizada para pedir ajuda. Você precisa de ajuda para se organizar. A ordem importa — e é exatamente por isso que a mentoria começa do início, não do meio. Você vem do jeito que está.</p>
       </div>
     </div>
-  </section>
-
-  <!-- MÉTODO -->
-  <section class="method">
-    <div class="container">
-      <span class="section-tag">O Método</span>
-      <h2 class="section-title">A Trilogia Financeira</h2>
-      <p class="section-subtitle">Enquanto o mercado começa por investimentos, eu começo pela base. Porque ninguém investe bem o que ainda não controla.</p>
-      <div class="pillars">
-        <div class="pillar-card">
-          <div class="pillar-number">01</div>
-          <h3>Domínio</h3>
-          <p>Enxergar com clareza para onde seu dinheiro vai e assumir o controle real do que entra e sai. O fim da desconexão silenciosa.</p>
-        </div>
-        <div class="pillar-card">
-          <div class="pillar-number">02</div>
-          <h3>Crescimento</h3>
-          <p>Construir uma estrutura onde seu patrimônio cresce de forma automática, independente do seu cansaço ou da sua disciplina emocional do dia.</p>
-        </div>
-        <div class="pillar-card">
-          <div class="pillar-number">03</div>
-          <h3>Liberdade</h3>
-          <p>Dar destino real ao seu dinheiro para que ele compre o que realmente importa na sua vida com segurança, não com culpa.</p>
-        </div>
+    <div class="accordion__item">
+      <button class="accordion__trigger">
+        <span>"Não tenho tempo para isso agora."</span>
+        <span class="accordion__icon">+</span>
+      </button>
+      <div class="accordion__panel">
+        <p>São 7 encontros ao longo de 3 meses. Uma conversa a cada duas semanas, em média. O que vai custar mais: investir esse tempo agora, ou continuar mais 2 anos no mesmo ciclo — trabalhando muito, ganhando bem, e sem patrimônio proporcional para mostrar?</p>
       </div>
     </div>
-  </section>
-
-  <!-- JORNADA -->
-  <section class="journey">
-    <div class="container">
-      <span class="section-tag">A Jornada</span>
-      <h2 class="section-title">6 encontros. 2 meses.<br>Uma estrutura financeira completa.</h2>
-      <p class="section-subtitle">Cada encontro tem foco, ferramentas e entregáveis concretos. Você não recebe material para resolver sozinha você constrói com acompanhamento.</p>
-      <div class="journey-grid">
-        <div class="journey-card">
-          <div class="journey-number">Encontro 01</div>
-          <h4>Diagnóstico & Clareza</h4>
-          <ul>
-            <li>Diário das Histórias com o Dinheiro</li>
-            <li>Quiz de Vieses Comportamentais</li>
-            <li>Índice Febraban diagnóstico inicial</li>
-          </ul>
-        </div>
-        <div class="journey-card">
-          <div class="journey-number">Encontro 02</div>
-          <h4>Plano de Reserva</h4>
-          <ul>
-            <li>Mapa da Reserva Financeira</li>
-            <li>Mapa do Ambiente Financeiro</li>
-          </ul>
-        </div>
-        <div class="journey-card">
-          <div class="journey-number">Encontro 03</div>
-          <h4>Orçamento + Mobills</h4>
-          <ul>
-            <li>Planilha Orçamento Sob Medida</li>
-            <li>Roteiro prático de uso do Mobills</li>
-          </ul>
-        </div>
-        <div class="journey-card">
-          <div class="journey-number">Encontro 04</div>
-          <h4>Constância & Disciplina</h4>
-          <ul>
-            <li>Checklist P.A.R.I.S.</li>
-            <li>Desafio de 7 Dias de Consciência Financeira</li>
-            <li>Plano Financeiro Comportamental</li>
-            <li>Calculadora da Distância da Liberdade</li>
-          </ul>
-        </div>
-        <div class="journey-card">
-          <div class="journey-number">Encontro 05</div>
-          <h4>Consolidação & Liberdade</h4>
-          <ul>
-            <li>Mapa da Liberdade Financeira</li>
-            <li>Questionário de Perfil de Investidor</li>
-            <li>Plano de Investimento Inicial</li>
-          </ul>
-        </div>
-        <div class="journey-card">
-          <div class="journey-number">Encontro 06</div>
-          <h4>Fechamento & Revisão</h4>
-          <ul>
-            <li>Índice Febraban evolução</li>
-            <li>Checklist de revisão de progresso</li>
-            <li>Relatório final de progresso</li>
-          </ul>
-        </div>
+    <div class="accordion__item">
+      <button class="accordion__trigger">
+        <span>"Já tentei me organizar antes e não funcionou."</span>
+        <span class="accordion__icon">+</span>
+      </button>
+      <div class="accordion__panel">
+        <p>Você tentou sem método e sem acompanhamento. Planilha, app, boa intenção funcionam por duas semanas. O que muda aqui é a estrutura — e o fato de você não estar sozinha no processo.</p>
       </div>
     </div>
-  </section>
-
-  <!-- DEPOIMENTOS -->
-  <section class="testimonials">
-    <div class="container">
-      <span class="section-tag">Resultados reais</span>
-      <h2 class="section-title">Nas palavras de quem viveu.</h2>
-      <div class="testimonials-grid">
-
-        <div class="testimonial-card">
-          <p class="testimonial-text">"Desde que iniciei a mentoria, a mudança mais tangível foi a forma como passei a lidar com o cartão de crédito. No primeiro mês já reduzi minha fatura em 34%. No seguinte, mais 65%. Quando olho o comparativo do início até agora, a queda acumulada é de quase 77%. Mais do que o número, isso representa mudança de mentalidade e decisões financeiras alinhadas com meus objetivos de longo prazo."</p>
-          <p class="testimonial-author">Tathiely B.</p>
-          <p class="testimonial-result">Redução de 77% nos gastos com cartão</p>
-        </div>
-
-        <div class="testimonial-card">
-          <p class="testimonial-text">"Antes eu não guardava dinheiro pra nada. Ganhava, gastava e no final do mês nem sabia pra onde tinha ido. Reserva de emergência? Zero. A Flávia conseguiu transformar um assunto que pra mim era super complicado em algo mais leve. Hoje tenho clareza de onde vai o meu dinheiro, consigo me organizar e ter a minha reserva. Sou muito grata por ter uma assessora que realmente se importa e não me deixa desistir da minha liberdade financeira."</p>
-          <p class="testimonial-author">Ana Paula</p>
-          <p class="testimonial-result">Saiu do zero e construiu sua primeira reserva</p>
-        </div>
-
-        <div class="testimonial-card">
-          <p class="testimonial-text">"Antes, a gente vivia num looping: só pagava contas e, no fim do mês, o dinheiro sumia. Com a planilha que a Flávia sugeriu, percebi que boa parte ia pra besteiras. Consegui zerar dois cartões com dívidas atrasadas e agora consigo ver claramente para onde vai cada gasto. Só de começar já sentimos uma diferença enorme na nossa vida financeira."</p>
-          <p class="testimonial-author">Rodrigo V.</p>
-          <p class="testimonial-result">Zerou dois cartões com dívidas atrasadas</p>
-        </div>
-
-        <div class="testimonial-card">
-          <p class="testimonial-text">"Antes do nosso planejamento, eu achava que tinha noção das minhas finanças — mas a verdade é que eu vivia sem clareza do que estava me sabotando. Você conseguiu organizar tudo de um jeito tão leve, prático e sem julgamentos, que me fez sentir segura pra olhar de frente pra minha relação com o dinheiro. Hoje tenho uma visão muito mais estratégica, sei onde estou e pra onde quero ir. Foi um divisor de águas pra mim."</p>
-          <p class="testimonial-author">Paula</p>
-          <p class="testimonial-result">Visão estratégica e paz com o dinheiro</p>
-        </div>
-
+    <div class="accordion__item">
+      <button class="accordion__trigger">
+        <span>"Será que funciona para quem ganha bem?"</span>
+        <span class="accordion__icon">+</span>
+      </button>
+      <div class="accordion__panel">
+        <p>A mentoria foi criada especificamente para esse perfil. Quem ganha bem tem um tipo de desorganização financeira com características próprias — e as soluções genéricas do mercado não foram pensadas para você.</p>
       </div>
     </div>
-  </section>
-
-  <!-- PROCESSO SELETIVO -->
-  <section class="investment">
-    <div class="container">
-      <span class="section-tag">Processo Seletivo</span>
-      <h2 class="section-title">Vagas limitadas por turma.</h2>
-      <p class="section-subtitle">A mentoria tem número reduzido de vagas para garantir acompanhamento real. O processo começa com uma conversa gratuita — você me conta sua situação e eu avalio se faz sentido avançarmos juntas.</p>
-
-      <div class="price-box">
-        <p class="price-label">Como funciona o processo</p>
-        <div style="text-align:left;margin-bottom:32px;">
-          <div style="display:flex;gap:14px;padding:14px 0;border-bottom:1px solid rgba(207,174,101,0.2);">
-            <span style="font-family:'Playfair Display',serif;font-size:20px;color:var(--gold);font-weight:700;flex-shrink:0;min-width:28px;">01</span>
-            <span style="font-size:15px;color:rgba(255,255,255,0.85);padding-top:2px;">Você agenda a Sessão da Clareza Financeira — gratuita e sem compromisso</span>
-          </div>
-          <div style="display:flex;gap:14px;padding:14px 0;border-bottom:1px solid rgba(207,174,101,0.2);">
-            <span style="font-family:'Playfair Display',serif;font-size:20px;color:var(--gold);font-weight:700;flex-shrink:0;min-width:28px;">02</span>
-            <span style="font-size:15px;color:rgba(255,255,255,0.85);padding-top:2px;">Conversamos por 60 a 90 minutos sobre o seu cenário financeiro real</span>
-          </div>
-          <div style="display:flex;gap:14px;padding:14px 0;">
-            <span style="font-family:'Playfair Display',serif;font-size:20px;color:var(--gold);font-weight:700;flex-shrink:0;min-width:28px;">03</span>
-            <span style="font-size:15px;color:rgba(255,255,255,0.85);padding-top:2px;">Se fizer sentido para as duas partes, apresento as condições e avançamos</span>
-          </div>
-        </div>
-        <a href="https://forms.gle/Qnvhmc8CBwgue9DH7" class="btn" target="_blank" style="width:100%; text-align:center; display:block;">Agendar minha Sessão da Clareza</a>
-      </div>
-
-      <p class="investment-note">Novas turmas abrem periodicamente. O número de vagas é limitado para garantir presença real e resultado concreto.</p>
-    </div>
-  </section>
-
-  <!-- FAQ -->
-  <section class="faq">
-    <div class="container">
-      <span class="section-tag">Dúvidas frequentes</span>
-      <h2 class="section-title" style="text-align:center">Talvez você esteja pensando...</h2>
-      <div class="faq-list">
-        <div class="faq-item">
-          <h4>"Preciso me organizar um pouco antes de buscar ajuda."</h4>
-          <p>Você não precisa estar organizada para pedir ajuda. Você precisa de ajuda para se organizar. A ordem importa e é exatamente por isso que a mentoria começa do início, não do meio. Se preferir dar um passo antes de vir para a mentoria, o Raio-X Financeiro ou o Mapa da Reserva são o lugar certo para começar. Você volta quando estiver pronta.</p>
-        </div>
-        <div class="faq-item">
-          <h4>"Não tenho tempo para isso agora."</h4>
-          <p>São 6 encontros em 2 meses. Uma conversa por semana. O que vai custar mais caro: investir esse tempo agora ou continuar mais 2 anos no mesmo ciclo?</p>
-        </div>
-        <div class="faq-item">
-          <h4>"Já tentei me organizar antes e não funcionou."</h4>
-          <p>Você tentou sem método. Planilha, app, boa intenção funcionam por um tempo e param. O que muda aqui é a estrutura e o acompanhamento. Resultado sustentável precisa de método, não de motivação.</p>
-        </div>
-        <div class="faq-item">
-          <h4>"Será que isso funciona para quem ganha bem?"</h4>
-          <p>A mentoria foi criada especificamente para quem ganha bem. A desorganização financeira em alta renda tem características próprias e as soluções genéricas do mercado não foram feitas para esse perfil.</p>
-        </div>
-        <div class="faq-item">
-          <h4>"E se eu não tiver certeza se é para mim?"</h4>
-          <p>Por isso existe a Sessão da Clareza Financeira. Uma conversa gratuita de 60 a 90 minutos onde você me conta sua situação e sai com direção real sem compromisso com a mentoria.</p>
-        </div>
+    <div class="accordion__item">
+      <button class="accordion__trigger">
+        <span>"E se eu não tiver certeza se é para mim?"</span>
+        <span class="accordion__icon">+</span>
+      </button>
+      <div class="accordion__panel">
+        <p>Por isso existe a Sessão da Clareza. Você vem, a gente conversa, você entende se faz sentido avançar. Sem compromisso, sem pressão.</p>
       </div>
     </div>
-  </section>
-
-  <!-- CTA FINAL -->
-  <section class="final-cta" id="sessao">
-    <div class="container">
-      <h2>O próximo passo<br>é <span>seu</span>.</h2>
-      <p>A Sessão da Clareza Financeira é gratuita, individual e com a Flávia. Você sai com diagnóstico real e próximos passos concretos.</p>
-      <a href="https://forms.gle/Qnvhmc8CBwgue9DH7" class="btn" target="_blank">Agendar minha Sessão da Clareza</a>
-      <p class="investment-note" style="margin-top:20px">Após o contato, Flávia retorna em até 48h para agendar.</p>
+    <div class="accordion__item">
+      <button class="accordion__trigger">
+        <span>"Vou precisar expor minhas finanças para alguém?"</span>
+        <span class="accordion__icon">+</span>
+      </button>
+      <div class="accordion__panel">
+        <p>Parte do processo é olhar para a sua situação real juntas. Não tem outro jeito — diagnóstico falso não gera resultado real. E tudo fica entre nós: sigilo total, sem exceção.</p>
+      </div>
     </div>
-  </section>
+  </div>
+</section>
 
-  <footer>
-    <p>© 2026 Flávia Schusciman · CFP® · Todos os direitos reservados</p>
-  </footer>
+<!-- ============ SEÇÃO 12 — CTA FINAL ============ -->
+<section class="final-cta" id="cta-final">
+  <div class="final-cta__inner">
+    <span class="section-tag section-tag--light reveal">Vagas limitadas por turma</span>
+    <h2 class="reveal">O próximo passo<br><em>é seu.</em></h2>
+    <p class="reveal">O acompanhamento é individual. Por isso o número de clientes por turma é reduzido — para garantir que cada mulher receba presença real, não atenção dividida.</p>
+    <p class="final-cta__urgency reveal">Quando as vagas fecham, fecham. Se você está lendo isso, ainda há vagas disponíveis.</p>
+    <p class="reveal">Você trabalhou muito para chegar onde está. Construiu carreira, conquistou renda, provou que é capaz — muitas vezes sem nenhum roteiro para seguir.</p>
+    <p class="final-cta__lead reveal">Agora é hora de fazer o seu dinheiro chegar onde você já chegou.</p>
 
+    <div class="final-cta__form reveal">
+      <a class="btn btn--primary" href="https://docs.google.com/forms/d/e/1FAIpQLScvtFqhDfdSCXQN659Zp-4TFm5kOIoUTYQQyG6I-tX5j8EaFQ/viewform" target="_blank" rel="noopener">
+        Agendar minha Sessão da Clareza Financeira
+        <span class="btn__arrow">→</span>
+      </a>
+    </div>
+    <p class="final-cta__note reveal">Gratuita. Sem compromisso. Após o contato, Flávia retorna em até 48h para agendar.</p>
+  </div>
+</section>
+</main>
+<footer class="footer">
+  <div class="footer__brand">
+    <img class="footer__logo" src="assets/img/logo-trilogia.jpg" alt="Logo Trilogia Financeira">
+    <span class="footer__wordmark">
+      <strong>Trilogia Financeira</strong>
+      <span>Flávia Schusciman · CFP®</span>
+    </span>
+  </div>
+  <p class="footer__copy">© 2026 Flávia Schusciman · CFP® · Todos os direitos reservados</p>
+</footer>
+
+<script>
+// ============ SCROLL REVEAL ============
+const revealEls = document.querySelectorAll('.reveal');
+const revealObserver = new IntersectionObserver((entries) => {
+  entries.forEach((entry) => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('is-visible');
+      revealObserver.unobserve(entry.target);
+    }
+  });
+}, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+
+revealEls.forEach((el) => revealObserver.observe(el));
+
+// Stagger reveal slightly within the same section for a smoother cascade
+document.querySelectorAll('.checklist, .tried-grid, .pillars, .credentials, .process-steps').forEach((group) => {
+  const items = group.querySelectorAll('.reveal');
+  items.forEach((item, i) => {
+    item.style.transitionDelay = `${i * 70}ms`;
+  });
+});
+
+// ============ ACCORDION (FAQ) ============
+document.querySelectorAll('.accordion__item').forEach((item) => {
+  const trigger = item.querySelector('.accordion__trigger');
+  const panel = item.querySelector('.accordion__panel');
+
+  trigger.addEventListener('click', () => {
+    const isOpen = item.classList.contains('is-open');
+
+    document.querySelectorAll('.accordion__item').forEach((other) => {
+      if (other !== item) {
+        other.classList.remove('is-open');
+        other.querySelector('.accordion__panel').style.maxHeight = null;
+      }
+    });
+
+    if (isOpen) {
+      item.classList.remove('is-open');
+      panel.style.maxHeight = null;
+    } else {
+      item.classList.add('is-open');
+      panel.style.maxHeight = panel.scrollHeight + 'px';
+    }
+  });
+});
+
+// ============ NAV — hide on scroll down, show on scroll up ============
+const nav = document.getElementById('nav');
+let lastScroll = 0;
+
+window.addEventListener('scroll', () => {
+  const current = window.scrollY;
+  if (current > lastScroll && current > 140) {
+    nav.style.transform = 'translateY(-100%)';
+  } else {
+    nav.style.transform = 'translateY(0)';
+  }
+  lastScroll = current;
+}, { passive: true });
+
+</script>
 </body>
 </html>
