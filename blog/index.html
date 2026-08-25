@@ -185,6 +185,95 @@
       color: var(--gold-dark);
     }
 
+    /* FILTROS DO BLOG */
+    .blog-filtros {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      margin-bottom: 48px;
+    }
+    .filtros-wrap {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 16px;
+      align-items: center;
+    }
+    .busca-box {
+      position: relative;
+      flex: 1 1 260px;
+      min-width: 220px;
+    }
+    .busca-box svg {
+      position: absolute;
+      left: 14px;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 16px;
+      height: 16px;
+      color: var(--gray);
+      pointer-events: none;
+    }
+    .busca-box input {
+      width: 100%;
+      padding: 12px 16px 12px 40px;
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      font-family: 'Manrope', sans-serif;
+      font-size: 14px;
+      color: var(--text);
+      background: var(--cream);
+      outline: none;
+      transition: border-color .2s, background .2s;
+    }
+    .busca-box input:focus { border-color: var(--gold-dark); background: var(--white); }
+    .busca-box input::placeholder { color: var(--gray); opacity: .8; }
+
+    .filtro-data select {
+      padding: 11px 16px;
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      font-family: 'Manrope', sans-serif;
+      font-size: 14px;
+      color: var(--text);
+      background: var(--cream);
+      cursor: pointer;
+      outline: none;
+      transition: border-color .2s;
+    }
+    .filtro-data select:focus { border-color: var(--gold-dark); }
+
+    .filtro-categorias {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+    .filtro-pill {
+      font-family: 'Manrope', sans-serif;
+      font-size: 13px;
+      font-weight: 600;
+      padding: 8px 16px;
+      border-radius: 20px;
+      border: 1px solid var(--border);
+      background: var(--white);
+      color: var(--gray);
+      cursor: pointer;
+      transition: all .2s;
+      white-space: nowrap;
+    }
+    .filtro-pill:hover { border-color: var(--gold-dark); color: var(--navy); }
+    .filtro-pill.active { background: var(--navy); border-color: var(--navy); color: var(--gold); }
+
+    .filtro-resultado-vazio {
+      text-align: center;
+      color: var(--gray);
+      font-size: 14px;
+      padding: 32px 0;
+    }
+
+    @media (max-width: 640px) {
+      .filtro-categorias { flex-wrap: nowrap; overflow-x: auto; padding-bottom: 4px; }
+    }
+
     /* FOOTER */
     footer {
       background: var(--navy-dark);
@@ -232,9 +321,42 @@
 </section>
 
 <section class="blog-section">
-  <div class="artigos-grid">
+  <div class="blog-filtros">
+    <div class="filtros-wrap">
+      <div class="busca-box">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+        <input type="text" id="busca-artigos" placeholder="Buscar artigos..." aria-label="Buscar artigos" />
+      </div>
+      <div class="filtro-data">
+        <select id="filtro-mes" aria-label="Filtrar por data">
+          <option value="">Todas as datas</option>
+        </select>
+      </div>
+    </div>
+    <div class="filtro-categorias" id="filtro-categorias" role="group" aria-label="Filtrar por assunto">
+      <button type="button" class="filtro-pill active" data-cat="">Todos os assuntos</button>
+    </div>
+    <p class="filtro-resultado-vazio" id="sem-resultados" hidden>Nenhum artigo encontrado. Tente outra busca ou outro filtro.</p>
+  </div>
 
-    <a href="/blog/educacao-financeira-por-onde-comecar/" class="artigo-card">
+  <div class="artigos-grid" id="artigos-grid">
+
+    <a href="/blog/7-crencas-que-travam-o-patrimonio/" class="artigo-card" data-cat="crencas-sobre-dinheiro" data-cat-label="Crenças sobre Dinheiro" data-mes="2026-08" data-mes-label="Agosto 2026">
+      <div class="artigo-tag-bar">
+        <span class="artigo-tag">Crenças sobre Dinheiro</span>
+        <span class="artigo-tempo">9 min de leitura</span>
+      </div>
+      <div class="artigo-body">
+        <h2>As 7 crenças que travam o patrimônio de quem já ganha bem</h2>
+        <p>Ganhar bem não é garantia de patrimônio. Sete ideias que parecem verdade, e travam mais do que ajudam quem já tem uma boa renda. O mapa completo da série.</p>
+        <div class="artigo-footer">
+          <span class="artigo-data">Agosto 2026</span>
+          <span class="artigo-link">Ler artigo →</span>
+        </div>
+      </div>
+    </a>
+
+    <a href="/blog/educacao-financeira-por-onde-comecar/" class="artigo-card" data-cat="educacao-financeira" data-cat-label="Educação Financeira" data-mes="2026-08" data-mes-label="Agosto 2026">
       <div class="artigo-tag-bar">
         <span class="artigo-tag">Educação Financeira</span>
         <span class="artigo-tempo">6 min de leitura</span>
@@ -249,7 +371,7 @@
       </div>
     </a>
 
-    <a href="/blog/voce-nao-tem-problema-com-dinheiro/" class="artigo-card">
+    <a href="/blog/voce-nao-tem-problema-com-dinheiro/" class="artigo-card" data-cat="comportamento" data-cat-label="Comportamento" data-mes="2026-08" data-mes-label="Agosto 2026">
       <div class="artigo-tag-bar">
         <span class="artigo-tag">Comportamento</span>
         <span class="artigo-tempo">4 min de leitura</span>
@@ -264,7 +386,7 @@
       </div>
     </a>
 
-    <a href="/blog/reserva-de-emergencia-valor-onde-guardar/" class="artigo-card">
+    <a href="/blog/reserva-de-emergencia-valor-onde-guardar/" class="artigo-card" data-cat="reserva-de-emergencia" data-cat-label="Reserva de Emergência" data-mes="2026-07" data-mes-label="Julho 2026">
       <div class="artigo-tag-bar">
         <span class="artigo-tag">Reserva de Emergência</span>
         <span class="artigo-tempo">7 min de leitura</span>
@@ -279,7 +401,7 @@
       </div>
     </a>
 
-    <a href="/blog/numero-magico-independencia-financeira/" class="artigo-card">
+    <a href="/blog/numero-magico-independencia-financeira/" class="artigo-card" data-cat="patrimonio" data-cat-label="Patrimônio" data-mes="2026-07" data-mes-label="Julho 2026">
       <div class="artigo-tag-bar">
         <span class="artigo-tag">Patrimônio</span>
         <span class="artigo-tempo">8 min de leitura</span>
@@ -294,7 +416,7 @@
       </div>
     </a>
 
-    <a href="/blog/indice-saude-financeira/" class="artigo-card">
+    <a href="/blog/indice-saude-financeira/" class="artigo-card" data-cat="comportamento" data-cat-label="Comportamento" data-mes="2026-07" data-mes-label="Julho 2026">
       <div class="artigo-tag-bar">
         <span class="artigo-tag">Comportamento</span>
         <span class="artigo-tempo">3 min de leitura</span>
@@ -323,5 +445,84 @@
   <p>CFP® · Planejadora Financeira · Assessora XP Investimentos</p>
 </footer>
 
+<script>
+(function () {
+  var grid = document.getElementById('artigos-grid');
+  if (!grid) return;
+  var cards = Array.prototype.slice.call(grid.querySelectorAll('.artigo-card'));
+  var buscaInput = document.getElementById('busca-artigos');
+  var mesSelect = document.getElementById('filtro-mes');
+  var catWrap = document.getElementById('filtro-categorias');
+  var semResultados = document.getElementById('sem-resultados');
+  var catAtiva = '';
+
+  // popula pills de categoria a partir dos cards (dedup, ordem de aparição)
+  var catsVistas = {};
+  cards.forEach(function (card) {
+    var cat = card.getAttribute('data-cat');
+    var label = card.getAttribute('data-cat-label');
+    if (cat && !catsVistas[cat]) {
+      catsVistas[cat] = true;
+      var btn = document.createElement('button');
+      btn.type = 'button';
+      btn.className = 'filtro-pill';
+      btn.setAttribute('data-cat', cat);
+      btn.textContent = label;
+      catWrap.appendChild(btn);
+    }
+  });
+
+  // popula select de datas a partir dos cards (dedup, mais recente primeiro)
+  var mesesVistos = {};
+  var mesesArr = [];
+  cards.forEach(function (card) {
+    var mes = card.getAttribute('data-mes');
+    var label = card.getAttribute('data-mes-label');
+    if (mes && !mesesVistos[mes]) {
+      mesesVistos[mes] = true;
+      mesesArr.push({ mes: mes, label: label });
+    }
+  });
+  mesesArr.sort(function (a, b) { return b.mes.localeCompare(a.mes); });
+  mesesArr.forEach(function (m) {
+    var opt = document.createElement('option');
+    opt.value = m.mes;
+    opt.textContent = m.label;
+    mesSelect.appendChild(opt);
+  });
+
+  function aplicarFiltros() {
+    var termo = buscaInput.value.trim().toLowerCase();
+    var mesAtivo = mesSelect.value;
+    var visiveis = 0;
+    cards.forEach(function (card) {
+      var texto = card.textContent.toLowerCase();
+      var cat = card.getAttribute('data-cat');
+      var mes = card.getAttribute('data-mes');
+      var passaBusca = !termo || texto.indexOf(termo) !== -1;
+      var passaCat = !catAtiva || cat === catAtiva;
+      var passaMes = !mesAtivo || mes === mesAtivo;
+      var mostrar = passaBusca && passaCat && passaMes;
+      card.style.display = mostrar ? '' : 'none';
+      if (mostrar) visiveis++;
+    });
+    semResultados.hidden = visiveis !== 0;
+  }
+
+  catWrap.addEventListener('click', function (e) {
+    var btn = e.target.closest('.filtro-pill');
+    if (!btn) return;
+    Array.prototype.forEach.call(catWrap.querySelectorAll('.filtro-pill'), function (b) {
+      b.classList.remove('active');
+    });
+    btn.classList.add('active');
+    catAtiva = btn.getAttribute('data-cat') || '';
+    aplicarFiltros();
+  });
+
+  buscaInput.addEventListener('input', aplicarFiltros);
+  mesSelect.addEventListener('change', aplicarFiltros);
+})();
+</script>
 </body>
 </html>
