@@ -74,7 +74,7 @@
   </url>
   <url>
     <loc>https://flaviaschusciman.com/blog/</loc>
-    <lastmod>2026-09-30</lastmod>
+    <lastmod>2026-09-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
   </url>
@@ -207,6 +207,12 @@
   <url>
     <loc>https://flaviaschusciman.com/blog/titia-nao-tem-dinheiro/</loc>
     <lastmod>2026-09-30</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://flaviaschusciman.com/blog/liberdade-financeira-nao-e-um-numero-fixo/</loc>
+    <lastmod>2026-09-28</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.6</priority>
   </url>
