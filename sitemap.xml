@@ -74,7 +74,7 @@
   </url>
   <url>
     <loc>https://flaviaschusciman.com/blog/</loc>
-    <lastmod>2026-09-28</lastmod>
+    <lastmod>2026-10-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
   </url>
@@ -219,6 +219,12 @@
   <url>
     <loc>https://flaviaschusciman.com/blog/casal-1-por-cento-ao-dia/</loc>
     <lastmod>2026-09-28</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://flaviaschusciman.com/blog/eleicao-e-investimentos-carteira/</loc>
+    <lastmod>2026-10-06</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.6</priority>
   </url>
