@@ -271,6 +271,17 @@ em { font-style: italic; }
   transition: background .25s ease, color .25s ease;
 }
 .nav__cta:hover { background: var(--gold); color: var(--navy-deep); }
+.nav__right { display: flex; align-items: center; gap: 24px; }
+.nav__links { display: flex; gap: 20px; }
+.nav__links a {
+  font-family: var(--font-body);
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--navy);
+  text-decoration: none;
+  transition: color .25s ease;
+}
+.nav__links a:hover { color: var(--terracotta); }
 
 /* ============ HERO ============ */
 .hero {
@@ -753,6 +764,21 @@ em { font-style: italic; }
   opacity: 0.65;
   margin-top: 2px;
 }
+.footer__links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 8px 28px;
+  margin: 0 0 22px;
+}
+.footer__links a {
+  font-size: 15px;
+  color: var(--cream);
+  opacity: 0.75;
+  text-decoration: none;
+  transition: opacity .25s ease, color .25s ease;
+}
+.footer__links a:hover { opacity: 1; color: var(--gold); }
 .footer p.footer__copy { margin: 0; font-size: 13px; color: var(--cream); opacity: 0.5; }
 
 /* ============================================
@@ -825,6 +851,7 @@ em { font-style: italic; }
   .brand__title { font-size: 14px; }
   .brand__subtitle { font-size: 9px; }
   .nav__cta { font-size: 11.5px; padding: 9px 13px; }
+  .nav__links { display: none; }
 
   .eyebrow { font-size: 13px; }
   .hero { padding-top: 96px; padding-bottom: 56px; }
@@ -900,14 +927,20 @@ em { font-style: italic; }
 <!-- ============ NAV ============ -->
 <header class="nav" id="nav">
   <div class="nav__inner">
-    <a class="brand" href="#hero">
+    <a class="brand" href="/" aria-label="Ir para a página inicial">
       <img class="brand__logo" src="assets/img/logo-trilogia.jpg" alt="Logo Trilogia Financeira" loading="eager">
       <span class="brand__text">
         <span class="brand__title">Trilogia <em>Financeira</em></span>
         <span class="brand__subtitle">Flávia Schusciman</span>
       </span>
     </a>
-    <a class="nav__cta" href="https://docs.google.com/forms/d/e/1FAIpQLScvtFqhDfdSCXQN659Zp-4TFm5kOIoUTYQQyG6I-tX5j8EaFQ/viewform" target="_blank" rel="noopener">Agendar Sessão da Clareza</a>
+    <div class="nav__right">
+      <nav class="nav__links" aria-label="Navegação principal">
+        <a href="/">Início</a>
+        <a href="/blog/">Blog</a>
+      </nav>
+      <a class="nav__cta" href="https://docs.google.com/forms/d/e/1FAIpQLScvtFqhDfdSCXQN659Zp-4TFm5kOIoUTYQQyG6I-tX5j8EaFQ/viewform" target="_blank" rel="noopener">Agendar Sessão da Clareza</a>
+    </div>
   </div>
 </header>
 
@@ -1413,6 +1446,12 @@ em { font-style: italic; }
       <span>Flávia Schusciman · CFP®</span>
     </span>
   </div>
+  <nav class="footer__links" aria-label="Links do rodapé">
+    <a href="/">Início</a>
+    <a href="/mentoria/">Mentoria</a>
+    <a href="/blog/">Blog</a>
+    <a href="https://www.instagram.com/flavia.schuscimann" target="_blank" rel="noopener">Instagram</a>
+  </nav>
   <p class="footer__copy">© 2026 Flávia Schusciman · CFP® · Todos os direitos reservados</p>
   <p class="footer__copy">Razão social: FLAVIA CAROLINA SCHUSCIMAN LTDA | CNPJ: 60.920.809/0001-63</p>
 </footer>
