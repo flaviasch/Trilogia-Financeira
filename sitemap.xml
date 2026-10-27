@@ -74,7 +74,7 @@
   </url>
   <url>
     <loc>https://flaviaschusciman.com/blog/</loc>
-    <lastmod>2026-10-20</lastmod>
+    <lastmod>2026-10-27</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
   </url>
@@ -252,6 +252,12 @@
   <url>
     <loc>https://flaviaschusciman.com/blog/planejamento-sucessorio-patrimonio-sem-estrutura/</loc>
     <lastmod>2026-10-20</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://flaviaschusciman.com/blog/13o-salario-quitar-divida-reserva-ou-investir/</loc>
+    <lastmod>2026-10-27</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.6</priority>
   </url>
