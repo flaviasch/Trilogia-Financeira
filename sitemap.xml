@@ -74,7 +74,7 @@
   </url>
   <url>
     <loc>https://flaviaschusciman.com/blog/</loc>
-    <lastmod>2026-11-03</lastmod>
+    <lastmod>2026-11-05</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
   </url>
@@ -282,6 +282,12 @@
   <url>
     <loc>https://flaviaschusciman.com/blog/renda-fixa-camada-de-seguranca-da-carteira/</loc>
     <lastmod>2026-11-03</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://flaviaschusciman.com/blog/cartao-e-parcelamentos-de-fim-de-ano/</loc>
+    <lastmod>2026-11-05</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.6</priority>
   </url>
